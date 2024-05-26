@@ -5,6 +5,12 @@ Making mead with a buddy, The following and included files are a compilation of 
 This is not a guide, no really it's essentially a checklist of stuff we might or might not have brought and or done.
 
 
+## Recipes We've Started
+
+- [#1 Standard Mead](Recipe%20List%2F%231%20Standard.md)
+- [#2 Elderflower Mead](Recipe%20List%2F%232%20Elderflower.md)
+
+
 ## Yeasts I'd like to use
 
 - [12% Gervin Yeast](https://brew2bottle.co.uk/collections/wine-yeast/products/gervin-yeasts?variant=15349934620787)
@@ -35,11 +41,6 @@ possible to ignore this if yeast only works to x% alc? (this is only a good idea
 in all the planned meads, because we brought 15 kilos of it
 
 Fermentation will be done in 1 Gallon / 5 litre demijohns, with bubbler airlocks
-
-## From the Recipe List
-
-- [#1 Standard Mead](Recipe%20List%2F%231%20Standard.md)
-- [#2 Elderflower Mead](Recipe%20List%2F%232%20Elderflower.md)
 
 
 ## The Python bit
