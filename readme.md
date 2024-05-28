@@ -92,6 +92,7 @@ SG: 1.13, FG: 1.02
 The long list of things that might taste nice, or might just be interesting enough to try, they'll move above
 once we've attempted to make them
 
+- Wild Violet Mead
 - Lemon lavendar
 - Blood orange
 - Lime and Chilli

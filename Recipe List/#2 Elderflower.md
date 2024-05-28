@@ -36,14 +36,23 @@ Quantity: 3.5 Grams
 
 <h2>Fermentation Data</h2>
 
-| Date       | Temperature  °C | Gravity | Notes                   |
-|------------|-----------------|---------|-------------------------|
-| 2024-05-25 | PM 24.75        | 1060    | start time around 5pm   |
-| 2024-05-26 | AM 22.75        |         |                         |
-| 2024-05-26 | PM 22.00        |         | PH 4.5, 3 min Agitation |
-|            |                 |         |                         |
-|            |                 |         |                         |
-|            |                 |         |                         |
+| Date       | Temperature  °C | Gravity | Notes                                                   |
+|------------|-----------------|---------|---------------------------------------------------------|
+| 2024-05-25 | PM 24.75        | 1060    | start time around 5pm                                   |
+| 2024-05-26 | AM 22.75        |         |                                                         |
+| 2024-05-26 | PM 22.00        |         | PH 4.5, 3 min Agitation                                 |
+| 2024-05-27 | PM 22.00        | 1075    | not sure about gravity readings currently,              |
+|            |                 |         | need to wait for the wine theif to arrive               |
+| 2024-05-28 | AM 22.00        |         |                                                         |
+| 2024-05-28 | AM 22.00        |         | Agitated (shaken) 2 times, bubbles apparent and regular |
+|            |                 |         |                                                         |
+|            |                 |         |                                                         |
+|            |                 |         |                                                         |
+|            |                 |         |                                                         |
+|            |                 |         |                                                         |
+|            |                 |         |                                                         |
+|            |                 |         |                                                         |
+|            |                 |         |                                                         |
 
 <h2>Post Fermentation</h2>
 
