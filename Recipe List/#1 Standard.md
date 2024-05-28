@@ -41,7 +41,7 @@ Quantity:  3.5 Grams
 | 2024-05-27 | PM 22.00        | 1080    | not sure about gravity readings currently,         |
 |            |                 |         | need to wait for the wine theif to arrive          |
 | 2024-05-28 | AM 22.00        |         | agitated slightly with bubbler in ^1               |
-| 2024-05-28 | AM 22.00        |         | Agitated (shaken) 4 times, bubbles beginning today |
+| 2024-05-28 | PM 22.00        |         | Agitated (shaken) 4 times, bubbles beginning today |
 |            |                 |         |                                                    |
 |            |                 |         |                                                    |
 |            |                 |         |                                                    |
