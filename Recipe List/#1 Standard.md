@@ -33,25 +33,33 @@ Quantity:  3.5 Grams
 
 <h2>Fermentation Data</h2>
 
-| Date       | Temperature  °C | Gravity | Notes                                              |
-|------------|-----------------|---------|----------------------------------------------------|
-| 2024-05-25 | PM 24.75        | 1060    | start time around 5pm                              |
-| 2024-05-26 | AM 22.75        |         |                                                    |
-| 2024-05-26 | PM 22.00        |         | PH 4.5, 3 min Agitation                            |
-| 2024-05-27 | PM 22.00        | 1080    | not sure about gravity readings currently,         |
-|            |                 |         | need to wait for the wine theif to arrive          |
-| 2024-05-28 | AM 22.00        |         | agitated slightly with bubbler in ^1               |
-| 2024-05-28 | PM 22.00        |         | Agitated (shaken) 4 times, bubbles beginning today |
-|            |                 |         |                                                    |
-|            |                 |         |                                                    |
-|            |                 |         |                                                    |
-|            |                 |         |                                                    |
-|            |                 |         |                                                    |
-|            |                 |         |                                                    |
-|            |                 |         |                                                    |
-|            |                 |         |                                                    |
+| Date       | Temperature  °C | Gravity | Notes                                                  |
+|------------|-----------------|---------|--------------------------------------------------------|
+| 2024-05-25 | PM 24.75        | 1.060   | start time around 5pm                                  |
+| 2024-05-26 | AM 22.75        |         |                                                        |
+| 2024-05-26 | PM 22.00        |         | PH 4.5, 3 min Agitation                                |
+| 2024-05-27 | PM 22.00        | 1.080   | not sure about gravity readings currently,             |
+|            |                 |         | need to wait for the wine theif to arrive              |
+| 2024-05-28 | AM 22.00        |         | agitated slightly with bubbler in ^1                   |
+| 2024-05-28 | PM 22.00        |         | Agitated (shaken) 4 times, bubbles beginning today     |
+| 2024-05-29 | AM 22.00        |         | Agitated 8:45; Agitated 16:00  45s                     |
+|            | PM 22.00        | 1.062sg | added Fermaid K 1.04g in 20ml water, aerated for 2 min |
+|            |                 |         |                                                        |
+|            |                 |         |                                                        |
+|            |                 |         |                                                        |
+|            |                 |         |                                                        |
+|            |                 |         |                                                        |
+|            |                 |         |                                                        |
 
 1: bubbler secured in and shaken lightly seems to be making co2
+
+
+<h3> Notes </h3>
+2024-05-28 Brought some Fermaid K Yeast Nutrient, will add when it arrives,  fermentation appears slow currently, 
+we didn't add much in the way of nutrient at the start, only using a standard beer making nutrient 
+
+2024-05-29 Adding Fermaid K as co2 productions seems very low outside of agitation; will not be adding to other brew
+I've now very little trust in our gravity readings, hopefully time & equipment will help
 
 <h2>Post Fermentation</h2>
 

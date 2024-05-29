@@ -60,40 +60,18 @@ def grav_to_brix(grav: float) -> float:
 
 
 class NitrogenSource:
-    def __init__(self, name: str, dose_grams, dose_litres, *,
-                 nitrogen_pct=0, nitrogen_ppm=0, ammonia_ppm=0, amino_acids_ppm=0):
+    def __init__(self, name: str, *, nitrogen_ppm=0.0, parts_nitrogen_pct=0.0):
         """
         Conversion note: g/hl == mg/L == ppm
 
         :param name:
-        :type nitrogen_pct: float :param nitrogen_pct: nitrogen that is accessible to the yeast
+        :type parts_nitrogen_pct: float :param nitrogen_pct: nitrogen that is accessible to the yeast by percent weight
         :type nitrogen_ppm: float :param nitrogen_ppm: nitrogen that is accessible to the yeast
-        :type ammonia_ppm: float :param ammonia_ppm:
-        :type dose_grams: float :param dose_grams: how many grams / millilitres of the source to use
-        :type dose_litres: float :param dose_litres: how many litres does that dose effect
         """
         self.name = name
-        self.nitrogen_pct: float = nitrogen_pct
-        if self.nitrogen_pct > 0.2:
-            # 0.2 == 20% == more nitrogen than wine needs
-            print(f"Warning: NitrogenSource({name}) has nitrogen pct of {nitrogen_pct} "
-                  f"That is a lot of nitrogen, might need to check the percentage again.")
-        self.nitrogen_ppm: float = nitrogen_ppm
-        self.ammonia_ppm: float = ammonia_ppm
-        self.amino_acids_ppm: float = amino_acids_ppm
-        self.yan_as_ppm: float = sum([0.8225 * self.ammonia_ppm,
-                                      self.nitrogen_ppm,
-                                      self.nitrogen_pct * 10000,
-                                      self.amino_acids_ppm])
-        self.dose_per_litre = dose_litres / dose_grams
-        self.ppm_per_gram = self.yan_as_ppm / self.dose_per_litre
+        self.nitrogen_ppm: float = nitrogen_ppm if nitrogen_ppm else parts_nitrogen_pct * 1000
+
         self.current_dose = 0
-
-    def pct(self) -> float:
-        return self.yan_as_ppm / 10000
-
-    def ppm(self) -> float:
-        return self.yan_as_ppm
 
     def requested_quantity(self, required_ppm, litres):
         """
@@ -101,7 +79,7 @@ class NitrogenSource:
         :type litres: float :param litres: how many litres is the batch
         :return: float
         """
-        grams = required_ppm / self.ppm_per_gram * litres
+        grams = required_ppm / self.nitrogen_ppm * litres
         return grams
 
     def with_quantity(self, litres) -> Self:
@@ -112,17 +90,18 @@ class NitrogenSource:
     def use_source(self):
         if self.current_dose == 0:
             raise Exception("dose must be set before use")
-        print(f"Added Nitrogen Source: {self.name}, @{self.ppm():.1f}ppm * {self.current_dose:.1f}grams "
-              f"totaling: {self.ppm_per_gram * self.current_dose:.1f}")
-        return self.ppm_per_gram * self.current_dose
+        print(f"Added Nitrogen Source: {self.name}, @{self.nitrogen_ppm:.1f}ppm * {self.current_dose:.1f}grams "
+              f"totaling: {self.nitrogen_ppm * self.current_dose:.1f}")
+        return self.nitrogen_ppm * self.current_dose
 
 
 nitrogen_sources = {
-    "Mangrove Jack Beer Nutrient": NitrogenSource("Mangrove Jack Beer Nutrient", 15, 23, nitrogen_pct=0.007),
-    "Mangrove Jack Wine Nutrient": NitrogenSource("Mangrove Jack Wine Nutrient", 23.5, 23, nitrogen_pct=0.14),
-    "Fermaid K": NitrogenSource("Fermaid K", 1, 5, nitrogen_ppm=26),
-    "DAP": NitrogenSource("DAP", 1, 5, nitrogen_ppm=55),
-    "Honey": NitrogenSource("Honey", 1, 1, nitrogen_ppm=48.2),
+    "Mangrove Jack Beer Nutrient": NitrogenSource("Mangrove Jack Beer Nutrient", parts_nitrogen_pct=0.007),
+    "Mangrove Jack Wine Nutrient": NitrogenSource("Mangrove Jack Wine Nutrient", parts_nitrogen_pct=0.14),
+    "Fermaid O": NitrogenSource("Fermaid O",  nitrogen_ppm=40),
+    "Fermaid K": NitrogenSource("Fermaid K",  nitrogen_ppm=100),
+    "DAP": NitrogenSource("DAP",  nitrogen_ppm=210),
+    "Honey": NitrogenSource("Honey",  nitrogen_ppm=48.2),
 }
 
 
