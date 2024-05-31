@@ -44,7 +44,7 @@ Quantity:  3.5 Grams
 | 2024-05-28 | PM 22.00        |         | Agitated (shaken) 4 times, bubbles beginning today     |
 | 2024-05-29 | AM 22.00        |         | Agitated 8:45; Agitated 16:00  45s                     |
 |            | PM 22.00        | 1.062sg | added Fermaid K 1.04g in 20ml water, aerated for 2 min |
-|            |                 |         |                                                        |
+| 2024-05-30 | AM 21.00        |         | Agitated 10s still minimal bubbles                     |
 |            |                 |         |                                                        |
 |            |                 |         |                                                        |
 |            |                 |         |                                                        |
