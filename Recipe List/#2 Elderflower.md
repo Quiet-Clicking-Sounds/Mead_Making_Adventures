@@ -47,6 +47,7 @@ Quantity: 3.5 Grams
 | 2024-05-28 | PM 22.00        |         | Agitated (shaken) 2 times, bubbles apparent and regular |
 | 2024-05-29 | AM 22.00        |         | Agitated 8:45;  Agitated 16:00 20s; 18 bubbles / min    |
 | 2024-05-30 | AM 21.00        |         | Agitated 10s bubbling well still                        |
+| 2024-05-31 | AM 21.00        |         | Shaken for 30s, airlock shows movement!                 |
 |            |                 |         |                                                         |
 |            |                 |         |                                                         |
 |            |                 |         |                                                         |
@@ -55,15 +56,14 @@ Quantity: 3.5 Grams
 |            |                 |         |                                                         |
 |            |                 |         |                                                         |
 |            |                 |         |                                                         |
-
 
 <h3> Notes </h3>
 
 2024-05-29 Fermentation appears better in this brew than #1, presumably because the elderflower has some amount
-of nitrogen available to the yeast 
+of nitrogen available to the yeast
 
-2024-05-29 other brew was given Fermaid K, decided against adding to this brew as co2 production has been 
-consistent since 2024-05-27, I think our starter nutrient was a little excessive. step feeding next time.  
+2024-05-29 other brew was given Fermaid K, decided against adding to this brew as co2 production has been
+consistent since 2024-05-27, I think our starter nutrient was a little excessive. step feeding next time.
 
 <h2>Post Fermentation</h2>
 

@@ -45,6 +45,8 @@ Quantity:  3.5 Grams
 | 2024-05-29 | AM 22.00        |         | Agitated 8:45; Agitated 16:00  45s                     |
 |            | PM 22.00        | 1.062sg | added Fermaid K 1.04g in 20ml water, aerated for 2 min |
 | 2024-05-30 | AM 21.00        |         | Agitated 10s still minimal bubbles                     |
+| 2024-05-31 | AM 21.00        |         | Shaken for 30s, airlock shows movement!                |
+|            |                 |         |                                                        |
 |            |                 |         |                                                        |
 |            |                 |         |                                                        |
 |            |                 |         |                                                        |
@@ -60,6 +62,9 @@ we didn't add much in the way of nutrient at the start, only using a standard be
 
 2024-05-29 Adding Fermaid K as co2 productions seems very low outside of agitation; will not be adding to other brew
 I've now very little trust in our gravity readings, hopefully time & equipment will help
+
+2024-05-31 A little dead yeast floating on-top, more bubbles at the airlock, and plenty of bubbles once agitated,
+much happier with the progress of this one now
 
 <h2>Post Fermentation</h2>
 
