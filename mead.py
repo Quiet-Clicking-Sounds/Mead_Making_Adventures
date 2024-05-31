@@ -9,7 +9,7 @@ sg_ethanol = 0.79
 
 
 class NitrogenSource:
-    def __init__(self, name: str, *, nitrogen_ppm=0.0, parts_nitrogen_pct=0.0):
+    def __init__(self, name: str, *, nitrogen_ppm=0.0, parts_nitrogen_pct=0.0, note=""):
         """
         Conversion note: g/hl == mg/L == ppm
 
@@ -21,6 +21,7 @@ class NitrogenSource:
         self.nitrogen_ppm: float = nitrogen_ppm if nitrogen_ppm else parts_nitrogen_pct * 1000
 
         self.current_dose = 0
+        self.note = note
 
     def requested_quantity(self, required_ppm, litres):
         """
@@ -43,10 +44,9 @@ class NitrogenSource:
         return self.nitrogen_ppm * self.current_dose
 
     def __repr__(self) -> str:
-        out = f"\tNitrogen Source: {self.nitrogen_ppm:.1f}ppm x " \
-              f"{self.current_dose:.1f}g " \
-              f"= {self.nitrogen_ppm * self.current_dose:.1f}mg(?) " \
-              f" - Name: {self.name} \n"
+        out = f"\tNitrogen Source: {self.current_dose:.1f}g @ {self.nitrogen_ppm:.1f}ppm " \
+              f"= {self.nitrogen_ppm * self.current_dose:.1f}mg " \
+              f" - Name: {self.name}{' - ' if len(self.note) > 1 else ''}{self.note}\n"
         return out
 
     __str__ = __repr__
@@ -202,7 +202,7 @@ class Mead:
     def __repr__(self) -> str:
         self.calculate_ratios()
 
-        out = f"Mead Calculation:"
+        out = f"Mead Calculation for {self.product_volume:.2f} litres of product"
         out += f"\n\tStart gravity (required) {self.start_gravity:.3f} "
         out += f"\n\tFinal gravity (sweetness) {self.final_gravity:.3f} "
         out += f"\n\tExpected ABV {self.expected_abv:.1f}% \n"
@@ -210,15 +210,13 @@ class Mead:
                f"\n\tWater {self.kg_water:.3f}KG {self.kg_water:.3f}L" \
                f"\n\tHoney {self.kg_honey:.3f}KG {self.kg_honey / self.honey_gravity:.3f}L\n"
         out += "".join([i.__str__() for i in self.ingredients])
-        out += f"total product should be: {self.product_volume:.3f}L, \n"
         out += f"Nitrogen requirement (YAN): {self.nitrogen_requirement * self._get_brix_():.2f}ppm * " \
                f"{self.product_volume}L = " \
-               f"{self.nitrogen_requirement * self._get_brix_() * self.product_volume:.2f}mg(?)\n"
+               f"{self.nitrogen_requirement * self._get_brix_() * self.product_volume:.2f}mg\n"
 
-        for ns in self.nitrogen_sources:
-            out += ns.__repr__()
+        out += "".join([i.__str__() for i in self.nitrogen_sources])
         total_required_nitrogen = self._get_brix_() * self.nitrogen_requirement
-        out += f"Current Nitrogen Load: {self.sum_nitrogen_load()}, \n" \
+        out += f"Current Nitrogen Load: {self.sum_nitrogen_load()} \n" \
                f"Required Nitrogen Load: {total_required_nitrogen:.2f}"
 
         return out
@@ -246,8 +244,13 @@ class Mead:
         current_nitrogen = self.sum_nitrogen_load()
         print(f"required: {total_required_nitrogen:.2f}ppm current: {current_nitrogen:.2f}ppm")
 
-    def add_nitrogen_source(self, source: NitrogenSource, qty: float):
-        self.nitrogen_sources.append(source.with_quantity(qty))
+    def add_nitrogen_source(self, source: str, g: float):
+
+        if source not in nitrogen_sources:
+            raise Exception(f"Item {source} not in nitrogen_sources")
+
+        item = nitrogen_sources[source].with_quantity(g)
+        self.nitrogen_sources.append(item)
 
     def set_nitrogen_demand_low(self):
         """Low nitrogen-demand: 7.5 ppm YAN per 1 °Brix."""
@@ -260,28 +263,6 @@ class Mead:
     def set_nitrogen_demand_high(self):
         """High nitrogen-demand: 12.5 ppm YAN per 1 °Brix."""
         self.nitrogen_requirement = 12.5 / 0.55
-
-
-nitrogen_sources: dict[str, NitrogenSource] = {
-    "Mangrove Jack Beer Nutrient": NitrogenSource("Mangrove Jack Beer Nutrient", parts_nitrogen_pct=0.007),
-    "Mangrove Jack Wine Nutrient": NitrogenSource("Mangrove Jack Wine Nutrient", parts_nitrogen_pct=0.14),
-    "Fermaid O": NitrogenSource("Fermaid O", nitrogen_ppm=40),
-    "Fermaid K": NitrogenSource("Fermaid K", nitrogen_ppm=100),
-    "DAP": NitrogenSource("DAP", nitrogen_ppm=210),
-    "Honey": NitrogenSource("Honey", nitrogen_ppm=0),
-    # "Honey": NitrogenSource("Honey",  nitrogen_ppm=48.2), this is probably the correct value? or not?
-}
-
-ingredients: dict[str, Ingredient] = {
-    "Honey": Ingredient("Honey", specific_gravity=1.435),
-    "Sugar": Ingredient("Sugar", specific_gravity=1.59),
-    "Orange": Ingredient("Orange", sugar_per_100g=9.35, grams_per_ml=0.72, water_ml_per_gram=0.86),
-    "Peach": Ingredient("Peach", sugar_per_100g=8.39, grams_per_ml=0.998, water_ml_per_gram=0.89),
-    "Cranberry Raw": Ingredient("Cranberry Raw", sugar_per_100g=4.27, grams_per_ml=0.42, water_ml_per_gram=.873),
-    "Cranberry Dried": Ingredient("Cranberry Dried", sugar_per_100g=72.56, grams_per_ml=0.51, water_ml_per_gram=.157),
-    "Beetroot": Ingredient("Beetroot", sugar_per_100g=6.76, grams_per_ml=0.57, water_ml_per_gram=.876),
-    "Pumpkin": Ingredient("Pumpkin", sugar_per_100g=2.76, grams_per_ml=0.68, water_ml_per_gram=.916),
-}
 
 
 def interactive():
@@ -316,11 +297,33 @@ def interactive():
                 pass
 
 
+nitrogen_sources: dict[str, NitrogenSource] = {
+    "Mangrove Jack Beer Nutrient": NitrogenSource("Mangrove Jack Beer Nutrient", parts_nitrogen_pct=0.007),
+    "Mangrove Jack Wine Nutrient": NitrogenSource("Mangrove Jack Wine Nutrient", parts_nitrogen_pct=0.14),
+    "Fermaid O": NitrogenSource("Fermaid O", nitrogen_ppm=40, note="add last"),
+    "Fermaid K": NitrogenSource("Fermaid K", nitrogen_ppm=100, note="contains inorganic nitrogen"),
+    "DAP": NitrogenSource("DAP", nitrogen_ppm=210, note="mostly inorganic nitrogen, add early"),
+    "Honey": NitrogenSource("Honey", nitrogen_ppm=0),
+    # "Honey": NitrogenSource("Honey",  nitrogen_ppm=48.2), this is probably the correct value? or not?
+}
+
+ingredients: dict[str, Ingredient] = {
+    "Honey": Ingredient("Honey", specific_gravity=1.435),
+    "Sugar": Ingredient("Sugar", specific_gravity=1.59),
+    "Orange": Ingredient("Orange", sugar_per_100g=9.35, grams_per_ml=0.72, water_ml_per_gram=0.86),
+    "Peach": Ingredient("Peach", sugar_per_100g=8.39, grams_per_ml=0.998, water_ml_per_gram=0.89),
+    "Cranberry Raw": Ingredient("Cranberry Raw", sugar_per_100g=4.27, grams_per_ml=0.42, water_ml_per_gram=.873),
+    "Cranberry Dried": Ingredient("Cranberry Dried", sugar_per_100g=72.56, grams_per_ml=0.51, water_ml_per_gram=.157),
+    "Beetroot": Ingredient("Beetroot", sugar_per_100g=6.76, grams_per_ml=0.57, water_ml_per_gram=.876),
+    "Pumpkin": Ingredient("Pumpkin", sugar_per_100g=2.76, grams_per_ml=0.68, water_ml_per_gram=.916),
+}
+
 if __name__ == '__main__':
     print()
-    mead = Mead(12, 1.02, product_volume=4.5)
+    mead = Mead(12, 1.05, product_volume=4.5)
     mead.add_ingredient("Peach", g=100)
     mead.set_nitrogen_demand_medium()
-    mead.add_nitrogen_source(nitrogen_sources["Mangrove Jack Beer Nutrient"], 3.5)
-    mead.add_nitrogen_source(nitrogen_sources["Fermaid K"], 1)
+    mead.add_nitrogen_source("DAP", 1.5)
+    mead.add_nitrogen_source("Fermaid K", 1.5)
+    mead.add_nitrogen_source("Fermaid O", 1.5)
     print(mead)
