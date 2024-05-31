@@ -8,57 +8,6 @@ sg_water = 1.0
 sg_ethanol = 0.79
 
 
-def hydrometer_temperature_correction(
-        measured_gravity: float, measured_temperature: float, calibration_temperature: float = 20):
-    cal1 = 0.000134722124 * calibration_temperature
-    cal2 = 0.00000204052596 * calibration_temperature ** 2
-    cal3 = 0.00000000232820948 - calibration_temperature ** 3
-    tmp1 = 0.000134722124 * measured_temperature
-    tmp2 = 0.00000204052596 * measured_temperature ** 2
-    tmp3 = 0.00000000232820948 * measured_temperature ** 3
-    correction_factor = (1.00130346 - cal1 + cal2 - cal3) - (1.00130346 - tmp1 + tmp2 - tmp3)
-    return measured_gravity * correction_factor
-
-
-class Grav:
-    def __init__(self, grav: float, temp: float, cal_temp: float = 20.0):
-        self.calibration_temperature = cal_temp
-        self.measured_gravity = grav
-        self.measured_temperature = temp
-        self.correct_gravity: float = 0
-        self._correction()
-
-    def _correction(self):
-        cal1 = 0.000134722124 * self.calibration_temperature
-        cal2 = 0.00000204052596 * self.calibration_temperature ** 2
-        cal3 = 0.00000000232820948 - self.calibration_temperature ** 3
-        tmp1 = 0.000134722124 * self.measured_temperature
-        tmp2 = 0.00000204052596 * self.measured_temperature ** 2
-        tmp3 = 0.00000000232820948 * self.measured_temperature ** 3
-        self.correct_gravity = (1.00130346 - cal1 + cal2 - cal3) - (1.00130346 - tmp1 + tmp2 - tmp3)
-
-    def __call__(self, *args, **kwargs) -> float:
-        return self.correct_gravity
-
-
-class Alcohol:
-    def __init__(self, sg: Grav, fg: Grav):
-        self.starting_gravity = sg
-        self.final_gravity = fg
-        self.alcohol_pct = (sg() - fg()) * 131
-
-    def __call__(self) -> float:
-        return self.alcohol_pct
-
-
-def brix_to_grav(brix: float) -> float:
-    return brix * 0.044
-
-
-def grav_to_brix(grav: float) -> float:
-    return grav / 0.044
-
-
 class NitrogenSource:
     def __init__(self, name: str, *, nitrogen_ppm=0.0, parts_nitrogen_pct=0.0):
         """
@@ -90,54 +39,211 @@ class NitrogenSource:
     def use_source(self):
         if self.current_dose == 0:
             raise Exception("dose must be set before use")
-        print(f"Added Nitrogen Source: {self.name}, @{self.nitrogen_ppm:.1f}ppm * {self.current_dose:.1f}grams "
-              f"totaling: {self.nitrogen_ppm * self.current_dose:.1f}")
+
         return self.nitrogen_ppm * self.current_dose
 
+    def __repr__(self) -> str:
+        out = f"\tNitrogen Source: {self.nitrogen_ppm:.1f}ppm x " \
+              f"{self.current_dose:.1f}g " \
+              f"= {self.nitrogen_ppm * self.current_dose:.1f}mg(?) " \
+              f" - Name: {self.name} \n"
+        return out
 
-nitrogen_sources = {
-    "Mangrove Jack Beer Nutrient": NitrogenSource("Mangrove Jack Beer Nutrient", parts_nitrogen_pct=0.007),
-    "Mangrove Jack Wine Nutrient": NitrogenSource("Mangrove Jack Wine Nutrient", parts_nitrogen_pct=0.14),
-    "Fermaid O": NitrogenSource("Fermaid O",  nitrogen_ppm=40),
-    "Fermaid K": NitrogenSource("Fermaid K",  nitrogen_ppm=100),
-    "DAP": NitrogenSource("DAP",  nitrogen_ppm=210),
-    "Honey": NitrogenSource("Honey",  nitrogen_ppm=48.2),
-}
+    __str__ = __repr__
+
+
+class Ingredient:
+    def __init__(self, name: str, *, sugar_per_100g=1.0, grams_per_ml=None, specific_gravity=None,
+                 water_ml_per_gram=None):
+        """
+        grams per ml == sg
+        sugar: Ingredient("Sugar", sugar_per_g=1, specific_gravity = 1.59)
+
+        :param name:
+        :param sugar_per_100g: for use with ml_per_g where item is not wholly sugar
+        :param grams_per_ml: density in g/cm3
+        :param specific_gravity: SG == grams per millilitre
+        """
+        self.name = name
+        if specific_gravity is not None:
+            self.specific_gravity = specific_gravity
+        elif grams_per_ml is not None:
+            self.specific_gravity = (grams_per_ml * sugar_per_100g / 100) + 1
+        else:
+            raise ValueError("No measurable SG")
+
+        self.parts_water_by_weight = water_ml_per_gram
+        self.quantity = 0.0
+
+    def with_quantity(self, grams) -> Self:
+        new = copy.deepcopy(self)
+        new.quantity = grams
+        return new
+
+    def volume(self) -> float:
+        return self.quantity * self.parts_water_by_weight
+
+    def weight(self) -> float:
+        return self.quantity
+
+    def __repr__(self) -> str:
+        out = f"\t{self.name} {self.quantity:.0f}g, {self.quantity / self.specific_gravity:.0f}ml {self.specific_gravity:.3f}grav \n"
+        return out
+
+    __str__ = __repr__
 
 
 class Mead:
     """
     This is a real work in progress, finding a way to display useful information about what a mead may require
     YAN = Yeast assimilable nitrogen
+    [Advanced Nutrients in Mead making](https://docs.google.com/document/d/11pW-dC91OupCYKX-zld73ckg9ximXwxbmpLFOqv6JEk/edit)
+    [YAN Spreadsheet](https://docs.google.com/spreadsheets/d/1W8Pp52vFx9g-Uk7aq4WK66Kg_TI5nTrI32sBc5fGaPU/edit#gid=0)
+
+
     :param self.nitrogen_requirement: required amount of nitrogen in the mead for 1% abv
     """
 
-    def __init__(self, abv: float, final_gravity: float = 1.000, product_volume=5, honey_gravity=1.43):
+    def __init__(self, abv: float = None, final_gravity: float = None, start_gravity: float = None, product_volume=5.0):
         """
 
         :param abv: in percentage points (5% == 5)
         :param final_gravity: preferred sweetness, 1.02 is a middling sweet mead
-        :param honey_gravity: gravity of the honey being used, if known
+        :param start_gravity: starting gravity for the mead
+        :param product_volume: Volume of final product in Litres
         """
+        self.nitrogen_requirement = 0
+
+        match (abv is not None, final_gravity is not None, start_gravity is not None):
+            case (False, False, False):
+                raise Exception("Some Initial data is required")
+            case (True, False, True):
+                final_gravity = 1.000
+            case (False, True, False):
+                raise Exception("Either abv or starting gravity will be necessary")
+            case (True, True, True):
+                raise Exception("If you know all 3 you probably don't need this")
+            case (_, _, _):
+                pass
+
+        match (abv, final_gravity, start_gravity):
+            case (None, final_gravity, start_gravity):
+                abv = (start_gravity - final_gravity) * 131
+            case (abv, None, start_gravity):
+                final_gravity = start_gravity - abv / 131
+            case (abv, final_gravity, None):
+                start_gravity = final_gravity + abv / 131
+
+        self.ingredients = list()
+
         self.expected_abv = abv
         self.final_gravity = final_gravity
-        self.start_gravity = self.final_gravity + (self.expected_abv / 131)
+        self.start_gravity = start_gravity
+
         self.honey_gravity = 1.43
 
         self.product_volume = product_volume
-        self.kg_water = 1 - ((self.start_gravity - 1) / (self.honey_gravity - 1))
-        self.kg_honey = ((self.start_gravity - 1) / (self.honey_gravity - 1)) * self.honey_gravity
+        self.kg_water = None
+        self.kg_honey = None
+        self.calculate_ratios()
 
-        self.nitrogen_requirement = 7.5 / 0.55
-        self.initial_nitrogen: NitrogenSource = nitrogen_sources["Honey"].with_quantity(self.kg_honey)
+        self.set_nitrogen_demand_low()
+        self.initial_nitrogen: NitrogenSource = nitrogen_sources["Honey"].with_quantity(0)
         self.nitrogen_sources: list[NitrogenSource] = list()
 
-    def calculate_nitrogen_expectations(self):
-        total_required_nitrogen = self.expected_abv * self.nitrogen_requirement
+    def calculate_ratios(self):
+
+        ingredient_gravity_diff = 0
+        ingredient_vol = 0
+        for i in self.ingredients:
+            i_vol = i.volume() / 1000 / self.product_volume
+            ingredient_vol += i_vol
+            ingredient_gravity_diff += i_vol * i.specific_gravity
+
+        start_grav = self.start_gravity - ingredient_gravity_diff
+
+        parts_water = (1 - ((start_grav - 1) / (self.honey_gravity - 1)))
+        parts_honey = (((start_grav - 1) / (self.honey_gravity - 1)) * self.honey_gravity)
+
+        self.kg_water = parts_water * (self.product_volume - ingredient_vol)
+        self.kg_honey = parts_honey * (self.product_volume - ingredient_vol)
+        self.initial_nitrogen: NitrogenSource = nitrogen_sources["Honey"].with_quantity(self.kg_honey)
+
+    def add_ingredient(self, name: str, g: float = None, kg: float = None, qty_per_litre=False):
+        """
+        :param kg: Quantity in Kilograms to be added
+        :param g: Quantity in grams to be added
+        :param name: Name as shown in [ingredients] dictionary
+        :param qty_per_litre: use quantity on a per-litre basis
+        :return:
+        """
+
+        match (g, kg):
+            case (None, None):
+                raise Exception("Adding an ingredient requires an amount to be added")
+            case (x, None):
+                quantity = x
+            case (None, x):
+                quantity = x * 1000
+            case (x, y):
+                quantity = x + y * 1000
+            case _:
+                return
+
+        if name not in ingredients:
+            raise Exception(f"Item {name} not in Ingredients")
+        if qty_per_litre:
+            quantity = quantity * self.product_volume
+
+        item = ingredients[name].with_quantity(quantity)
+
+        self.ingredients.append(item)
+
+    def __repr__(self) -> str:
+        self.calculate_ratios()
+
+        out = f"Mead Calculation:"
+        out += f"\n\tStart gravity (required) {self.start_gravity:.3f} "
+        out += f"\n\tFinal gravity (sweetness) {self.final_gravity:.3f} "
+        out += f"\n\tExpected ABV {self.expected_abv:.1f}% \n"
+        out += f"Ingredients: " \
+               f"\n\tWater {self.kg_water:.3f}KG {self.kg_water:.3f}L" \
+               f"\n\tHoney {self.kg_honey:.3f}KG {self.kg_honey / self.honey_gravity:.3f}L\n"
+        out += "".join([i.__str__() for i in self.ingredients])
+        out += f"total product should be: {self.product_volume:.3f}L, \n"
+        out += f"Nitrogen requirement (YAN): {self.nitrogen_requirement * self._get_brix_():.2f}ppm * " \
+               f"{self.product_volume}L = " \
+               f"{self.nitrogen_requirement * self._get_brix_() * self.product_volume:.2f}mg(?)\n"
+
+        for ns in self.nitrogen_sources:
+            out += ns.__repr__()
+        total_required_nitrogen = self._get_brix_() * self.nitrogen_requirement
+        out += f"Current Nitrogen Load: {self.sum_nitrogen_load()}, \n" \
+               f"Required Nitrogen Load: {total_required_nitrogen:.2f}"
+
+        return out
+
+    __str__ = __repr__
+
+    def sum_nitrogen_load(self) -> float:
         current_nitrogen = self.initial_nitrogen.use_source()
 
         for n in self.nitrogen_sources:
             current_nitrogen += n.use_source()
+        return current_nitrogen
+
+    def _get_brix_(self) -> float:
+
+        brix = (((182.4601 * self.start_gravity - 775.6821)
+                 * self.start_gravity + 1262.7794)
+                * self.start_gravity - 669.5622)
+        if brix > 40:
+            print(f"Warning: Brix estimate {brix} is not trusted for conversion")
+        return brix
+
+    def calculate_nitrogen_expectations(self):
+        total_required_nitrogen = self._get_brix_() * self.nitrogen_requirement
+        current_nitrogen = self.sum_nitrogen_load()
         print(f"required: {total_required_nitrogen:.2f}ppm current: {current_nitrogen:.2f}ppm")
 
     def add_nitrogen_source(self, source: NitrogenSource, qty: float):
@@ -156,57 +262,65 @@ class Mead:
         self.nitrogen_requirement = 12.5 / 0.55
 
 
-def abv_estimate(original_gravity, final_gravity):
-    # predict the final abv of a fermented drink
-    return (original_gravity - final_gravity) * 131
+nitrogen_sources: dict[str, NitrogenSource] = {
+    "Mangrove Jack Beer Nutrient": NitrogenSource("Mangrove Jack Beer Nutrient", parts_nitrogen_pct=0.007),
+    "Mangrove Jack Wine Nutrient": NitrogenSource("Mangrove Jack Wine Nutrient", parts_nitrogen_pct=0.14),
+    "Fermaid O": NitrogenSource("Fermaid O", nitrogen_ppm=40),
+    "Fermaid K": NitrogenSource("Fermaid K", nitrogen_ppm=100),
+    "DAP": NitrogenSource("DAP", nitrogen_ppm=210),
+    "Honey": NitrogenSource("Honey", nitrogen_ppm=0),
+    # "Honey": NitrogenSource("Honey",  nitrogen_ppm=48.2), this is probably the correct value? or not?
+}
+
+ingredients: dict[str, Ingredient] = {
+    "Honey": Ingredient("Honey", specific_gravity=1.435),
+    "Sugar": Ingredient("Sugar", specific_gravity=1.59),
+    "Orange": Ingredient("Orange", sugar_per_100g=9.35, grams_per_ml=0.72, water_ml_per_gram=0.86),
+    "Peach": Ingredient("Peach", sugar_per_100g=8.39, grams_per_ml=0.998, water_ml_per_gram=0.89),
+    "Cranberry Raw": Ingredient("Cranberry Raw", sugar_per_100g=4.27, grams_per_ml=0.42, water_ml_per_gram=.873),
+    "Cranberry Dried": Ingredient("Cranberry Dried", sugar_per_100g=72.56, grams_per_ml=0.51, water_ml_per_gram=.157),
+    "Beetroot": Ingredient("Beetroot", sugar_per_100g=6.76, grams_per_ml=0.57, water_ml_per_gram=.876),
+    "Pumpkin": Ingredient("Pumpkin", sugar_per_100g=2.76, grams_per_ml=0.68, water_ml_per_gram=.916),
+}
 
 
-def estimate_final_gravity(alcohol_content, original_gravity):
-    return original_gravity - (alcohol_content / 131)
+def interactive():
+    abv: float | None = None
+    start_grav: float | None = None
+    end_grav: float | None = None
+    print("Mead Maker")
+    allowed_inputs = ('abv', 'start', 'end')
+    print(f"Setup, input one of {allowed_inputs} followed by a number to set. ")
+    while True:
+        arg = input()
+        arg0, arg1 = arg.lower().split(" ", 1)
 
+        match arg.lower().split(" ", 1):
+            case ['abv', x]:
+                abv = float(x)
+            case ['start', x]:
+                start_grav = float(x)
+            case ['end', x]:
+                end_grav = float(x)
+            case [a, x]:
+                print(f"command '{a}' not recognised use one of {allowed_inputs} followed by a number")
+        if sum([1 for a in (abv, + start_grav, end_grav) if a is not None]) == 2:
+            break
+    mead = Mead(abv, end_grav, start_grav)
 
-def required_original_gravity(alcohol_content, final_gravity):
-    return final_gravity + (alcohol_content / 131)
+    while True:
+        arg = input()
 
-
-def auto_compute(finished_gravity_pref=1.02, yeast_tolerance_pct=14, end_litres=5, sg_of_honey=1.43):
-    magic_number = 135
-    # 104 = yeast@14
-    sg_drop = yeast_tolerance_pct / magic_number
-    sg_start = finished_gravity_pref + sg_drop
-    # water in KG
-    required_water = 1 - ((sg_start - 1) / (sg_of_honey - 1))
-    # honey in KG
-    required_honey = (sg_start - 1) / (sg_of_honey - 1) * sg_of_honey
-
-    print(f"\n--- Mead Calculator ---\n"
-          f"alcohol content {yeast_tolerance_pct:.0f}%, "
-          f"for {end_litres:.2f} litres of product \n"
-          f"{required_honey * end_litres:.2f} KG honey, "
-          f"{required_water * end_litres:.2f} KG water\n"
-          f"SG: {sg_start:.2f}, FG: {finished_gravity_pref:.2f}")
-    if sg_start > 1.14:
-        print("Alert: Mead over 1.14 SG may stall, add additional sugar content when below 1.09 Grav")
+        match arg.lower().split(" ", 1):
+            case _:
+                pass
 
 
 if __name__ == '__main__':
-    mead = Mead(5, 1.02)
-
+    print()
+    mead = Mead(12, 1.02, product_volume=4.5)
+    mead.add_ingredient("Peach", g=100)
+    mead.set_nitrogen_demand_medium()
     mead.add_nitrogen_source(nitrogen_sources["Mangrove Jack Beer Nutrient"], 3.5)
-    mead.add_nitrogen_source(nitrogen_sources["Fermaid K"], 2.5)
-    mead.calculate_nitrogen_expectations()
-
-    if False:
-        auto_compute(yeast_tolerance_pct=6)
-        auto_compute()
-
-        # https://brew2bottle.co.uk/collections/wine-yeast/products/gervin-yeasts?variant=15349934620787
-        auto_compute(yeast_tolerance_pct=12)
-        auto_compute(yeast_tolerance_pct=15)
-        auto_compute(yeast_tolerance_pct=18)
-        auto_compute(yeast_tolerance_pct=21)
-
-        # sweet mead https://www.themaltmiller.co.uk/product/wyeast-4184-sweet-mead/?v=79cba1185463
-        auto_compute(yeast_tolerance_pct=11)
-        # 5-10%er https://www.themaltmiller.co.uk/product/wlp090-san-diego-super-yeast/?v=79cba1185463
-        # 17% dry mead https://www.themaltmiller.co.uk/product/wyeast-4021-dry-white-sparkling/?v=79cba1185463
+    mead.add_nitrogen_source(nitrogen_sources["Fermaid K"], 1)
+    print(mead)

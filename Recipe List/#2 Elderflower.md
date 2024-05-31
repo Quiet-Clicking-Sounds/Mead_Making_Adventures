@@ -48,7 +48,7 @@ Quantity: 3.5 Grams
 | 2024-05-29 | AM 22.00        |         | Agitated 8:45;  Agitated 16:00 20s; 18 bubbles / min    |
 | 2024-05-30 | AM 21.00        |         | Agitated 10s bubbling well still                        |
 | 2024-05-31 | AM 21.00        |         | Shaken for 30s, airlock shows movement!                 |
-|            |                 |         |                                                         |
+|            | __ 22.00        | 1.060   | Winetheif arrived, measurements taken more precisely    |
 |            |                 |         |                                                         |
 |            |                 |         |                                                         |
 |            |                 |         |                                                         |
@@ -64,6 +64,10 @@ of nitrogen available to the yeast
 
 2024-05-29 other brew was given Fermaid K, decided against adding to this brew as co2 production has been
 consistent since 2024-05-27, I think our starter nutrient was a little excessive. step feeding next time.
+
+2024-05-31 new hydrometer readings of 1.060 @ 22c, need to wait for a while before testing again to see how much
+alcohol we're making. Mead#1 has a 1.068 currently and our starting honey and water levels were the same on both 
+batches, so that should be the lower end of our SG 
 
 <h2>Post Fermentation</h2>
 

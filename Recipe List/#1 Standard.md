@@ -46,8 +46,8 @@ Quantity:  3.5 Grams
 |            | PM 22.00        | 1.062sg | added Fermaid K 1.04g in 20ml water, aerated for 2 min |
 | 2024-05-30 | AM 21.00        |         | Agitated 10s still minimal bubbles                     |
 | 2024-05-31 | AM 21.00        |         | Shaken for 30s, airlock shows movement!                |
-|            |                 |         |                                                        |
-|            |                 |         |                                                        |
+|            |                 | 1.068   | Winetheif arrived, measurements taken more precisely   |
+|            |                 |         | aerated for awhile                                     |
 |            |                 |         |                                                        |
 |            |                 |         |                                                        |
 |            |                 |         |                                                        |
@@ -65,6 +65,9 @@ I've now very little trust in our gravity readings, hopefully time & equipment w
 
 2024-05-31 A little dead yeast floating on-top, more bubbles at the airlock, and plenty of bubbles once agitated,
 much happier with the progress of this one now
+
+2024-05-31 14:00 Winetheif arrived today, took some more accurate readings. 1.060grav @ 22c, I'm willing to trust 
+these readings. We may end up with a sweeter or stronger brew than expected
 
 <h2>Post Fermentation</h2>
 
