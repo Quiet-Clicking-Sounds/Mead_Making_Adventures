@@ -74,10 +74,16 @@ class Ingredient:
 
         self.parts_water_by_weight = water_ml_per_gram
         self.quantity = 0.0
+        self.note: str = None
 
     def with_quantity(self, grams) -> Self:
         new = copy.deepcopy(self)
         new.quantity = grams
+        return new
+
+    def with_note(self, note: str) -> Self:
+        new = copy.deepcopy(self)
+        new.note = note
         return new
 
     def volume(self) -> float:
@@ -87,7 +93,10 @@ class Ingredient:
         return self.quantity
 
     def __repr__(self) -> str:
-        out = f"\t{self.name} {self.quantity:.0f}g, {self.quantity / self.specific_gravity:.0f}ml {self.specific_gravity:.3f}grav \n"
+        out = f"\t{self.name} {self.quantity:.0f}g, " \
+              f"{self.quantity / self.specific_gravity:.0f}ml " \
+              f"{self.specific_gravity:.3f}grav " \
+              f"{self.note if self.note is not None else ''}\n"
         return out
 
     __str__ = __repr__
@@ -105,13 +114,13 @@ class Mead:
     """
 
     def __init__(self, abv: float = None, final_gravity: float = None, start_gravity: float = None,
-                 product_volume=5.0, step_feeding=False):
+                 product_weight=5.0, step_feeding=False):
         """
 
         :param abv: in percentage points (5% == 5)
         :param final_gravity: preferred sweetness, 1.02 is a middling sweet mead
         :param start_gravity: starting gravity for the mead
-        :param product_volume: Volume of final product in Litres
+        :param product_weight: Volume of final product in Litres
         """
         self.nitrogen_requirement = 0
 
@@ -135,6 +144,9 @@ class Mead:
             case (abv, final_gravity, None):
                 start_gravity = final_gravity + abv / 131
 
+        self._step_feed_ = step_feeding
+        self.upper_grav_limit = 1.100
+        self.lower_grav_limit = 1.050
         self.ingredients = list()
 
         self.expected_abv = abv
@@ -143,7 +155,7 @@ class Mead:
 
         self.honey_gravity = 1.43
 
-        self.product_volume = product_volume
+        self.product_weight = product_weight
         self.kg_water = None
         self.total_kg_honey = None
         self.honey_steps: list[Ingredient] = list()
@@ -152,42 +164,68 @@ class Mead:
         self.set_nitrogen_demand_low()
         self.initial_nitrogen: NitrogenSource = nitrogen_sources["Honey"].with_quantity(0)
         self.nitrogen_sources: list[NitrogenSource] = list()
-        if step_feeding:
-            self.step_feeding_setup()
 
-    def step_feeding_setup(self):
-        volume = self.kg_water
-        total_sg = self.start_gravity
+    def step_feeding_setup(self, upper_grav_limit: float = None, lower_grav_limit: float = None):
+        self.upper_grav_limit = upper_grav_limit or self.upper_grav_limit
+        self.lower_grav_limit = lower_grav_limit or self.lower_grav_limit
+        self._step_feed_ = True
+        self.honey_steps = list()
         available_honey = self.total_kg_honey
+        ingredient_gravity_diff, ingredient_vol = self._get_ingredient_vol_grav()
+        start_grav = 1 + ingredient_gravity_diff
+        volume = self.kg_water + ingredient_vol
+        # first feeding
+        honey_feed = volume * ((start_grav / self.upper_grav_limit) - 1) / \
+                     (1 - (self.honey_gravity / self.upper_grav_limit)) * self.honey_gravity
+        honey_feed = max(min(honey_feed, available_honey), 0)
+        available_honey -= honey_feed
+        self.honey_steps.append(
+            ingredients["Honey"]
+            .with_quantity(honey_feed * 1000)
+            .with_note(f"initial honey addition")
+        )
 
-        upper_grav_limit = 1.060
-        lower_set_point_grav = 1.0
+        step = 0
+        # other feedings
         while available_honey > 0.00001:
-            h = volume * ((lower_set_point_grav / upper_grav_limit) - 1) / \
-                (1 - (self.honey_gravity / upper_grav_limit))
-            h = min(h, available_honey)
-
+            step += 1
+            honey_feed = volume * ((self.lower_grav_limit / self.upper_grav_limit) - 1) / \
+                         (1 - (self.honey_gravity / self.upper_grav_limit)) * self.honey_gravity
+            honey_feed = max(min(honey_feed, available_honey), 0)
+            available_honey -= honey_feed
+            self.honey_steps.append(
+                ingredients["Honey"]
+                .with_quantity(honey_feed * 1000)
+                .with_note(f"Step {step} added at {self.lower_grav_limit:.3f}grav")
+            )
 
     def kg_honey_(self) -> float:
         return sum([a.weight() for a in self.honey_steps])
 
-    def calculate_ratios(self):
-
+    def _get_ingredient_vol_grav(self) -> (float, float):
         ingredient_gravity_diff = 0
         ingredient_vol = 0
         for i in self.ingredients:
-            i_vol = i.volume() / 1000 / self.product_volume
+            i_vol = i.volume() / 1000 / self.product_weight
             ingredient_vol += i_vol
             ingredient_gravity_diff += i_vol * i.specific_gravity
+        return ingredient_gravity_diff, ingredient_vol
+
+    def calculate_ratios(self):
+        ingredient_gravity_diff, ingredient_vol = self._get_ingredient_vol_grav()
 
         start_grav = self.start_gravity - ingredient_gravity_diff
 
         parts_water = (1 - ((start_grav - 1) / (self.honey_gravity - 1)))
         parts_honey = (((start_grav - 1) / (self.honey_gravity - 1)) * self.honey_gravity)
 
-        self.kg_water = parts_water * (self.product_volume - ingredient_vol)
-        self.total_kg_honey = parts_honey * (self.product_volume - ingredient_vol)
-        self.initial_nitrogen: NitrogenSource = nitrogen_sources["Honey"].with_quantity(self.total_kg_honey)
+        self.kg_water = parts_water * (self.product_weight - ingredient_vol)
+        self.total_kg_honey = parts_honey * (self.product_weight - ingredient_vol)
+        self.initial_nitrogen: NitrogenSource = nitrogen_sources["Honey"].with_quantity(self.total_kg_honey * 1000)
+        if self._step_feed_:
+            self.step_feeding_setup()
+        else:
+            self.honey_steps = [ingredients["Honey"].with_quantity(self.total_kg_honey * 1000)]
 
     def add_ingredient(self, name: str, g: float = None, kg: float = None, qty_per_litre=False):
         """
@@ -213,7 +251,7 @@ class Mead:
         if name not in ingredients:
             raise Exception(f"Item {name} not in Ingredients")
         if qty_per_litre:
-            quantity = quantity * self.product_volume
+            quantity = quantity * self.product_weight
 
         item = ingredients[name].with_quantity(quantity)
 
@@ -222,17 +260,19 @@ class Mead:
     def __repr__(self) -> str:
         self.calculate_ratios()
 
-        out = f"Mead Calculation for {self.product_volume:.2f} litres of product"
+        out = f"Mead Calculation for {self.product_weight:.2f} litres of product"
         out += f"\n\tStart gravity (required) {self.start_gravity:.3f} "
         out += f"\n\tFinal gravity (sweetness) {self.final_gravity:.3f} "
         out += f"\n\tExpected ABV {self.expected_abv:.1f}% \n"
-        out += f"Ingredients: " \
-               f"\n\tWater {self.kg_water:.3f}KG {self.kg_water:.3f}L" \
-               f"\n\tHoney {self.total_kg_honey:.3f}KG {self.total_kg_honey / self.honey_gravity:.3f}L\n"
+        out += f"Ingredients: "
+        out += f"\n\tWater {self.kg_water:.3f}KG {self.kg_water:.3f}L \n"
+        if self._step_feed_:
+            out += f"\tTotal Honey {self.total_kg_honey:.3f}KG {self.total_kg_honey / self.honey_gravity:.3f}L\n"
         out += "".join([i.__str__() for i in self.ingredients])
+        out += "".join([i.__str__() for i in self.honey_steps])
         out += f"Nitrogen requirement (YAN): {self.nitrogen_requirement * self._get_brix_():.2f}ppm * " \
-               f"{self.product_volume}L = " \
-               f"{self.nitrogen_requirement * self._get_brix_() * self.product_volume:.2f}mg\n"
+               f"{self.product_weight}L = " \
+               f"{self.nitrogen_requirement * self._get_brix_() * self.product_weight:.2f}mg\n"
 
         out += "".join([i.__str__() for i in self.nitrogen_sources])
         total_required_nitrogen = self._get_brix_() * self.nitrogen_requirement
@@ -339,8 +379,8 @@ ingredients: dict[str, Ingredient] = {
 
 if __name__ == '__main__':
     print()
-    mead = Mead(16, 1.05, product_volume=2)
-    # mead.add_ingredient("Dragon Fruit", g=500)
+    mead = Mead(16, 1.05, product_weight=5, step_feeding=True)
+    mead.add_ingredient("Dragon Fruit", g=500)
     mead.set_nitrogen_demand_medium()
     mead.add_nitrogen_source("Fermaid K", 1.5)
     mead.add_nitrogen_source("Fermaid O", 1.5)
