@@ -48,7 +48,7 @@ Quantity:  3.5 Grams
 | 2024-05-31 | AM 21.00        |         | Shaken for 30s, airlock shows movement!                |
 |            |                 | 1.068   | Winetheif arrived, measurements taken more precisely   |
 |            |                 |         | aerated for awhile                                     |
-| 2024-06-01 | AM 22.00        |         | Shaken ~30s                                            |
+| 2024-06-01 | AM 22.00        |         | Shaken ~30s AM and again PM                            |
 |            |                 |         |                                                        |
 |            |                 |         |                                                        |
 |            |                 |         |                                                        |
@@ -67,8 +67,11 @@ I've now very little trust in our gravity readings, hopefully time & equipment w
 2024-05-31 A little dead yeast floating on-top, more bubbles at the airlock, and plenty of bubbles once agitated,
 much happier with the progress of this one now
 
-2024-05-31 14:00 Winetheif arrived today, took some more accurate readings. 1.060grav @ 22c, I'm willing to trust 
+2024-05-31 14:00 Winetheif arrived today, took some more accurate readings. 1.060grav @ 22c, I'm willing to trust
 these readings. We may end up with a sweeter or stronger brew than expected
+
+2024-06-01 with nothing to back up my thoughts other than bubbles and yeast sediment, the mead looks much more healthy
+at the moment than it did last week
 
 <h2>Post Fermentation</h2>
 
