@@ -18,6 +18,8 @@ This is not a guide, no really it's essentially a checklist of stuff we might or
     - [wpl90 calculator](https://yeastman.com/calculator)
 - [17% dry mead Wyeast ](https://www.themaltmiller.co.uk/product/wyeast-4021-dry-white-sparkling/?v=79cba1185463)
 
+[more yeast ideas](https://new.reddit.com/r/mead/comments/96o93j/what_yeast_is_best_to_use/)
+
 ## Yeast Nutrients
 
 which we should probably use
@@ -81,12 +83,18 @@ SG: 1.13, FG: 1.02
 </tr>
 </table>
 
+### seemingly random notes
+
+- Chlorophyll induces bitterness in mead 
+
+
 ### Planned Meads
 
 The long list of things that might taste nice, or might just be interesting enough to try, they'll move above
 once we've attempted to make them
 
 - Wild Violet
+    - requires a lot, 10 cups of violet petals per gallon 
     - Contains [Anthocyanin](https://en.wikipedia.org/wiki/Anthocyanin) which causes the pigmentation
     - [buying option](https://www.pollyspetals.co.uk/product/edible-freeze-dried-natural-violet-viola-flower-heads-cake-decoration-cocktail-garnish-food-grade-culinary-uk-grown-dried/)
 - [black crowberry](https://en.wikipedia.org/wiki/Empetrum_nigrum)
