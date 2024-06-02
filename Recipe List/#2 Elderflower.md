@@ -1,6 +1,6 @@
 <h1> #2 Elderflower </h1>
 
-Started on: 2024/05/25
+Started on: 2024/05/25 | Running concurrently with [#1 Standard Mead](Recipe%20List%2F%231%20Standard.md)
 
 <hr>
 
@@ -16,13 +16,14 @@ elderflower steeped in boiling water, then added to the demijohn heads included.
 
 <h3>Yeast</h3>
 
-Yeast
-Used: [5-10%er WLP90 San-diego](https://www.themaltmiller.co.uk/product/wlp090-san-diego-super-yeast/?v=79cba1185463)
-Quantity: as recommended based on volume
+<h3>Yeast</h3>
 
-Yeast
-Food: [Mangrove Jack’s Beer Nutrient 15g](https://www.themaltmiller.co.uk/product/mangrove-jacks-beer-nutrient-15g/?v=79cba1185463)
-Quantity: 3.5 Grams
+- [5-10%er WLP90 San-diego](https://www.themaltmiller.co.uk/product/wlp090-san-diego-super-yeast/?v=79cba1185463)
+  - Quantity: as recommended based on volume
+
+Yeast Food: 
+- [Mangrove Jack’s Beer Nutrient 15g](https://www.themaltmiller.co.uk/product/mangrove-jacks-beer-nutrient-15g/?v=79cba1185463)
+  - 3.50 Grams
 
 <h2>Gravity Expectations</h2>
 
@@ -51,7 +52,7 @@ Quantity: 3.5 Grams
 |            | __ 22.00        | 1.060   | Winetheif arrived, measurements taken more precisely    |
 | 2024-06-01 | AM 22.00        |         | Shaken ~30s AM and again PM                             |
 | 2024-06-02 | AM 21.00        |         |                                                         |
-|            |                 |         |                                                         |
+|            | PM 21.50        | 1.055   | Taken with Refractometer                                |
 |            |                 |         |                                                         |
 |            |                 |         |                                                         |
 |            |                 |         |                                                         |

@@ -1,6 +1,6 @@
 <h1> #1 Standard </h1>
 
-Started on: 2024/05/25
+Started on: 2024/05/25 | Running concurrently with [#2 Elderflower Mead](Recipe%20List%2F%232%20Elderflower.md)
 
 <hr>
 
@@ -13,13 +13,15 @@ Plan & Ingredient List
 
 <h3>Yeast</h3>
 
-Yeast
-Used: [5-10%er WLP90 San-diego](https://www.themaltmiller.co.uk/product/wlp090-san-diego-super-yeast/?v=79cba1185463)
-Quantity: as recommended based on volume
 
-Yeast
-Food: [Mangrove Jack’s Beer Nutrient 15g](https://www.themaltmiller.co.uk/product/mangrove-jacks-beer-nutrient-15g/?v=79cba1185463)
-Quantity:  3.5 Grams
+- [5-10%er WLP90 San-diego](https://www.themaltmiller.co.uk/product/wlp090-san-diego-super-yeast/?v=79cba1185463)
+  - Quantity: as recommended based on volume
+
+Yeast Food: 
+- [Mangrove Jack’s Beer Nutrient 15g](https://www.themaltmiller.co.uk/product/mangrove-jacks-beer-nutrient-15g/?v=79cba1185463)
+  - 3.50 Grams
+- Fermaid K 
+  - 1.04g
 
 <h2>Gravity Expectations</h2>
 
@@ -50,7 +52,7 @@ Quantity:  3.5 Grams
 |            |                 |         | aerated for awhile                                     |
 | 2024-06-01 | AM 22.00        |         | Shaken ~30s AM and again PM                            |
 | 2024-06-02 | AM 21.00        |         |                                                        |
-|            |                 |         |                                                        |
+|            | PM 21.50        | 1.060   | Taken with Refractometer                               |
 |            |                 |         |                                                        |
 |            |                 |         |                                                        |
 |            |                 |         |                                                        |
@@ -73,6 +75,8 @@ these readings. We may end up with a sweeter or stronger brew than expected
 
 2024-06-01 with nothing to back up my thoughts other than bubbles and yeast sediment, the mead looks much more healthy
 at the moment than it did last week
+
+2024-06-02 Refractometers are easier to use; I'll be using it for all but the first and last tests from now on I think
 
 <h2>Post Fermentation</h2>
 
