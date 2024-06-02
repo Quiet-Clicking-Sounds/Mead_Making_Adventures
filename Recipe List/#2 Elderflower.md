@@ -50,7 +50,7 @@ Quantity: 3.5 Grams
 | 2024-05-31 | AM 21.00        |         | Shaken for 30s, airlock shows movement!                 |
 |            | __ 22.00        | 1.060   | Winetheif arrived, measurements taken more precisely    |
 | 2024-06-01 | AM 22.00        |         | Shaken ~30s AM and again PM                             |
-|            |                 |         |                                                         |
+| 2024-06-02 | AM 21.00        |         |                                                         |
 |            |                 |         |                                                         |
 |            |                 |         |                                                         |
 |            |                 |         |                                                         |

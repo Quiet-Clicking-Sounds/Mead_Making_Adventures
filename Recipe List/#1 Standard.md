@@ -49,6 +49,7 @@ Quantity:  3.5 Grams
 |            |                 | 1.068   | Winetheif arrived, measurements taken more precisely   |
 |            |                 |         | aerated for awhile                                     |
 | 2024-06-01 | AM 22.00        |         | Shaken ~30s AM and again PM                            |
+| 2024-06-02 | AM 21.00        |         |                                                        |
 |            |                 |         |                                                        |
 |            |                 |         |                                                        |
 |            |                 |         |                                                        |
