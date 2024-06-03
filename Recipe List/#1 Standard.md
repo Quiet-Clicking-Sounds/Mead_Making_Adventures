@@ -53,7 +53,7 @@ Yeast Food:
 | 2024-06-01 | AM 22.00        |         | Shaken ~30s AM and again PM                            |
 | 2024-06-02 | AM 21.00        |         |                                                        |
 |            | PM 21.50        | 1.060   | Taken with Refractometer                               |
-|            |                 |         |                                                        |
+| 2024-06-03 | AM 22.00        |         | agitated morning, midday                               |
 |            |                 |         |                                                        |
 |            |                 |         |                                                        |
 

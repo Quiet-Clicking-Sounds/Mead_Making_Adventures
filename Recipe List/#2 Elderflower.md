@@ -19,11 +19,12 @@ elderflower steeped in boiling water, then added to the demijohn heads included.
 <h3>Yeast</h3>
 
 - [5-10%er WLP90 San-diego](https://www.themaltmiller.co.uk/product/wlp090-san-diego-super-yeast/?v=79cba1185463)
-  - Quantity: as recommended based on volume
+    - Quantity: as recommended based on volume
 
-Yeast Food: 
+Yeast Food:
+
 - [Mangrove Jack’s Beer Nutrient 15g](https://www.themaltmiller.co.uk/product/mangrove-jacks-beer-nutrient-15g/?v=79cba1185463)
-  - 3.50 Grams
+    - 3.50 Grams
 
 <h2>Gravity Expectations</h2>
 
@@ -53,6 +54,7 @@ Yeast Food:
 | 2024-06-01 | AM 22.00        |         | Shaken ~30s AM and again PM                             |
 | 2024-06-02 | AM 21.00        |         |                                                         |
 |            | PM 21.50        | 1.055   | Taken with Refractometer                                |
+| 2024-06-03 | AM 22.00        |         | agitated morning, midday                                |
 |            |                 |         |                                                         |
 |            |                 |         |                                                         |
 |            |                 |         |                                                         |
