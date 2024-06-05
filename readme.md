@@ -20,6 +20,8 @@ This is not a guide, no really it's essentially a checklist of stuff we might or
 
 [more yeast ideas](https://new.reddit.com/r/mead/comments/96o93j/what_yeast_is_best_to_use/)
 
+[Some Yeast Nutrient Requirements](https://www.piwine.com/media/pdf/yeast-selection-chart.pdf)
+
 ## Yeast Nutrients
 
 which we should probably use

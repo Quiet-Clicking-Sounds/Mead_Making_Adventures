@@ -254,15 +254,18 @@ class Mead:
         self.nitrogen_sources.append(item)
 
     def set_nitrogen_demand_low(self):
-        """Low nitrogen-demand: 7.5 ppm YAN per 1 °Brix."""
+        """Low nitrogen-demand: 7.5 ppm YAN per 1 °Brix.
+        [Nutrient Data](https://www.piwine.com/media/pdf/yeast-selection-chart.pdf)"""
         self.nitrogen_requirement = 7.5 / 0.55
 
     def set_nitrogen_demand_medium(self):
-        """Medium nitrogen-demand: 9 ppm YAN per 1 °Brix."""
+        """Medium nitrogen-demand: 9 ppm YAN per 1 °Brix.
+        [Nutrient Data](https://www.piwine.com/media/pdf/yeast-selection-chart.pdf)"""
         self.nitrogen_requirement = 9 / 0.55
 
     def set_nitrogen_demand_high(self):
-        """High nitrogen-demand: 12.5 ppm YAN per 1 °Brix."""
+        """High nitrogen-demand: 12.5 ppm YAN per 1 °Brix.
+        [Nutrient Data](https://www.piwine.com/media/pdf/yeast-selection-chart.pdf)"""
         self.nitrogen_requirement = 12.5 / 0.55
 
 
