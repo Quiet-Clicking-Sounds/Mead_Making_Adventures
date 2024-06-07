@@ -56,7 +56,7 @@ Yeast Food:
 | 2024-06-03 | AM 22.00        |         | agitated morning, midday, evening                      |
 | 2024-06-04 | AM 22.50        |         | Agitated 3x                                            |
 | 2024-06-05 | PM 22.00        | 1.056   | Agitated 3x                                            |
-|            |                 |         |                                                        |
+| 2024-06-07 | PM 22.00        | 1.053   | Agitated 2x                                            |
 |            |                 |         |                                                        |
 |            |                 |         |                                                        |
 |            |                 |         |                                                        |
