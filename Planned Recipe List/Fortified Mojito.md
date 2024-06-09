@@ -1,14 +1,4 @@
 # Fortified Mojito Mead
-```python
-from mead import Mead
-mead = Mead(18, 1.018, product_weight=5, step_feeding=True)
-mead.add_ingredient("Lime", g=320)
-mead.add_ingredient("Mint", g=1.5)
-mead.set_nitrogen_demand_medium()
-mead.add_nitrogen_source("Fermaid K", 4)
-mead.add_nitrogen_source("Fermaid O", 2)
-mead.add_nitrogen_source("Fermaid O", 2)
-```
 ```text
 Mead Calculation for 5.00 litres of product
 	Start gravity (required) 1.155 
@@ -30,4 +20,20 @@ Current Nitrogen Load: 560.00
 Required Nitrogen Load: 579.02
 
 Final additions Rum to 24% ABV
+```
+
+
+
+
+
+### generator code for this mead
+```python
+from mead import Mead
+mead = Mead(18, 1.018, product_weight=5, step_feeding=True)
+mead.add_ingredient("Lime", g=320)
+mead.add_ingredient("Mint", g=1.5)
+mead.set_nitrogen_demand_medium()
+mead.add_nitrogen_source("Fermaid K", 4)
+mead.add_nitrogen_source("Fermaid O", 2)
+mead.add_nitrogen_source("Fermaid O", 2)
 ```

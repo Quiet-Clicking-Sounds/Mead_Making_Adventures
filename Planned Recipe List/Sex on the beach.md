@@ -1,14 +1,4 @@
 # Sex on the beach
-```python
-from mead import Mead
-mead = Mead(12, 1.010, product_weight=5, step_feeding=False)
-mead.add_ingredient("Peach", g=100)
-mead.add_ingredient("Orange", g=50)
-mead.add_ingredient("Cranberry Raw", g=75)
-mead.set_nitrogen_demand_medium()
-mead.add_nitrogen_source("Fermaid K", 2.5)
-mead.add_nitrogen_source("Fermaid O", 3.5)
-```
 ```text
 Mead Calculation for 5.00 litres of product
 	Start gravity (required) 1.102 
@@ -25,4 +15,19 @@ Nitrogen requirement (YAN): 394.76ppm * 5L = 1973.80mg
 	Nitrogen Source: 3.5g @ 40.0ppm = 140.0mg  - Name: Fermaid O - add last
 Current Nitrogen Load: 390.00 
 Required Nitrogen Load: 394.76
+```
+
+
+
+
+### generator code for this mead
+```python
+from mead import Mead
+mead = Mead(12, 1.010, product_weight=5, step_feeding=False)
+mead.add_ingredient("Peach", g=100)
+mead.add_ingredient("Orange", g=50)
+mead.add_ingredient("Cranberry Raw", g=75)
+mead.set_nitrogen_demand_medium()
+mead.add_nitrogen_source("Fermaid K", 2.5)
+mead.add_nitrogen_source("Fermaid O", 3.5)
 ```
