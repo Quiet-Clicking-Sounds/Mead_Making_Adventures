@@ -1,49 +1,16 @@
-from mead import Mead, NitrogenSourceNotImplemented, IngredientNotImplemented
+import fuzzywuzzy.process
 
-
-def interactive():
-    """
-
-    :return:
-    """
-    abv: float | None = None
-    start_grav: float | None = None
-    end_grav: float | None = None
-    print("Mead Maker")
-    allowed_inputs = ('abv', 'start', 'end')
-    print(f"Setup, input one of {allowed_inputs} followed by a number to set. ")
-    while True:
-        arg = input()
-        arg0, arg1 = arg.lower().split(" ", 1)
-
-        match arg.lower().split(" ", 1):
-            case ['abv', x]:
-                abv = float(x)
-            case ['start', x]:
-                start_grav = float(x)
-            case ['end', x]:
-                end_grav = float(x)
-            case [a, x]:
-                print(f"command '{a}' not recognised use one of {allowed_inputs} followed by a number")
-        if sum([1 for a in (abv, + start_grav, end_grav) if a is not None]) == 2:
-            break
-    mead = Mead(abv, end_grav, start_grav)
-
-    while True:
-        arg = input()
-
-        match arg.lower().split(" ", 1):
-            case _:
-                pass
+from mead import Mead, NitrogenSource, Ingredient
+from mead import NitrogenSourceNotImplemented, IngredientNotImplemented
 
 
 def make_mead_base() -> Mead:
-    print("Mead Creation starte.\n")
+    print("Mead Creation started.\n")
     print("two of Alcohol, Original Gravity or Final gravity will need to be quantified: \n")
     print("Selector: A: ABV, O: Original Gravity, F: Final Gravity")
     selector_aof = [None, None, None]
 
-    while selector_aof.count(None) == 1:
+    while selector_aof.count(None) > 1:
         sel = input("Choose Selector: ")
         if len(sel) == 0:
             print("no valid input found")
@@ -80,33 +47,109 @@ def mead_creator():
 
     print("Additions can be made here:")
     while True:
-        arg = input("Options - I: Ingredient, N: Nitrogen source, E: End and print mead")
+        arg = input("Options - I: Ingredient, N: Nitrogen source, E: End and print mead:")
         if len(arg) == 0:
             print("no valid input found")
             continue
         match arg.lower().strip()[0]:
-            case 'e': break
-            case 'i': mead = add_ingredient(mead)
-            case 'n': mead = add_nitrogen(mead)
-            case _ : print("No valid input found")
+            case 'e':
+                break
+            case 'i':
+                mead = add_ingredient(mead)
+            case 'n':
+                mead = add_nitrogen(mead)
+            case _:
+                print("No valid input found")
     print(mead)
 
+
+def ask_for_bool(question: str) -> bool:
+    bl = input(question)
+    bl = bl.lower()[0]
+    if bl == 'y':
+        return True
+    return False
+
+
 def add_ingredient(mead: Mead) -> Mead:
-    try:
-        pass
-    except IngredientNotImplemented as _ie:
-        print("No ingredient by that name has been found")
-    finally:
-        return mead
+    ingredient_list = Ingredient.get_source_list()
+    print("Choose Ingredient, use '.' to exit,  use '?' to print ingredient list: ")
+    while True:
+        i = input()
+        if i[0] == '?':
+            sl = ', '.join(ingredient_list)
+            print(f"Ingredient options: {sl}")
+            continue
+        elif i[0] == '.':
+            break
+
+        try:
+            best_match: tuple[str, int] | None = fuzzywuzzy.process.extractOne(query=i, choices=ingredient_list)
+            match best_match:
+                case None:
+                    print("No match, try again")
+                    continue
+                case (x, n) if n < 75:
+                    if ask_for_bool(f"Did you mean: {x}? (y/n)"):
+                        ing = x
+                    else:
+                        continue
+                case (x, n) if n >= 75:
+                    ing = x
+                case _:
+                    print("that didn't work, you shouldn't be here")
+                    continue
+
+            qty = single_float_selector("Add Quantity in KG (total):", 0, None)
+            if qty is None:
+                continue
+            print(f"Adding: {qty}kg of {ing}")
+            mead.add_ingredient(ing, kg=qty)
+            break
+        except IngredientNotImplemented as _ie:
+            print("No ingredient by that name has been found")
+
+    return mead
+
 
 def add_nitrogen(mead: Mead) -> Mead:
-    arg = input("123")
-    try:
-        pass
-    except NitrogenSourceNotImplemented as _ne:
-        print("No nitrogen source by that name has been found")
-    finally:
-        return mead
+    nitrogen_list = NitrogenSource.get_source_list()
+    print("Choose Nitrogen, use '.' to exit, use '?' to print nitrogen source list: ")
+    while True:
+        i = input()
+        if i[0] == '?':
+            sl = ', '.join(nitrogen_list)
+            print(f"Nitrogen options: {sl}")
+            continue
+        elif i[0] == '.':
+            break
+        try:
+            best_match: tuple[str, int] | None = fuzzywuzzy.process.extractOne(query=i, choices=nitrogen_list)
+            match best_match:
+                case None:
+                    print("No match, try again")
+                    continue
+                case (x, n) if n < 75:
+                    if ask_for_bool(f"Did you mean: {x}? (y/n)"):
+                        nt = x
+                    else:
+                        continue
+                case (x, n) if n >= 75:
+                    nt = x
+                case _:
+                    print("that didn't work, you shouldn't be here")
+                    continue
+
+            qty = single_float_selector("Add Quantity in grams(total):", 0, None)
+            if qty is None:
+                continue
+            print(f"Adding: {qty}g of {nt}")
+            mead.add_nitrogen_source(nt, qty)
+            break
+        except NitrogenSourceNotImplemented as _ne:
+            print("we got an unexpected error .. No nitrogen source by that name has been found")
+
+    return mead
 
 
 def single_float_selector(text: str, range_min: None | float, range_max: None | float) -> float | None:
@@ -121,7 +164,6 @@ def single_float_selector(text: str, range_min: None | float, range_max: None | 
     except ValueError:
         print("Error, input not valid")
         return None
-
 
 
 if __name__ == '__main__':

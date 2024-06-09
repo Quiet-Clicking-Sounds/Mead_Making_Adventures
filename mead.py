@@ -8,6 +8,7 @@ sg_water = 1.0
 sg_ethanol = 0.79
 
 
+
 class Mead:
     """
     This is a real work in progress, finding a way to display useful information about what a mead may require
@@ -320,6 +321,12 @@ class NitrogenSource:
 
     __str__ = __repr__
 
+    @staticmethod
+    def get_source_list() -> list[str]:
+        ls = list(NitrogenSource.nitrogen_source_dict.keys())
+        ls.sort()
+        return ls
+
 
 class Ingredient:
     ingredient_dictionary: dict[str, Self] = dict()
@@ -379,6 +386,12 @@ class Ingredient:
 
     __str__ = __repr__
 
+    @staticmethod
+    def get_source_list() -> list[str]:
+        ls = list(Ingredient.ingredient_dictionary.keys())
+        ls.sort()
+        return ls
+
 
 class NitrogenSourceNotImplemented(Exception):
     pass
@@ -389,7 +402,6 @@ class IngredientNotImplemented(Exception):
 
 
 # Nitrogen Sources
-nitrogen_source = NitrogenSource.nitrogen_source_dict
 NitrogenSource("Mangrove Jack Beer Nutrient", parts_nitrogen_pct=0.007)
 NitrogenSource("Mangrove Jack Wine Nutrient", parts_nitrogen_pct=0.14)
 NitrogenSource("Fermaid O", nitrogen_ppm=40, note="add last")
@@ -398,7 +410,6 @@ NitrogenSource("DAP", nitrogen_ppm=210, note="mostly inorganic nitrogen, add ear
 NitrogenSource("Honey", nitrogen_ppm=0)
 
 # Ingredients
-ingredients = Ingredient.ingredient_dictionary
 Ingredient("Honey", specific_gravity=1.435)
 Ingredient("Sugar", specific_gravity=1.59)
 Ingredient("Orange", sugar_per_100g=9.35, grams_per_ml=0.72, water_ml_per_gram=0.86)
