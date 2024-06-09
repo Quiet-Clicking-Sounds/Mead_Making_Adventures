@@ -190,7 +190,8 @@ once we've attempted to make them
 - Greengage (like plumbs)
 - Passion fruit
 - Pomegranate
-- Sex on the beach
+- [Fortified Mojito](Planned%20Recipe%20List/Fortified%20Mojito.md)
+- [Sex on the beach](Planned%20Recipe%20List/Sex%20on%20the%20beach.md)
     - the usual cocktail consists of
         - 4 cl Vodka
         - 2 cl Peach schnapps
