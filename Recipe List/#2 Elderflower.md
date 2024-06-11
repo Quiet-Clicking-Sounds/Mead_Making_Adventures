@@ -38,34 +38,26 @@ Yeast Food:
 
 <h2>Fermentation Data</h2>
 
-| Date       | Temperature  °C | Gravity | Notes                                                   |
-|------------|-----------------|---------|---------------------------------------------------------|
-| 2024-05-25 | PM 24.75        | 1060    | start time around 5pm                                   |
-| 2024-05-26 | AM 22.75        |         |                                                         |
-| 2024-05-26 | PM 22.00        |         | PH 4.5, 3 min Agitation                                 |
-| 2024-05-27 | PM 22.00        | 1075    | not sure about gravity readings currently,              |
-|            |                 |         | need to wait for the wine theif to arrive               |
-| 2024-05-28 | AM 22.00        |         |                                                         |
-| 2024-05-28 | PM 22.00        |         | Agitated (shaken) 2 times, bubbles apparent and regular |
-| 2024-05-29 | AM 22.00        |         | Agitated 8:45;  Agitated 16:00 20s; 18 bubbles / min    |
-| 2024-05-30 | AM 21.00        |         | Agitated 10s bubbling well still                        |
-| 2024-05-31 | AM 21.00        |         | Shaken for 30s, airlock shows movement!                 |
-|            | __ 22.00        | 1.060   | Winetheif arrived, measurements taken more precisely    |
-| 2024-06-01 | AM 22.00        |         | Shaken ~30s AM and again PM                             |
-| 2024-06-02 | AM 21.00        |         |                                                         |
-|            | PM 21.50        | 1.055   | Taken with Refractometer                                |
-| 2024-06-03 | AM 22.00        |         | agitated morning, midday, evening                       |
-| 2024-06-04 | AM 22.50        |         | Agitated morning                                        |
-| 2024-06-05 | PM 22.00        |         | Agitated 3x                                             |
-| 2024-06-07 | PM 22.00        | 1.051   | Agitated 2x                                             |
-|            |                 |         |                                                         |
-|            |                 |         |                                                         |
-|            |                 |         |                                                         |
-|            |                 |         |                                                         |
-|            |                 |         |                                                         |
-|            |                 |         |                                                         |
-|            |                 |         |                                                         |
-|            |                 |         |                                                         |
+| Date       | Temperature  °C | Gravity | Notes                                                |
+|------------|-----------------|---------|------------------------------------------------------|
+| 2024-05-25 | PM 24.75        | 1060    | start time around 5pm                                |
+| 2024-05-26 | PM 22.00        |         | PH 4.5, 3 min                                        |
+| 2024-05-27 | PM 22.00        | 1075    | not sure about gravity readings currently,           |
+| 2024-05-31 | __ 22.00        | 1.060   | Winetheif arrived, measurements taken more precisely |
+| 2024-06-02 | PM 21.50        | 1.055   | Taken with Refractometer                             |
+| 2024-06-07 | PM 22.00        | 1.051   | Agitated 2x                                          |
+| 2024-06-10 | PM 21.00        | 1.046   |                                                      |
+|            |                 |         |                                                      |
+|            |                 |         |                                                      |
+|            |                 |         |                                                      |
+|            |                 |         |                                                      |
+|            |                 |         |                                                      |
+|            |                 |         |                                                      |
+|            |                 |         |                                                      |
+
+- Aerated twice, first two days, could have done much more
+- I've been agitating 2 or 3 times a day, will stop when we finish fermenting
+- temperatures have been at a consistent 21-22°C
 
 <h3> Notes </h3>
 

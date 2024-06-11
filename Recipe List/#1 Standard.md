@@ -35,43 +35,36 @@ Yeast Food:
 
 <h2>Fermentation Data</h2>
 
-| Date       | Temperature  °C | Gravity | Notes                                                  |
-|------------|-----------------|---------|--------------------------------------------------------|
-| 2024-05-25 | PM 24.75        | 1.060   | start time around 5pm                                  |
-| 2024-05-26 | AM 22.75        |         |                                                        |
-| 2024-05-26 | PM 22.00        |         | PH 4.5, 3 min Agitation                                |
-| 2024-05-27 | PM 22.00        | 1.080   | not sure about gravity readings currently,             |
-|            |                 |         | need to wait for the wine theif to arrive              |
-| 2024-05-28 | AM 22.00        |         | agitated slightly with bubbler in ^1                   |
-| 2024-05-28 | PM 22.00        |         | Agitated (shaken) 4 times, bubbles beginning today     |
-| 2024-05-29 | AM 22.00        |         | Agitated 8:45; Agitated 16:00  45s                     |
-|            | PM 22.00        | 1.062sg | added Fermaid K 1.04g in 20ml water, aerated for 2 min |
-| 2024-05-30 | AM 21.00        |         | Agitated 10s still minimal bubbles                     |
-| 2024-05-31 | AM 21.00        |         | Shaken for 30s, airlock shows movement!                |
-|            |                 | 1.068   | Winetheif arrived, measurements taken more precisely   |
-|            |                 |         | aerated for awhile                                     |
-| 2024-06-01 | AM 22.00        |         | Shaken ~30s AM and again PM                            |
-| 2024-06-02 | AM 21.00        |         |                                                        |
-|            | PM 21.50        | 1.060   | Taken with Refractometer                               |
-| 2024-06-03 | AM 22.00        |         | agitated morning, midday, evening                      |
-| 2024-06-04 | AM 22.50        |         | Agitated 3x                                            |
-| 2024-06-05 | PM 22.00        | 1.056   | Agitated 3x                                            |
-| 2024-06-07 | PM 22.00        | 1.053   | Agitated 2x                                            |
-|            |                 |         |                                                        |
-|            |                 |         |                                                        |
-|            |                 |         |                                                        |
-|            |                 |         |                                                        |
-|            |                 |         |                                                        |
-|            |                 |         |                                                        |
-|            |                 |         |                                                        |
-|            |                 |         |                                                        |
+| Date       | Temperature  °C | Gravity | Notes                                                |
+|------------|-----------------|---------|------------------------------------------------------|
+| 2024-05-25 | PM 24.75        | 1.060   | start time around 5pm                                |
+| 2024-05-26 | PM 22.00        |         | PH 4.5, 3 min                                        |
+| 2024-05-27 | PM 22.00        | 1.080   | not sure about gravity readings currently,           |
+| 2024-05-29 | PM 22.00        | 1.062sg | added Fermaid K 1.04g in 20ml water                  |
+| 2024-05-31 |                 | 1.068   | Winetheif arrived, measurements taken more precisely |
+| 2024-06-02 | PM 21.50        | 1.060   | Taken with Refractometer                             |
+| 2024-06-05 | PM 22.00        | 1.056   |                                                      |
+| 2024-06-07 | PM 22.00        | 1.053   |                                                      |
+| 2024-06-10 | PM 21.00        | 1.048   |                                                      |
+|            |                 |         |                                                      |
+|            |                 |         |                                                      |
+|            |                 |         |                                                      |
+|            |                 |         |                                                      |
+|            |                 |         |                                                      |
+|            |                 |         |                                                      |
+|            |                 |         |                                                      |
 
 1: bubbler secured in and shaken lightly seems to be making co2
 
+- aeration was done for the first 5 days on this one, not sure if that hindered since we didn't see fermentation for
+  a while
+- I've been agitating 2 or 3 times a day, will stop when we finish fermenting
+- temperatures have been at a consistent 21-22°C
 
 <h3> Notes </h3>
-2024-05-28 Brought some Fermaid K Yeast Nutrient, will add when it arrives,  fermentation appears slow currently, 
-we didn't add much in the way of nutrient at the start, only using a standard beer making nutrient 
+
+2024-05-28 Brought some Fermaid K Yeast Nutrient, will add when it arrives, fermentation appears slow currently,
+we didn't add much in the way of nutrient at the start, only using a standard beer making nutrient
 
 2024-05-29 Adding Fermaid K as co2 productions seems very low outside of agitation; will not be adding to other brew
 I've now very little trust in our gravity readings, hopefully time & equipment will help
