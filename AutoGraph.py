@@ -79,6 +79,7 @@ def get_recipe_fermentation_data(tar: Path) -> list[FermentDataPoint]:
 
 
 def make_graph(tar, data_: list[FermentDataPoint]):
+    plt.style.use('dark_background')
     fig, ax1 = plt.subplots()
     fig: matplotlib.pyplot.Figure
     ax1: matplotlib.pyplot.Axes
