@@ -37,22 +37,24 @@ Yeast Food:
 
 | Date       | Temperature  °C | Gravity | Notes                                                |
 |------------|-----------------|---------|------------------------------------------------------|
-| 2024-05-25 | PM 24.75        | 1.060   | start time around 5pm                                |
-| 2024-05-26 | PM 22.00        |         | PH 4.5, 3 min                                        |
-| 2024-05-27 | PM 22.00        | 1.080   | not sure about gravity readings currently,           |
-| 2024-05-29 | PM 22.00        | 1.062sg | added Fermaid K 1.04g in 20ml water                  |
-| 2024-05-31 | PM 22.00        | 1.068   | Winetheif arrived, measurements taken more precisely |
-| 2024-06-02 | PM 21.50        | 1.060   | Taken with Refractometer                             |
-| 2024-06-05 | PM 22.00        | 1.056   |                                                      |
-| 2024-06-07 | PM 22.00        | 1.053   |                                                      |
-| 2024-06-10 | PM 21.00        | 1.048   |                                                      |
+| 2024-05-25 | 24.75           | 1.060   | start time around 5pm                                |
+| 2024-05-26 | 22.00           |         | PH 4.5, 3 min                                        |
+| 2024-05-27 | 22.00           | 1.080   | not sure about gravity readings currently,           |
+| 2024-05-29 | 22.00           | 1.062   | added Fermaid K 1.04g in 20ml water                  |
+| 2024-05-31 | 22.00           | 1.068   | Winetheif arrived, measurements taken more precisely |
+| 2024-06-02 | 21.50           | 1.060   | Taken with Refractometer                             |
+| 2024-06-05 | 22.00           | 1.056   |                                                      |
+| 2024-06-07 | 22.00           | 1.053   |                                                      |
+| 2024-06-10 | 21.00           | 1.048   |                                                      |
+| 2024-06-13 | 21.00           | 1.045   |                                                      |
 |            |                 |         |                                                      |
 |            |                 |         |                                                      |
 |            |                 |         |                                                      |
 |            |                 |         |                                                      |
 |            |                 |         |                                                      |
 |            |                 |         |                                                      |
-|            |                 |         |                                                      |
+
+<img alt="#1 Standard.png" src="%231%20Standard.png"/>
 
 1: bubbler secured in and shaken lightly seems to be making co2
 

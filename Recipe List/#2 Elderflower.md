@@ -40,20 +40,22 @@ Yeast Food:
 
 | Date       | Temperature  °C | Gravity | Notes                                                |
 |------------|-----------------|---------|------------------------------------------------------|
-| 2024-05-25 | PM 24.75        | 1060    | start time around 5pm                                |
-| 2024-05-26 | PM 22.00        |         | PH 4.5, 3 min                                        |
-| 2024-05-27 | PM 22.00        | 1075    | not sure about gravity readings currently,           |
-| 2024-05-31 | PM 22.00        | 1.060   | Winetheif arrived, measurements taken more precisely |
-| 2024-06-02 | PM 21.50        | 1.055   | Taken with Refractometer                             |
-| 2024-06-07 | PM 22.00        | 1.051   | Agitated 2x                                          |
-| 2024-06-10 | PM 21.00        | 1.046   |                                                      |
+| 2024-05-25 | 24.75           | 1.060   | start time around 5pm                                |
+| 2024-05-26 | 22.00           |         | PH 4.5, 3 min                                        |
+| 2024-05-27 | 22.00           | 1.075   | not sure about gravity readings currently,           |
+| 2024-05-31 | 22.00           | 1.060   | Winetheif arrived, measurements taken more precisely |
+| 2024-06-02 | 21.50           | 1.055   | Taken with Refractometer                             |
+| 2024-06-07 | 22.00           | 1.051   | Agitated 2x                                          |
+| 2024-06-10 | 21.00           | 1.046   |                                                      |
+| 2024-06-13 | 21.00           | 1.043   |                                                      |
 |            |                 |         |                                                      |
 |            |                 |         |                                                      |
 |            |                 |         |                                                      |
 |            |                 |         |                                                      |
 |            |                 |         |                                                      |
 |            |                 |         |                                                      |
-|            |                 |         |                                                      |
+
+<img alt="#2 Elderflower.png" src="%232%20Elderflower.png"/>
 
 - Aerated twice, first two days, could have done much more
 - I've been agitating 2 or 3 times a day, will stop when we finish fermenting
