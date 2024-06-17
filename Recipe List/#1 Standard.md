@@ -54,7 +54,7 @@ Yeast Food:
 |            |                 |         |                                                      |
 |            |                 |         |                                                      |
 
-<img alt="#1 Standard.png" src="%231%20Standard.png"/>
+![#1 Standard.png](%231%20Standard.png)
 
 1: bubbler secured in and shaken lightly seems to be making co2
 
