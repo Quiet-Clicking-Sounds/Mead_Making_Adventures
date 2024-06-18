@@ -5,6 +5,7 @@ from typing import NamedTuple
 
 import matplotlib.pyplot
 import matplotlib.pyplot as plt
+from matplotlib import ticker
 
 FementDataRegex = re.compile(r"\|(|[^\|]+)\|(|[^\|]+)\|(|[^\|]+)\|(?:.+)")
 
@@ -51,6 +52,7 @@ def get_recipe_list() -> list[Path]:
 
 
 def get_recipe_fermentation_data(tar: Path) -> list[FermentDataPoint]:
+    """ Extracts data from a .md file, this is not a smart method, I should be doing better here"""
     with open(tar, 'r') as f:
         md_text = f.read()
     ferm_list = []
@@ -79,36 +81,57 @@ def get_recipe_fermentation_data(tar: Path) -> list[FermentDataPoint]:
 
 
 def make_graph(tar, data_: list[FermentDataPoint]):
+    """ I should not be allowed to use PyPlot """
+
     plt.style.use('dark_background')
+    # plot setup
     fig, ax1 = plt.subplots()
     fig: matplotlib.pyplot.Figure
     ax1: matplotlib.pyplot.Axes
+    # data needs to be in a different layout, should have planne for this earlier
     data = ([], [], [])
+    date_min = min(data_).date
     for d in data_:
-        data[0].append(d.date)
+        # Dates are less useful
+        data[0].append((d.date - date_min).days)
         data[1].append(d.temp)
         data[2].append(d.grav)
-    c1 = "tab:purple"
-    ax1.plot(data[0], data[1], color=c1)
-    ax1.tick_params(axis='y', labelcolor=c1)
-    ax1.set_ylabel("Temperature °C", color=c1)
+    colour_1 = "tab:purple"
+    colour_2 = "tab:blue"
+
+    ax1.plot(data[0], data[1], color=colour_1)
+    ax1.tick_params(axis='y', labelcolor=colour_1)
+    ax1.set_ylabel("Temperature °C", color=colour_1)
     ax1.set(
-        xlabel="Date",
-        ylim=[10, 30],
+        xlabel="Days since start",
+        ylim=[0, 30], # brewing outside the 0-30c range seems like a no-no, might modify one day
     )
 
-    ax1.tick_params(axis='x', rotation=45)
-
-    c2 = "tab:blue"
     ax2 = ax1.twinx()
-    ax2.plot(data[0], data[2], color=c2)
-    ax2.tick_params(axis='y', labelcolor=c2)
-    ax2.set_ylabel("Gravity", color=c2)
-    ax2.set(ylim=[0.9, 1.25], )
+    ax2.plot(data[0], data[2], color=colour_2)
+    ax2.tick_params(axis='y', labelcolor=colour_2)
+    ax2.set_ylabel("Gravity", color=colour_2)
+    ax2.set(
+        ylim=[
+            0.95,  # I don't think we'll be going below 0.950, might have to modify later
+            (max((d or 0 for d in data[2])) + 0.02) or 1.5  # crop the top of gravity if not used
+        ], )
+
+    # formatters
+    ax1.xaxis.set_major_formatter(ticker.FormatStrFormatter('%.0f'))
+    ax1.yaxis.set_major_formatter(ticker.FormatStrFormatter('%.2f'))
+    ax2.yaxis.set_major_formatter(ticker.FormatStrFormatter('%.3f'))
+
+    ax1.set_title(
+        f"Mead {tar.name.rsplit('.', 1)[0]} was started on {date_min.isoformat()}"
+    )
+
     fig.tight_layout()
     fig.savefig(tar)
 
+
 def apply_over_recipes():
+
     for target in get_recipe_list():
         data = get_recipe_fermentation_data(target)
         if len(data) < 2:
