@@ -127,12 +127,18 @@ NitrogenSource(
 
 ```
 
+### AutoGraph.py
+
+Graphing utility made to add graphics to the RecipeList items; when run it will 'automatically' create or update the
+graphs shown in the recipe list.
+
 ## Acids
 
 - Tartaric Acid
-    - Found in: grapes and few other fruits,
+    - Found in: Grapes
 - Malic Acid
     - Found in: Green Apples
+    - Probably the go-to for adding acidity to meads, less extreme than using Citric
 - Citric Acid
     - Found in: Citrus fruits
 - Sorbic Acid
@@ -151,6 +157,16 @@ NitrogenSource(
 The long list of things that might taste nice, or might just be interesting enough to try, they'll move above
 once we've attempted to make them
 
+Berry Meads
+- Sea Buck Thorne Berry <sup>[wiki](https://en.wikipedia.org/wiki/Hippophae)</sup>
+    - taste: astringent, sour, and oily
+    - contains Malic Acid, may be useful to
+      use  [malolactic fermentation](https://en.wikipedia.org/wiki/Malolactic_fermentation), winemaking stuff
+    - proposed 5grams per litre? via [homebrew thread](https://www.homebrewtalk.com/threads/sea-buckthorn-berries.512882/)
+    - 37.5g/L for a cider recipe via [omegafruit](https://omegafruit.ca/sea-buckthorn-berry-cider-recipe/)
+- Mulberries
+
+Flower Meads
 - Wild Violet
     - requires a lot, 10 cups of violet petals per gallon
     - Contains [Anthocyanin](https://en.wikipedia.org/wiki/Anthocyanin) which causes the pigmentation
@@ -158,38 +174,52 @@ once we've attempted to make them
 - [black crowberry](https://en.wikipedia.org/wiki/Empetrum_nigrum)
     - Contains [Anthocyanin](https://en.wikipedia.org/wiki/Anthocyanin) which causes the pigmentation
     - [buying option](https://www.rawliving.co.uk/products/dried-crowberry-powder-100g-islensk-hollusta?variant=40752788504715&currency=GBP&utm_medium=product_sync&utm_source=google&utm_content=sag_organic&utm_campaign=sag_organic&srsltid=AfmBOoq5-gKRgPIGt0PBj5e7dJsq6QzE_oIChfAFNiQ3wZKotVNOKsK0314)
-- Lemon & Lavender
-- Blood orange
-- Lime and Chilli
-- Strawberry and elderflower
-- Raspberry
-- Rhubarb
-- Cocao nibs
-- Lemon and ginger
+- orange blossom 
 - Dandelion
-- Mint
-- Blackberry
-- Ginger
-- Apple and cinnamon
+- Honeysuckle
 - Rose hip / blossom
     - Make a rose hip tea
-- Mulberries
+
+Fruit Meads
+- Blood orange
+- Raspberry
+- Blackberry
 - Wineberry
     - Find some dried ones?
-- Nettle mead
-- Turmeric mead
+- Greengage (like plumbs)
+- Persimmon
+- Gooseberry
+- Passion fruit
+- Pomegranate
+
+Vegetable Meads
+- Rhubarb
 - Carrot & Parsnip
 - turnip & beetroot
 - Beetroot
 - Horseradish
-- Honeysuckle
-- Aniseed
 - Pumpkin
-- Persimmon
-- Gooseberry
-- Greengage (like plumbs)
-- Passion fruit
-- Pomegranate
+
+
+Herbal Meads
+- Mint
+  - Don't do this as alone, use with other things, possibly lots of herbs mead?
+- Aniseed
+- Nettle mead
+
+Other Meads:
+- Cocao nibs
+- Ginger
+- Turmeric mead
+
+Multi Meads
+- Lemon & Lavender
+- Lemon and ginger
+- Strawberry and elderflower
+- Apple and cinnamon
+- Lime and 
+
+Cocktail base Meads
 - [Fortified Mojito](Planned%20Recipe%20List/Fortified%20Mojito.md)
 - [Sex on the beach](Planned%20Recipe%20List/Sex%20on%20the%20beach.md)
     - the usual cocktail consists of
@@ -209,3 +239,49 @@ once we've attempted to make them
             - Peach 500g
             - Orange 100g
             - Cranberry 250g
+
+### even more ideas taken from desert flavourings mostly
+
+The first group of these are from ["The Flavour Thesaurus" by Niki Segnit]
+
+- Chocolate 
+  - anise, cardamom, chilli, cinnamon, coffee, ginger, mint, nutmeg, rose, thyme
+  - all the things, a chocolate mead might be lovely, but it would need to be added in secondary I think 
+- Coffee 
+  - cardamom, cinnamon, clove, coriander seed, ginger, rose, vanilla.
+  - note: acidity of coffee, should check if that needs to be added in secondary 
+- Cherry 
+  - cinnamon, vanilla.
+- Watermelon 
+  - chilli, cinnamon, coriander leaf, mint, rosemary.
+    - thought: coriander may pair badly with honey
+- Grape 
+  - anise, rosemary.
+- Strawberry 
+  - anise, cinnamon, mint, vanilla.
+- Pineapple 
+  - anise, chilli, cinnamon, sage, vanilla.
+  - smaller idea: anise, sage, vanilla 
+- Apple 
+  - anise, cinnamon, rose, sage, vanilla.
+- Pear 
+  - anise, cardamom, cinnamon.
+- Banana 
+  - anise, cinnamon, vanilla.
+- Melon 
+  - anise, mint, rose.
+- Apricot 
+  - cardamom, cinnamon, ginger, rose, rosemary, vanilla.
+- Peach 
+  - clove, vanilla.
+
+
+## quick list: how much should be added? 
+
+- Cinnamon
+  - 1stick / gallon [from](https://gotmead.com/blog/making-mead/mead_recipes/joes-ancient-orange-clove-and-cinnamon-mead/)
+  - 0.2-0.4 sticks / litre [from]https://www.georgetimmermans.com/cinnamon-mead.html
+  - notes: [reddit thread](https://new.reddit.com/r/mead/comments/6yakbm/cinnamon_mead_questions/)
+- Vanilla 
+  - 0.14 Pods / litre [from](https://revolutionfermentation.com/en/blogs/fermented-beverages/vanilla-mead-recipe/)
+  - 1 bean / 5 litres  [reddit thread](https://new.reddit.com/r/mead/comments/88jvls/want_to_make_a_vanilla_bean_mead_is_it_best_to/)
