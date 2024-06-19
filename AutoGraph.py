@@ -6,6 +6,7 @@ from typing import NamedTuple
 import matplotlib.pyplot
 import matplotlib.pyplot as plt
 from matplotlib import ticker
+from matplotlib.ticker import MultipleLocator
 
 FementDataRegex = re.compile(r"\|(|[^\|]+)\|(|[^\|]+)\|(|[^\|]+)\|(?:.+)")
 
@@ -149,6 +150,11 @@ def make_graph(tar, data_: list[FermentDataPoint]):
     ax1.set_title(
         f"{tar.name.rsplit('.', 1)[0]} was started on {date_min.isoformat()}, last update {date_max.isoformat()}"
     )
+    ax1.set_xlim(left=0)
+    ax1.xaxis.set_ticks(range(0,(date_max-date_min).days,7))
+    ax1.xaxis.set_minor_locator(MultipleLocator(1))
+
+
 
     fig.tight_layout()
     fig.savefig(tar)
