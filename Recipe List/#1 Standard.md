@@ -35,24 +35,24 @@ Yeast Food:
 
 <h2>Fermentation Data</h2>
 
-| Date       | Temperature  °C | Gravity | Notes                                                |
-|------------|-----------------|---------|------------------------------------------------------|
-| 2024-05-25 | 24.75           | 1.060   | start time around 5pm                                |
-| 2024-05-26 | 22.00           |         | PH 4.5, 3 min                                        |
-| 2024-05-27 | 22.00           | 1.080   | not sure about gravity readings currently,           |
-| 2024-05-29 | 22.00           | 1.062   | added Fermaid K 1.04g in 20ml water                  |
-| 2024-05-31 | 22.00           | 1.068   | Winetheif arrived, measurements taken more precisely |
-| 2024-06-02 | 21.50           | 1.060   | Taken with Refractometer                             |
-| 2024-06-05 | 22.00           | 1.056   |                                                      |
-| 2024-06-07 | 22.00           | 1.053   |                                                      |
-| 2024-06-10 | 21.00           | 1.048   |                                                      |
-| 2024-06-13 | 21.00           | 1.045   |                                                      |
-| 2024-06-18 | 22.00           |         |                                                      |
-|            |                 |         |                                                      |
-|            |                 |         |                                                      |
-|            |                 |         |                                                      |
-|            |                 |         |                                                      |
-|            |                 |         |                                                      |
+| Date       | Temperature  °C | Gravity | PH  | Notes                                                |
+|------------|-----------------|---------|-----|------------------------------------------------------|
+| 2024-05-25 | 24.75           | 1.060   |     | start time around 5pm                                |
+| 2024-05-26 | 22.00           |         |     | PH 4.5 (I don't trust the test strips), 3 min        |
+| 2024-05-27 | 22.00           | 1.080   |     | not sure about gravity readings currently,           |
+| 2024-05-29 | 22.00           | 1.062   |     | added Fermaid K 1.04g in 20ml water                  |
+| 2024-05-31 | 22.00           | 1.068   |     | Winetheif arrived, measurements taken more precisely |
+| 2024-06-02 | 21.50           | 1.060   |     | Taken with Refractometer                             |
+| 2024-06-05 | 22.00           | 1.056   |     |                                                      |
+| 2024-06-07 | 22.00           | 1.053   |     |                                                      |
+| 2024-06-10 | 21.00           | 1.048   |     |                                                      |
+| 2024-06-13 | 21.00           | 1.045   |     |                                                      |
+| 2024-06-18 | 22.00           |         |     |                                                      |
+| 2024-06-19 | 22.00           | 1.042   | 3.2 |                                                      |
+|            |                 |         |     |                                                      |
+|            |                 |         |     |                                                      |
+|            |                 |         |     |                                                      |
+|            |                 |         |     |                                                      |
 
 ![#1 Standard.png](%231%20Standard.png)
 
