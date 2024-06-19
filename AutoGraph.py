@@ -1,3 +1,15 @@
+"""
+AutoGraph, a small utility to create recipe graphs, this should be run when a recipe is updated
+AutoGraph will create, or update the .png graphs for each recipe in the /Recipe List/ folder
+
+fermentation data to be graphed within the Recipe List markdown files should be formed as below
+    Date format should be YYYY-MM-DD and is required
+    Temperature only in C as a float or integer or may be left blank
+    Gravity must be a float  or may be left blank
+    Standard Markdown table formatting should be used, see previous recipe lists for working examples
+>>>"| Date       | Temperature  °C | Gravity |...More can be placed here..."
+"""
+
 import datetime
 import re
 from pathlib import Path
@@ -8,6 +20,7 @@ import matplotlib.pyplot as plt
 from matplotlib import ticker
 from matplotlib.ticker import MultipleLocator
 
+# Regex should be used with great care, this is not being used in that way
 FementDataRegex = re.compile(r"\|(|[^\|]+)\|(|[^\|]+)\|(|[^\|]+)\|(?:.+)")
 
 
@@ -153,8 +166,6 @@ def make_graph(tar, data_: list[FermentDataPoint]):
     ax1.set_xlim(left=0)
     ax1.xaxis.set_ticks(range(0,(date_max-date_min).days,7))
     ax1.xaxis.set_minor_locator(MultipleLocator(1))
-
-
 
     fig.tight_layout()
     fig.savefig(tar)
