@@ -91,15 +91,26 @@ def make_graph(tar, data_: list[FermentDataPoint]):
     # data needs to be in a different layout, should have planne for this earlier
     data = ([], [], [])
     date_min = min(data_).date
+    data_temp_t = []
+    data_temp = []
+
+    data_grav_t = []
+    data_grav = []
+
     for d in data_:
         # Dates are less useful
-        data[0].append((d.date - date_min).days)
-        data[1].append(d.temp)
-        data[2].append(d.grav)
+        if d.temp is not None:
+            data_temp_t.append((d.date - date_min).days)
+            data_temp.append(d.temp)
+        if d.grav is not None:
+            data_grav_t.append((d.date - date_min).days)
+            data_grav.append(d.grav)
+
     colour_1 = "tab:purple"
     colour_2 = "tab:blue"
 
-    ax1.plot(data[0], data[1], color=colour_1)
+    # ax1.plot(data[0], data[1], color=colour_1)
+    ax1.plot(data_temp_t, data_temp, color=colour_1)
     ax1.tick_params(axis='y', labelcolor=colour_1)
     ax1.set_ylabel("Temperature °C", color=colour_1)
     ax1.set(
@@ -108,13 +119,14 @@ def make_graph(tar, data_: list[FermentDataPoint]):
     )
 
     ax2 = ax1.twinx()
-    ax2.plot(data[0], data[2], color=colour_2)
+    # ax2.plot(data[0], data[2], color=colour_2)
+    ax2.plot(data_grav_t, data_grav, color=colour_2)
     ax2.tick_params(axis='y', labelcolor=colour_2)
     ax2.set_ylabel("Gravity", color=colour_2)
     ax2.set(
         ylim=[
             0.95,  # I don't think we'll be going below 0.950, might have to modify later
-            (max((d or 0 for d in data[2])) + 0.02) or 1.5  # crop the top of gravity if not used
+            (max(data_grav) + 0.02) or 1.5  # crop the top of gravity if not used
         ], )
 
     # formatters
