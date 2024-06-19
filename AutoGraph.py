@@ -32,13 +32,22 @@ class FermentDataPoint(NamedTuple):
         self.grav = value
 
     def __gt__(self, other):
-        self.date.__gt__(other.date)
+        if isinstance(other, FermentDataPoint):
+            self.date.__gt__(other.date)
+        else:
+            self.date.__gt__(other)
 
     def __lt__(self, other):
-        self.date.__lt__(other.date)
+        if isinstance(other, FermentDataPoint):
+            self.date.__lt__(other.date)
+        else:
+            self.date.__lt__(other)
 
     def __eq__(self, other):
-        self.date.__eq__(other.date)
+        if isinstance(other, FermentDataPoint):
+            self.date.__eq__(other.date)
+        else:
+            self.date.__eq__(other)
 
     def __str__(self):
         temp_text = f'{self.temp:.2f}' if self.temp is not None else "N/A"
@@ -90,12 +99,15 @@ def make_graph(tar, data_: list[FermentDataPoint]):
     ax1: matplotlib.pyplot.Axes
     # data needs to be in a different layout, should have planne for this earlier
     data = ([], [], [])
-    date_min = min(data_).date
-    data_temp_t = []
-    data_temp = []
+    date_list = [d.date for d in data_]
+    date_min = min(date_list)
+    date_max = max(date_list)
 
-    data_grav_t = []
-    data_grav = []
+    data_temp_t: list[int]= []
+    data_temp:list[float] = []
+
+    data_grav_t: list[int]= []
+    data_grav:list[float] = []
 
     for d in data_:
         # Dates are less useful
@@ -115,7 +127,7 @@ def make_graph(tar, data_: list[FermentDataPoint]):
     ax1.set_ylabel("Temperature °C", color=colour_1)
     ax1.set(
         xlabel="Days since start",
-        ylim=[0, 30], # brewing outside the 0-30c range seems like a no-no, might modify one day
+        ylim=[max(15, int(min(data_temp))-2), max(30, int(min(data_temp))+1)],
     )
 
     ax2 = ax1.twinx()
@@ -135,7 +147,7 @@ def make_graph(tar, data_: list[FermentDataPoint]):
     ax2.yaxis.set_major_formatter(ticker.FormatStrFormatter('%.3f'))
 
     ax1.set_title(
-        f"Mead {tar.name.rsplit('.', 1)[0]} was started on {date_min.isoformat()}"
+        f"{tar.name.rsplit('.', 1)[0]} was started on {date_min.isoformat()}, last update {date_max.isoformat()}"
     )
 
     fig.tight_layout()
