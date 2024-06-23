@@ -451,11 +451,11 @@ Ingredient("Mint", sugar_per_100g=0, grams_per_ml=0.856, water_ml_per_gram=0.1,
 
 if __name__ == '__main__':
     print()
-    mead = Mead(12, 1.010, product_weight=5, step_feeding=False)
-    mead.add_ingredient("Peach", g=100)
-    mead.add_ingredient("Orange", g=50)
-    mead.add_ingredient("Cranberry Raw", g=75)
+    mead = Mead(18, 1.000, product_weight=4.75, step_feeding=True)
+    mead.add_ingredient("Lime", g=100)
+    mead.add_ingredient("Mint", 0.15*4)
     mead.set_nitrogen_demand_medium()
     mead.add_nitrogen_source("Fermaid K", 2.5)
-    mead.add_nitrogen_source("Fermaid O", 3.5)
+    mead.add_nitrogen_source("Fermaid O", 3.0)
+    mead.add_nitrogen_source("Fermaid O", 3.0)
     print(mead)

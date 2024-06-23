@@ -1,4 +1,74 @@
-Dom's Mint and Lime pre Mojito
+<h1> #3 Mojito </h1>
+Started on: 2024-06-23 | Running Concurrently with [#4 Orange and Chilli.md](%234%20Orange%20and%20Chilli.md)
+
+
+
+<hr>
+
+Plan & Ingredient List
+
+| Ingredient | Planned<br/>Quantity  | Final<br/>Quantity    |
+|------------|-----------------------|-----------------------|
+| Honey      | 1865g (1211g + 654g)  | g                     |
+| Water      | 3427g                 | 3420g                 |
+| Lime Juice | 3 limes               | 3 limes               | 
+| Lime Zest  | 3 limes               | 3 limes               | 
+| Mint       | 8 mint leaves (small) | 5 mint leaves (small) | 
+
+
+
+<h3>Yeast</h3>
+- [17% dry mead Wyeast ](https://www.themaltmiller.co.uk/product/wyeast-4021-dry-white-sparkling/?v=79cba1185463)
+  - Half a packet (2-3x recommended)
+
+
+Yeast Food:
+- feed #1 
+  - Fermaid K: 2.5 grams at pitch
+    - Done 2024-06-23
+- feed #2
+  - Fermaid O: 3 grams day 3 
+- feed #3
+  - Fermaid O: 3 grams at addition of Honey - at or below 1.050 grav
+
+## Expectations
+
+- Start gravity
+  - Expected:1.137
+  - Expected: 1.068 pre step feeding
+  - Actual: 1.065 before step 1 honey addition 
+- Final gravity
+  - Expected:1.000
+  - Actual:
+- ABV 
+  - Expected: 16.0%
+  - Actual: 
+
+
+<h2>Fermentation Data</h2>
+
+| Date       | Temperature  °C | Gravity | PH  | Notes                                                      |
+|------------|-----------------|---------|-----|------------------------------------------------------------|
+| 2024-06-23 | 23.00           | 1.060   |     |                                                            |
+|            |                 |         |     |                                                            |
+|            |                 |         |     |                                                            |
+|            |                 |         |     |                                                            |
+|            |                 |         |     |                                                            |
+|            |                 |         |     |                                                            |
+|            |                 |         |     |                                                            |
+|            |                 |         |     |                                                            |
+|            |                 |         |     |                                                            |
+|            |                 |         |     |                                                            |
+|            |                 |         |     |                                                            |
+|            |                 |         |     |                                                            |
+|            |                 |         |     |                                                            |
+|            |                 |         |     |                                                            |
+|            |                 |         |     |                                                            |
+|            |                 |         |     |                                                            |
+
+
+
+
 
 ```
 Mead Calculation for 4.75 litres of product
