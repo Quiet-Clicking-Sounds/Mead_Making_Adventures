@@ -42,7 +42,7 @@ Yeast Food:
 |------------|-----------------|---------|------------------------------------------------------|
 | 2024-05-25 | 24.75           | 1.060   | start time around 5pm                                |
 | 2024-05-26 | 22.00           |         | PH 4.5, 3 min                                        |
-| 2024-05-27 | 22.00           | 1.075   | not sure about gravity readings currently,           |
+| 2024-05-27 | 22.00           |         | 1.075 not sure about gravity readings currently,     |
 | 2024-05-31 | 22.00           | 1.060   | Winetheif arrived, measurements taken more precisely |
 | 2024-06-02 | 21.50           | 1.055   | Taken with Refractometer                             |
 | 2024-06-07 | 22.00           | 1.051   | Agitated 2x                                          |
