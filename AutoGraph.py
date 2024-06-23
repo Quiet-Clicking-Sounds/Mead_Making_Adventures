@@ -7,7 +7,7 @@ fermentation data to be graphed within the Recipe List markdown files should be 
     Temperature only in C as a float or integer or may be left blank
     Gravity must be a float  or may be left blank
     Standard Markdown table formatting should be used, see previous recipe lists for working examples
->>>"| Date       | Temperature  °C | Gravity |...More can be placed here..."
+... "| Date       | Temperature  °C | Gravity |...More can be placed here..."
 """
 
 import datetime
