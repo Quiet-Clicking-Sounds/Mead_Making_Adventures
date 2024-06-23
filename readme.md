@@ -285,3 +285,11 @@ The first group of these are from ["The Flavour Thesaurus" by Niki Segnit]
 - Vanilla 
   - 0.14 Pods / litre [from](https://revolutionfermentation.com/en/blogs/fermented-beverages/vanilla-mead-recipe/)
   - 1 bean / 5 litres  [reddit thread](https://new.reddit.com/r/mead/comments/88jvls/want_to_make_a_vanilla_bean_mead_is_it_best_to/)
+
+
+## more thoughts
+
+- Chia Seeds / Guam Gum / Xantham Gum
+  - could be used in higher proof meads to make them less 'watery'? 
+  - supposedly use to improve 'mouth feel', but im still not sure how that relates.. 
+  - could be fun to make thickened mead? 
