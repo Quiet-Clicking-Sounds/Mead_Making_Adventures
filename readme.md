@@ -8,6 +8,8 @@ This is not a guide, no really it's essentially a checklist of stuff we might or
 
 - [#1 Standard Mead](Recipe%20List%2F%231%20Standard.md)
 - [#2 Elderflower Mead](Recipe%20List%2F%232%20Elderflower.md)
+- [#3 Mojito Mead](Recipe%20List%2F%233%20Mojito.md)
+- [#4 Orange and Chilli Mead](Recipe%20List%2F%234%20Orange%20and%20Chilli.md)
 
 ## Yeasts I'd like to use
 

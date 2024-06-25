@@ -1,8 +1,6 @@
 <h1> #4 Orange and Chilli</h1>
-Started on: 2024-06-23 | Running Concurrently with [#3 Mojito](#3 Mojito.md)
 
-
-
+Started on: 2024-06-23 | Running Concurrently with: [#3 Mojito](%233%20Mojito.md)
 
 
 
@@ -17,63 +15,60 @@ Plan & Ingredient List
 | Orange Juice     | 250g                 | 2 oranges (250g)   |
 | Orange Zest      | 3 Oranges            | 3 Oranges          | 
 | Red Chilli       | 75g                  | 2 chillis (35g)    |
-| Red Chilli Seeds | 2.5g                 | 1 chilli worth     |  
-
+| Red Chilli Seeds | 2.5g                 | 1 chilli worth     |
 
 <h3>Yeast</h3>
-- [17% dry mead Wyeast ](https://www.themaltmiller.co.uk/product/wyeast-4021-dry-white-sparkling/?v=79cba1185463)
-  - Half a packet (2-3x recommended)
+
+- [17% dry mead Wyeast](https://www.themaltmiller.co.uk/product/wyeast-4021-dry-white-sparkling/?v=79cba1185463)
+    - Half a packet (2-3x recommended)
 
 Yeast Food:
-- feed #1 
-  - Fermaid K: 2.5 grams at pitch
-    - Done 2024-06-23
+
+- feed #1
+    - Fermaid K: 2.5 grams at pitch
+        - Done 2024-06-23
 - feed #2
-  - Fermaid O: 3 grams day 3 
+    - Fermaid O: 3 grams day 3
 - feed #3
-  - Fermaid O: 3 grams at addition of Honey - at or below 1.050 grav
+    - Fermaid O: 3 grams at addition of Honey - at or below 1.050 grav
 
 ## Expectations
 
 - Start gravity
-  - Expected:1.132
-  - Actual: 1.095 before step 1 honey addition
+    - Expected:1.132
+    - Actual: 1.095 before step 1 honey addition
 - Final gravity
-  - Expected:1.010
-  - Actual:
-- ABV 
-  - Expected: 16.0%
-  - Actual: 
-
-
-
+    - Expected:1.010
+    - Actual:
+- ABV
+    - Expected: 16.0%
+    - Actual:
 
 <h2>Fermentation Data</h2>
 
-| Date       | Temperature  °C | Gravity | PH  | Notes                                                      |
-|------------|-----------------|---------|-----|------------------------------------------------------------|
-| 2024-06-23 | 23.00           | 1.095   |     |                                                            |
-| 2024-06-24 | 24.00           |         |     |                                                            |
-|            |                 |         |     |                                                            |
-|            |                 |         |     |                                                            |
-|            |                 |         |     |                                                            |
-|            |                 |         |     |                                                            |
-|            |                 |         |     |                                                            |
-|            |                 |         |     |                                                            |
-|            |                 |         |     |                                                            |
-|            |                 |         |     |                                                            |
-|            |                 |         |     |                                                            |
-|            |                 |         |     |                                                            |
-|            |                 |         |     |                                                            |
-|            |                 |         |     |                                                            |
-|            |                 |         |     |                                                            |
-|            |                 |         |     |                                                            |
+| Date       | Temperature  °C | Gravity | PH  | Notes |
+|------------|-----------------|---------|-----|-------|
+| 2024-06-23 | 23.00           | 1.095   |     |       |
+| 2024-06-24 | 24.00           |         |     |       |
+| 2024-06-25 | 24.00           |         |     |       |
+|            |                 |         |     |       |
+|            |                 |         |     |       |
+|            |                 |         |     |       |
+|            |                 |         |     |       |
+|            |                 |         |     |       |
+|            |                 |         |     |       |
+|            |                 |         |     |       |
+|            |                 |         |     |       |
+|            |                 |         |     |       |
+|            |                 |         |     |       |
+|            |                 |         |     |       |
+|            |                 |         |     |       |
+|            |                 |         |     |       |
 
+notes:
 
-notes: 
 - 2024-06-24 aerated for 3 minutes with a drill attachment
-
-
+- 2024-06-25 aerated again, likely for the final time
 
 ```
 Mead Calculation for 4.75 litres of product
