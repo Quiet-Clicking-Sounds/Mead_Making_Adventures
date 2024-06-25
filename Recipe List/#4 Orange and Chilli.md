@@ -36,7 +36,7 @@ Yeast Food:
 
 - Start gravity
     - Expected:1.132
-    - Actual: 1.095 before step 1 honey addition
+    - Actual: 1.065 before step 1 honey addition
 - Final gravity
     - Expected:1.010
     - Actual:
