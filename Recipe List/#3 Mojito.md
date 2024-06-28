@@ -69,7 +69,11 @@ Yeast Food:
 |            |                 |         |     |       |
 |            |                 |         |     |       |
 |            |                 |         |     |       |
+
+
 ![#3 Mojito.png](%233%20Mojito.png)
+
+
 notes:
 
 - 2024-06-24 aerated for 3 minutes with a drill attachment
