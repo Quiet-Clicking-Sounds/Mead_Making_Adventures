@@ -32,6 +32,8 @@ Yeast Food:
         - Done 2024-06-23
 - feed #2
     - Fermaid O: 3 grams day 3
+      - Done 2024-06-27
+      - caused quite the energetic reaction, had to replace the bubbler 
 - feed #3
     - Fermaid O: 3 grams at addition of Honey - at or below 1.050 grav
 
@@ -39,8 +41,7 @@ Yeast Food:
 
 - Start gravity
     - Expected:1.137
-    - Expected: 1.094 pre step feeding
-    - Actual: 1.065 before step 1 honey addition
+    - Actual: 1.094 before step 1 honey addition
 - Final gravity
     - Expected:1.000
     - Actual:
@@ -52,11 +53,11 @@ Yeast Food:
 
 | Date       | Temperature  °C | Gravity | PH  | Notes |
 |------------|-----------------|---------|-----|-------|
-| 2024-06-23 | 23.00           | 1.060   |     |       |
+| 2024-06-23 | 23.00           | 1.094   |     |       |
 | 2024-06-24 | 24.00           |         |     |       |
 | 2024-06-25 | 24.00           |         |     |       |
-|            |                 |         |     |       |
-|            |                 |         |     |       |
+| 2024-06-27 | 25.00           |         |     |       |
+| 2024-06-28 | 22.00           | 1.052   |     |       |
 |            |                 |         |     |       |
 |            |                 |         |     |       |
 |            |                 |         |     |       |

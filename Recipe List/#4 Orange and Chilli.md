@@ -29,6 +29,8 @@ Yeast Food:
         - Done 2024-06-23
 - feed #2
     - Fermaid O: 3 grams day 3
+      - Done 2024-06-27
+      - a small reaction, I think this is going to be a slower brew, possibly due to the chilli? 
 - feed #3
     - Fermaid O: 3 grams at addition of Honey - at or below 1.050 grav
 
@@ -48,11 +50,11 @@ Yeast Food:
 
 | Date       | Temperature  °C | Gravity | PH  | Notes |
 |------------|-----------------|---------|-----|-------|
-| 2024-06-23 | 23.00           | 1.095   |     |       |
+| 2024-06-23 | 23.00           | 1.650   |     |       |
 | 2024-06-24 | 24.00           |         |     |       |
 | 2024-06-25 | 24.00           |         |     |       |
-|            |                 |         |     |       |
-|            |                 |         |     |       |
+| 2024-06-27 | 25.00           |         |     |       |
+| 2024-06-28 | 22.00           | 1.056   |     |       |
 |            |                 |         |     |       |
 |            |                 |         |     |       |
 |            |                 |         |     |       |
