@@ -66,7 +66,9 @@ Yeast Food:
 |            |                 |         |     |       |
 |            |                 |         |     |       |
 |            |                 |         |     |       |
+
 ![#4 Orange and Chilli.png](%234%20Orange%20and%20Chilli.png)
+
 notes:
 
 - 2024-06-24 aerated for 3 minutes with a drill attachment
