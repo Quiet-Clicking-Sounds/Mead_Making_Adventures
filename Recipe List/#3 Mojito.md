@@ -7,13 +7,13 @@ Started on: 2024-06-23 | Running Concurrently with: [#4 Orange and Chilli](%234%
 
 Plan & Ingredient List
 
-| Ingredient | Planned<br/>Quantity  | Final<br/>Quantity    |
-|------------|-----------------------|-----------------------|
-| Honey      | 1865g (1211g + 654g)  | g                     |
-| Water      | 3427g                 | 3420g                 |
-| Lime Juice | 3 limes               | 3 limes               | 
-| Lime Zest  | 3 limes               | 3 limes               | 
-| Mint       | 8 mint leaves (small) | 5 mint leaves (small) |
+| Ingredient | Planned<br/>Quantity  | Final<br/>Quantity                                    |
+|------------|-----------------------|-------------------------------------------------------|
+| Honey      | 1865g (1211g + 654g)  | 1211 + 654?g scales didn't want to cooperate over 2kg |
+| Water      | 3427g                 | 3420g                                                 |
+| Lime Juice | 3 limes               | 3 limes                                               | 
+| Lime Zest  | 3 limes               | 3 limes                                               | 
+| Mint       | 8 mint leaves (small) | 5 mint leaves (small)                                 |
 
 - After brewing additions:
     - Mint for some time during secondary if needed
@@ -32,8 +32,8 @@ Yeast Food:
         - Done 2024-06-23
 - feed #2
     - Fermaid O: 3 grams day 3
-      - Done 2024-06-27
-      - caused quite the energetic reaction, had to replace the bubbler 
+        - Done 2024-06-27
+        - caused quite the energetic reaction, had to replace the bubbler
 - feed #3
     - Fermaid O: 3 grams at addition of Honey - at or below 1.050 grav
 
@@ -58,6 +58,7 @@ Yeast Food:
 | 2024-06-25 | 24.00           |         |     |       |
 | 2024-06-27 | 25.00           |         |     |       |
 | 2024-06-28 | 22.00           | 1.052   |     |       |
+| 2024-06-30 | 24.00           | 1.038   |     |       |
 |            |                 |         |     |       |
 |            |                 |         |     |       |
 |            |                 |         |     |       |
@@ -68,16 +69,14 @@ Yeast Food:
 |            |                 |         |     |       |
 |            |                 |         |     |       |
 |            |                 |         |     |       |
-|            |                 |         |     |       |
-
 
 ![#3 Mojito.png](%233%20Mojito.png)
-
 
 notes:
 
 - 2024-06-24 aerated for 3 minutes with a drill attachment
 - 2024-06-25 aerated again, likely for the final time
+- 2024-06-30 added honey #2, 5 mins of swirling got some of it into suspension, need a better plan for next time
 
 ```
 Mead Calculation for 4.75 litres of product

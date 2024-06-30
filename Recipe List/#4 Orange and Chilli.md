@@ -10,7 +10,7 @@ Plan & Ingredient List
 
 | Ingredient       | Planned<br/>Quantity | Final<br/>Quantity |
 |------------------|----------------------|--------------------|
-| Honey            | 1312g (895g + 453g)  | g                  |
+| Honey            | 1312g (895g + 453g)  | 895 + 496g         |
 | Water            | 3788g                | 3780g              | 
 | Orange Juice     | 250g                 | 2 oranges (250g)   |
 | Orange Zest      | 3 Oranges            | 3 Oranges          | 
@@ -29,8 +29,8 @@ Yeast Food:
         - Done 2024-06-23
 - feed #2
     - Fermaid O: 3 grams day 3
-      - Done 2024-06-27
-      - a small reaction, I think this is going to be a slower brew, possibly due to the chilli? 
+        - Done 2024-06-27
+        - a small reaction, I think this is going to be a slower brew, possibly due to the chilli?
 - feed #3
     - Fermaid O: 3 grams at addition of Honey - at or below 1.050 grav
 
@@ -55,7 +55,7 @@ Yeast Food:
 | 2024-06-25 | 24.00           |         |     |       |
 | 2024-06-27 | 25.00           |         |     |       |
 | 2024-06-28 | 22.00           | 1.056   |     |       |
-|            |                 |         |     |       |
+| 2024-06-30 | 24.00           | 1.035   |     |       |
 |            |                 |         |     |       |
 |            |                 |         |     |       |
 |            |                 |         |     |       |
@@ -73,6 +73,7 @@ notes:
 
 - 2024-06-24 aerated for 3 minutes with a drill attachment
 - 2024-06-25 aerated again, likely for the final time
+- 2024-06-30 added honey #2, 5 mins of swirling got some of it into suspension, need a better plan for next time 
 
 ```
 Mead Calculation for 4.75 litres of product
