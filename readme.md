@@ -69,32 +69,38 @@ from mead import Mead
 
 if __name__ == '__main__':
     print()
-    mead = Mead(16, 1.005, product_weight=5, step_feeding=True)
-    mead.add_ingredient("Dragon Fruit", g=500)
+    mead = Mead(18, 1.000, product_weight=4.75, step_feeding=True)
+    mead.add_ingredient("Lime", g=100)
+    mead.add_ingredient("Mint", g=0.5)
     mead.set_nitrogen_demand_medium()
-    mead.add_nitrogen_source("Fermaid K", 1.5)
-    mead.add_nitrogen_source("Fermaid O", 1.5)
+    mead.staggered_nutrient_additions(mead.SNA.Bray_Denard_dry)
     print(mead)
 ```
 
 And the commandline output will look like this:
 
 ```text
-Mead Calculation for 5.00 litres of product
-	Start gravity (required) 1.127 
-	Final gravity (sweetness) 1.005 
-	Expected ABV 16.0% 
+Mead Calculation for 4.75 litres of product
+	Start gravity (required) 1.137 
+	Final gravity (sweetness) 1.000 
+	Expected ABV 18.0% 
 Ingredients: 
-	Water 4.478KG 4.478L 
-	Total Honey 0.626KG 0.438L
-	Dragon Fruit 500g, 473ml 1.058grav 
-	Honey 221g, 154ml 1.435grav initial honey addition
-	Honey 405g, 283ml 1.435grav Step 1 added at 1.050grav
-Nitrogen requirement (YAN): 484.08ppm * 5L = 2420.39mg
-	Nitrogen Source: 1.5g @ 100.0ppm = 150.0mg  - Name: Fermaid K - contains inorganic nitrogen
-	Nitrogen Source: 1.5g @ 40.0ppm = 60.0mg  - Name: Fermaid O - add last
-Current Nitrogen Load: 210.00 
-Required Nitrogen Load: 484.08
+	Water 3.427KG 3.427L 
+	Total Honey 1.865KG 1.304L
+	Lime 100g, (1.5 fruit) 98ml 1.016grav 
+	Mint 0g, (3.3 leaves) 0ml 1.000grav 
+	Honey Water @1:1 1355g, 1115ml 1.215grav initial honey addition Honey: 678g, Water: 678g
+	Honey Water @1:1 835g, 688ml 1.215grav Step 1 added at 1.050grav Honey: 418g, Water: 418g
+	Honey Water @1:1 835g, 688ml 1.215grav Step 2 added at 1.050grav Honey: 418g, Water: 418g
+	Honey Water @1:1 704g, 579ml 1.215grav Step 3 added at 1.050grav Honey: 352g, Water: 352g
+Nitrogen requirement (YAN): 519.02ppm * 4.75L = 2465.34mg
+	Nitrogen Source: 1.9g @ 0.0ppm = 0.0mg  - Name: Potassium Carbonate - Add at pitch
+	Nitrogen Source: 1.8g @ 100.0ppm = 179.6mg  - Name: Fermaid K - Add at pitch
+	Nitrogen Source: 0.6g @ 40.0ppm = 25.3mg  - Name: Fermaid O - At pitch
+	Nitrogen Source: 0.6g @ 40.0ppm = 25.3mg  - Name: Fermaid O - 48 Hours post pitch
+	Nitrogen Source: 0.6g @ 40.0ppm = 25.3mg  - Name: Fermaid O - 96 Hours post pitch
+Current Nitrogen Load: 255.55 
+Required Nitrogen Load: 519.02
 ```
 
 ### interactive.py

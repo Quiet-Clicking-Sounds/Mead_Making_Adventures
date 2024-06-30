@@ -1,6 +1,7 @@
 # Honey  SG ranging between 1.420 g/cm3 and 1.448 g/cm3
 import copy
-from typing import Self
+from typing import Self, Final
+
 sg_min_honey = 1.420
 sg_max_honey = 1.448
 sg_water = 1.0
@@ -19,7 +20,7 @@ class Mead:
     """
 
     def __init__(self, abv: float = None, final_gravity: float = None, start_gravity: float = None,
-                 product_weight=5.0, step_feeding=False):
+                 product_weight=5.0, step_feeding=False, step_feed_mix_ratio: float = 1):
         """
         Describes the initial data about a Mead recipe.
 
@@ -49,6 +50,8 @@ class Mead:
         :param start_gravity: starting gravity for the mead
         :param product_weight: Volume of final product in Litres
         :param step_feeding: use :class:`Mead.step_feeding_setup()`
+        :param step_feed_mix_ratio: ratio of water to honey used in the stop feed to allow for better mixing,
+            1.0 would use 1:1 water to honey, 0.0 would use no water, ratio by WEIGHT
         """
         self.nitrogen_requirement = 0
 
@@ -83,6 +86,8 @@ class Mead:
 
         self.honey_gravity = 1.43
 
+        self.step_feed_ratio = max(0.0, step_feed_mix_ratio)
+
         self.product_weight = product_weight
         self.kg_water = None
         self.total_kg_honey = None
@@ -105,33 +110,48 @@ class Mead:
         self.lower_grav_limit = lower_grav_limit or self.lower_grav_limit
         self._step_feed_ = True
         self.honey_steps = list()
+
+        available_water = self.kg_water
         available_honey = self.total_kg_honey
+        water_used_for_honey = available_honey * self.step_feed_ratio
+        available_honey_water = self.total_kg_honey + water_used_for_honey
+
+        # when using honey & water as step feeding, if step ratio is < 0 it'll not use water
+        honey_water_grav = 1 + ((self.honey_gravity - 1) / (1 + self.step_feed_ratio))
+
         ingredient_gravity_diff, ingredient_vol = self._get_ingredient_vol_grav()
         start_grav = 1 + ingredient_gravity_diff
-        volume = self.kg_water + ingredient_vol
+        volume = self.kg_water + ingredient_vol - water_used_for_honey
+
+        prt_qty = lambda f: f"Honey: {f / (1 + self.step_feed_ratio) * 1 * 1000:.0f}g, " \
+                            f"Water: {f / (1 + self.step_feed_ratio) * self.step_feed_ratio * 1000:.0f}g"
+
         # first feeding
         honey_feed = volume * ((start_grav / self.upper_grav_limit) - 1) / \
-                     (1 - (self.honey_gravity / self.upper_grav_limit)) * self.honey_gravity
-        honey_feed = max(min(honey_feed, available_honey), 0)
-        available_honey -= honey_feed
+                     (1 - (honey_water_grav / self.upper_grav_limit)) * honey_water_grav
+        honey_feed = max(min(honey_feed, available_honey_water), 0)
+        available_honey_water -= honey_feed
+
+        honey_water_ingredient = Ingredient(f"Honey Water @1:{self.step_feed_ratio}", specific_gravity=honey_water_grav)
+
         self.honey_steps.append(
-            Ingredient.get("Honey")
+            honey_water_ingredient
             .with_quantity(honey_feed * 1000)
-            .with_note(f"initial honey addition")
+            .with_note(f"initial honey addition " + prt_qty(honey_feed))
         )
 
         step = 0
         # other feedings
-        while available_honey > 0.00001:
+        while available_honey_water > 0.00001:
             step += 1
             honey_feed = volume * ((self.lower_grav_limit / self.upper_grav_limit) - 1) / \
-                         (1 - (self.honey_gravity / self.upper_grav_limit)) * self.honey_gravity
-            honey_feed = max(min(honey_feed, available_honey), 0)
-            available_honey -= honey_feed
+                         (1 - (honey_water_grav / self.upper_grav_limit)) * honey_water_grav
+            honey_feed = max(min(honey_feed, available_honey_water), 0)
+            available_honey_water -= honey_feed
             self.honey_steps.append(
-                Ingredient.get("Honey")
+                honey_water_ingredient
                 .with_quantity(honey_feed * 1000)
-                .with_note(f"Step {step} added at {self.lower_grav_limit:.3f}grav")
+                .with_note(f"Step {step} added at {self.lower_grav_limit:.3f}grav " + prt_qty(honey_feed))
             )
 
     def kg_honey_(self) -> float:
@@ -225,7 +245,11 @@ class Mead:
         out += "".join([i.__str__() for i in self.nitrogen_sources])
         total_required_nitrogen = self._get_brix_() * self.nitrogen_requirement
         out += f"Current Nitrogen Load: {self.sum_nitrogen_load():.2f} \n" \
-               f"Required Nitrogen Load: {total_required_nitrogen:.2f}"
+               f"Required Nitrogen Load: {total_required_nitrogen:.2f}\n"
+        fermaid_k_use = sum([s.current_dose for s in self.nitrogen_sources if s.name == "Fermaid K"], 0)
+        if fermaid_k_use > 0.5 * self.product_weight:
+            out += f"Warning: Possibly using too much Fermaid K {fermaid_k_use / self.product_weight:.1f}g, " \
+                   "US Law would recommend less than 0.5g/L\n"
 
         return out
 
@@ -281,6 +305,100 @@ class Mead:
         [Nutrient Data](https://www.piwine.com/media/pdf/yeast-selection-chart.pdf)"""
         self.nitrogen_requirement = 12.5 / 0.55
 
+    # noinspection SpellCheckingInspection
+    class SNA:
+        """
+        SNA Options
+
+        :var TOSNA: TOSNA schedule, similar to [meadmaderight.com](https://www.meadmaderight.com/tosna-calculator)
+        :var Balathustrius: Balathustrius scheduler from [google docs](https://docs.google.com/spreadsheets/d/15VQe9BLk6TkLF5Fod7ghlRLIaRJJ07kQbPPMygu5Tyk/edit?gid=0#gid=0)
+        :var phase_3: simple 3 phase additons of Fermaid O over the first 72 Hours
+        """
+
+        TOSNA: Final[str] = "TOSNA"  #
+        Balathustrius: Final[str] = "Balathustrius"
+        phase_3: Final[str] = "phase_3"
+        phase_4: Final[str] = "phase_4"
+        Bray_Denard_liquid: Final[str] = "Bray Denard Liquid"
+        Bray_Denard_dry: Final[str] = "Bray Denard Dry"
+
+    def staggered_nutrient_additions(self, preset: str = ""):
+        """
+        Automatic SNA (Staggered Nutrient Addition), or nutrient scheduler
+        DO THIS LAST, it'll create useless results if other parts are modified after this
+
+        most of these processes were taken from [r/mead/wiki](https://new.reddit.com/r/mead/wiki/process/nutrient_schedules/)
+
+        :param preset: Options can be found in [Mead.SNA]
+        :return:
+        """
+        n2_total = self._get_brix_() * self.nitrogen_requirement
+        if preset.casefold() == self.SNA.TOSNA.casefold():
+            print(f"Using {self.SNA.TOSNA} staggered nutrient additions")
+            go_ferm = NitrogenSource.get("Go Ferm").with_quantity(0.3)
+            ferm_k_grams = (n2_total - go_ferm.use_source()) / NitrogenSource.get("Fermaid K").nitrogen_ppm
+            self.nitrogen_sources = [
+                go_ferm,
+                NitrogenSource.get("Fermaid K").with_quantity(ferm_k_grams / 4).with_note("24 Hours post pitch"),
+                NitrogenSource.get("Fermaid K").with_quantity(ferm_k_grams / 4).with_note("48 Hours post pitch"),
+                NitrogenSource.get("Fermaid K").with_quantity(ferm_k_grams / 4).with_note("72 Hours post pitch"),
+                NitrogenSource.get("Fermaid K").with_quantity(ferm_k_grams / 4)
+                .with_note("7 days post pitch or 1/3 sugar break"),
+            ]
+        elif preset.casefold() == self.SNA.Balathustrius.casefold():
+            print(f"Using {self.SNA.Balathustrius} staggered nutrient additions")
+            raise NotImplementedError("Sorry, haven't gotten around to this yet, I'd like to though")
+        elif preset.casefold() == self.SNA.phase_3.casefold():
+            print(f"Using {self.SNA.phase_3} staggered nutrient additions")
+            ferm_o_grams = n2_total / NitrogenSource.get("Fermaid O").nitrogen_ppm
+            self.nitrogen_sources = [
+                NitrogenSource.get("Fermaid O").with_quantity(ferm_o_grams / 3).with_note("At  pitch"),
+                NitrogenSource.get("Fermaid O").with_quantity(ferm_o_grams / 3).with_note("3 Days post pitch"),
+                NitrogenSource.get("Fermaid O").with_quantity(ferm_o_grams / 3).with_note("7 Days post pitch"),
+            ]
+        elif preset.casefold() == self.SNA.phase_4.casefold():
+            print(f"Using {self.SNA.phase_4} staggered nutrient additions")
+            ferm_o_grams = n2_total / NitrogenSource.get("Fermaid O").nitrogen_ppm
+            self.nitrogen_sources = [
+                NitrogenSource.get("Fermaid O").with_quantity(ferm_o_grams / 4).with_note("At  pitch"),
+                NitrogenSource.get("Fermaid O").with_quantity(ferm_o_grams / 4).with_note("1 Day post  pitch"),
+                NitrogenSource.get("Fermaid O").with_quantity(ferm_o_grams / 4).with_note("3 Days post pitch"),
+                NitrogenSource.get("Fermaid O").with_quantity(ferm_o_grams / 4).with_note("7 Days post pitch"),
+            ]
+
+        elif preset.casefold() == self.SNA.Bray_Denard_liquid.casefold() or \
+                preset.casefold() == self.SNA.Bray_Denard_dry.casefold():
+            print(f"Using {self.SNA.Bray_Denard_liquid} staggered nutrient additions")
+            grav_arg = (self.upper_grav_limit if self._step_feed_ else self.start_gravity)
+
+            self.nitrogen_sources = []
+            self.nitrogen_sources.append(NitrogenSource.get("Potassium Carbonate")
+                                         .with_quantity(0.4 * self.product_weight).with_note("Add at pitch"))
+            if preset.casefold() == self.SNA.Bray_Denard_dry.casefold():
+                self.nitrogen_sources.append(
+                    NitrogenSource.get("Fermaid K")
+                    .with_quantity(0.378 * self.product_weight).with_note("Add at pitch"))
+
+            if grav_arg <= 1.090:
+                self.nitrogen_sources.append(NitrogenSource.get("Fermaid O")
+                                             .with_quantity(0.32 * self.product_weight).with_note("Add at pitch"))
+                return
+
+            ferm_o_grams = next(
+                (a[1] for a in [(1.100, 0.32), (1.110, 0.40), (1.120, 0.52), (1.130, 0.56), (1.140, 0.64),
+                                (1.150, 0.72)] if a[0] - 0.01 >= grav_arg), 0.72) * self.product_weight
+
+            self.nitrogen_sources.append(NitrogenSource.get("Fermaid O")
+                                         .with_quantity(ferm_o_grams / 3).with_note("At pitch"))
+            self.nitrogen_sources.append(NitrogenSource.get("Fermaid O")
+                                         .with_quantity(ferm_o_grams / 3).with_note("48 Hours post pitch"))
+            self.nitrogen_sources.append(NitrogenSource.get("Fermaid O")
+                                         .with_quantity(ferm_o_grams / 3).with_note("96 Hours post pitch"))
+        else:
+            raise UserWarning("That has not been implemented")
+
+    sna = staggered_nutrient_additions
+
 
 class NitrogenSource:
     nitrogen_source_dict: dict[str, Self] = dict()
@@ -313,10 +431,15 @@ class NitrogenSource:
         grams = required_ppm / self.nitrogen_ppm * litres
         return grams
 
-    def with_quantity(self, litres) -> Self:
+    def with_quantity(self, grams) -> Self:
         """ Creates duplicate of :class:`self` with a given quantity to use"""
         new = copy.deepcopy(self)
-        new.current_dose = litres
+        new.current_dose = grams
+        return new
+
+    def with_note(self, note) -> Self:
+        new = copy.deepcopy(self)
+        new.note = note
         return new
 
     def use_source(self):
@@ -424,12 +547,15 @@ NitrogenSource("Mangrove Jack Beer Nutrient", parts_nitrogen_pct=0.007)
 NitrogenSource("Mangrove Jack Wine Nutrient", parts_nitrogen_pct=0.14)
 NitrogenSource("Fermaid O", nitrogen_ppm=40, note="add last")
 NitrogenSource("Fermaid K", nitrogen_ppm=100, note="contains inorganic nitrogen")
+NitrogenSource("Go Ferm", nitrogen_ppm=10, note="YAN contribution is insignificant, only use for starter")
 NitrogenSource("DAP", nitrogen_ppm=210, note="mostly inorganic nitrogen, add early")
 NitrogenSource("Honey", nitrogen_ppm=0)
+NitrogenSource("Potassium Carbonate", nitrogen_ppm=0, note="Not Nitrogen, still useful")
 
 # Ingredients
 ingredients = Ingredient.ingredient_dictionary
 Ingredient("Honey", specific_gravity=1.435)
+Ingredient("Honey Water", specific_gravity=1.435)
 Ingredient("Sugar", specific_gravity=1.59)
 Ingredient("Orange", sugar_per_100g=9.35, grams_per_ml=0.72, water_ml_per_gram=0.86,
            per_item_name="fruit", per_item_grams=125)
@@ -453,9 +579,11 @@ if __name__ == '__main__':
     print()
     mead = Mead(18, 1.000, product_weight=4.75, step_feeding=True)
     mead.add_ingredient("Lime", g=100)
-    mead.add_ingredient("Mint", 0.15*4)
+    mead.add_ingredient("Mint", g=0.5)
     mead.set_nitrogen_demand_medium()
-    mead.add_nitrogen_source("Fermaid K", 2.5)
-    mead.add_nitrogen_source("Fermaid O", 3.0)
-    mead.add_nitrogen_source("Fermaid O", 3.0)
+    mead.staggered_nutrient_additions(mead.SNA.Bray_Denard_dry)
+    # mead.add_nitrogen_source("Fermaid K", 2.5)
+    # mead.add_nitrogen_source("Fermaid O", 3.0)
+    # mead.add_nitrogen_source("Fermaid O", 3.0)
+
     print(mead)
