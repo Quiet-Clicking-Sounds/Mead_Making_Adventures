@@ -106,8 +106,22 @@ class Mead:
         :param lower_grav_limit: defaults to 1.050, will keep previous given limit if called multiple times
         :return:
         """
+
+        if self.expected_abv > 20 and self.step_feed_ratio > 0.5:
+            # if feed ratio is higher than overall honey/water ratio it'll error out and never finish
+            raise UserWarning("High ABV warning, use step_feed_mix_ratio below 0.5")
         self.upper_grav_limit = upper_grav_limit or self.upper_grav_limit
         self.lower_grav_limit = lower_grav_limit or self.lower_grav_limit
+
+        if self.lower_grav_limit > self.upper_grav_limit:
+            raise Exception("Upper gravity limit must be more than Lower gravity limit")
+        if self.upper_grav_limit > 1.3:
+            raise UserWarning("Upper gravity limit is set over 1.300, this will probably cause a stall")
+        if self.upper_grav_limit < 1.0:
+            raise Exception("Upper gravity limit is less than 1.000, you probably missed the 1. part")
+        if self.lower_grav_limit < 0.950:
+            raise Exception("Lower gravity limit is less than 0.950, you probably missed the 1. part")
+
         self._step_feed_ = True
         self.honey_steps = list()
 
@@ -132,13 +146,19 @@ class Mead:
         honey_feed = max(min(honey_feed, available_honey_water), 0)
         available_honey_water -= honey_feed
 
-        honey_water_ingredient = Ingredient(f"Honey Water @1:{self.step_feed_ratio}", specific_gravity=honey_water_grav)
-
         self.honey_steps.append(
-            honey_water_ingredient
+            Ingredient(f"Honey Water @1:{self.step_feed_ratio}", specific_gravity=honey_water_grav)
             .with_quantity(honey_feed * 1000)
             .with_note(f"initial honey addition " + prt_qty(honey_feed))
         )
+
+        self.honey_steps.append(
+            Ingredient.get("Water")
+            .with_quantity((available_water - water_used_for_honey) * 1000)
+            .with_note(f"initial water addition ")
+        )
+
+        honey_water_ingredient = Ingredient(f"Honey Water @1:{self.step_feed_ratio}", specific_gravity=honey_water_grav)
 
         step = 0
         # other feedings
@@ -153,6 +173,7 @@ class Mead:
                 .with_quantity(honey_feed * 1000)
                 .with_note(f"Step {step} added at {self.lower_grav_limit:.3f}grav " + prt_qty(honey_feed))
             )
+            a = 1
 
     def kg_honey_(self) -> float:
         """ returns the total honey weight in kilos based on step feeding items """
@@ -500,12 +521,12 @@ class Ingredient:
         return cls.ingredient_dictionary[item]
 
     def with_quantity(self, grams) -> Self:
-        new = copy.deepcopy(self)
+        new = copy.copy(self)
         new.quantity = grams
         return new
 
     def with_note(self, note: str) -> Self:
-        new = copy.deepcopy(self)
+        new = copy.copy(self)
         new.note = note
         return new
 
@@ -556,6 +577,7 @@ NitrogenSource("Potassium Carbonate", nitrogen_ppm=0, note="Not Nitrogen, still 
 ingredients = Ingredient.ingredient_dictionary
 Ingredient("Honey", specific_gravity=1.435)
 Ingredient("Honey Water", specific_gravity=1.435)
+Ingredient("Water", specific_gravity=1.000)
 Ingredient("Sugar", specific_gravity=1.59)
 Ingredient("Orange", sugar_per_100g=9.35, grams_per_ml=0.72, water_ml_per_gram=0.86,
            per_item_name="fruit", per_item_grams=125)
@@ -577,9 +599,10 @@ Ingredient("Mint", sugar_per_100g=0, grams_per_ml=0.856, water_ml_per_gram=0.1,
 
 if __name__ == '__main__':
     print()
-    mead = Mead(18, 1.000, product_weight=4.75, step_feeding=True)
-    mead.add_ingredient("Lime", g=100)
-    mead.add_ingredient("Mint", g=0.5)
+    mead = Mead(22, 1.020, product_weight=4.75, step_feeding=True, step_feed_mix_ratio=0.25)
+    mead.step_feeding_setup(lower_grav_limit=1.020)
+    # mead.add_ingredient("Lime", g=100)
+    # mead.add_ingredient("Mint", g=0.5)
     mead.set_nitrogen_demand_medium()
     mead.staggered_nutrient_additions(mead.SNA.Bray_Denard_dry)
     # mead.add_nitrogen_source("Fermaid K", 2.5)
