@@ -20,7 +20,7 @@ class Mead:
     """
 
     def __init__(self, abv: float = None, final_gravity: float = None, start_gravity: float = None,
-                 product_weight=5.0, step_feeding=False, step_feed_mix_ratio: float = 1):
+                 product_weight=5.0, step_feeding=False, step_feed_mix_ratio: float = None):
         """
         Describes the initial data about a Mead recipe.
 
@@ -86,7 +86,7 @@ class Mead:
 
         self.honey_gravity = 1.43
 
-        self.step_feed_ratio = max(0.0, step_feed_mix_ratio)
+        self.step_feed_ratio = max(0.0, step_feed_mix_ratio or 1)
 
         self.product_weight = product_weight
         self.kg_water = None
@@ -98,7 +98,8 @@ class Mead:
         self.initial_nitrogen: NitrogenSource = nitrogen_source["Honey"].with_quantity(0)
         self.nitrogen_sources: list[NitrogenSource] = list()
 
-    def step_feeding_setup(self, upper_grav_limit: float = None, lower_grav_limit: float = None):
+    def step_feeding_setup(self, upper_grav_limit: float = None, lower_grav_limit: float = None,
+                           step_feed_mix_ratio: float = None):
         """
         This function will aim to keep the estimated gravity between the upper and lower bounds for your mead.
 
@@ -112,6 +113,7 @@ class Mead:
             raise UserWarning("High ABV warning, use step_feed_mix_ratio below 0.5")
         self.upper_grav_limit = upper_grav_limit or self.upper_grav_limit
         self.lower_grav_limit = lower_grav_limit or self.lower_grav_limit
+        self.step_feed_ratio = max(0.0,  step_feed_mix_ratio or self.step_feed_ratio)
 
         if self.lower_grav_limit > self.upper_grav_limit:
             raise Exception("Upper gravity limit must be more than Lower gravity limit")

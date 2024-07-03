@@ -33,7 +33,7 @@ Yeast Food:
         - a small reaction, I think this is going to be a slower brew, possibly due to the chilli?
 - feed #3
     - Fermaid O: 3 grams at addition of Honey - at or below 1.050 grav
-      - Done 2024-07-03
+        - Done 2024-07-03
 
 ## Expectations
 
@@ -49,24 +49,24 @@ Yeast Food:
 
 <h2>Fermentation Data</h2>
 
-| Date       | Temperature  °C | Gravity | PH  | Notes |
-|------------|-----------------|---------|-----|-------|
-| 2024-06-23 | 23.00           | 1.065   |     |       |
-| 2024-06-24 | 24.00           |         |     |       |
-| 2024-06-25 | 24.00           |         |     |       |
-| 2024-06-27 | 25.00           |         |     |       |
-| 2024-06-28 | 22.00           | 1.056   |     |       |
-| 2024-06-30 | 24.00           | 1.035   |     |       |
-| 2024-07-01 | 23.00           |         |     |       |
-| 2024-07-03 | 22.00           |         |     |       |
-|            |                 |         |     |       |
-|            |                 |         |     |       |
-|            |                 |         |     |       |
-|            |                 |         |     |       |
-|            |                 |         |     |       |
-|            |                 |         |     |       |
-|            |                 |         |     |       |
-|            |                 |         |     |       |
+| Date       | Temperature  °C | Gravity | PH  | Notes                     |
+|------------|-----------------|---------|-----|---------------------------|
+| 2024-06-23 | 23.00           | 1.065   |     |                           |
+| 2024-06-24 | 24.00           |         |     |                           |
+| 2024-06-25 | 24.00           |         |     |                           |
+| 2024-06-27 | 25.00           |         |     |                           |
+| 2024-06-28 | 22.00           | 1.056   |     |                           |
+| 2024-06-30 | 24.00           | 1.035   |     |                           |
+| 2024-07-01 | 23.00           | 1.073   |     | Estimated blended gravity |
+| 2024-07-03 | 22.00           |         |     |                           |
+|            |                 |         |     |                           |
+|            |                 |         |     |                           |
+|            |                 |         |     |                           |
+|            |                 |         |     |                           |
+|            |                 |         |     |                           |
+|            |                 |         |     |                           |
+|            |                 |         |     |                           |
+|            |                 |         |     |                           |
 
 ![#4 Orange and Chilli.png](%234%20Orange%20and%20Chilli.png)
 
@@ -74,7 +74,7 @@ notes:
 
 - 2024-06-24 aerated for 3 minutes with a drill attachment
 - 2024-06-25 aerated again, likely for the final time
-- 2024-06-30 added honey #2, 5 mins of swirling got some of it into suspension, need a better plan for next time 
+- 2024-06-30 added honey #2, 5 mins of swirling got some of it into suspension, need a better plan for next time
 
 ```
 Mead Calculation for 4.75 litres of product
