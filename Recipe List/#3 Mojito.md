@@ -36,6 +36,7 @@ Yeast Food:
         - caused quite the energetic reaction, had to replace the bubbler
 - feed #3
     - Fermaid O: 3 grams at addition of Honey - at or below 1.050 grav
+      - Done 2024-07-03
 
 ## Expectations
 
@@ -59,8 +60,8 @@ Yeast Food:
 | 2024-06-27 | 25.00           |         |     |       |
 | 2024-06-28 | 22.00           | 1.052   |     |       |
 | 2024-06-30 | 24.00           | 1.038   |     |       |
-|            |                 |         |     |       |
-|            |                 |         |     |       |
+| 2024-07-01 | 23.00           |         |     |       |
+| 2024-07-03 | 22.00           |         |     |       |
 |            |                 |         |     |       |
 |            |                 |         |     |       |
 |            |                 |         |     |       |
