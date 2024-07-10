@@ -161,7 +161,7 @@ def make_graph(tar, data_: list[FermentDataPoint]):
     ax2.yaxis.set_major_formatter(ticker.FormatStrFormatter('%.3f'))
 
     ax1.set_title(
-        f"{tar.name.rsplit('.', 1)[0]} was started on {date_min.isoformat()}, last update {date_max.isoformat()}"
+        f"#{tar.name.rsplit('.', 1)[0].replace('_',' ')} was started on {date_min.isoformat()}, last update {date_max.isoformat()}"
     )
     ax1.set_xlim(left=0)
     ax1.xaxis.set_ticks(range(0,(date_max-date_min).days,7))
