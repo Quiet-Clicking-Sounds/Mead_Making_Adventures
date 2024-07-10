@@ -6,10 +6,22 @@ This is not a guide, no really it's essentially a checklist of stuff we might or
 
 ## Recipes We've Started
 
-- [#1 Standard Mead](Recipe%20List%2F%231%20Standard.md)
-- [#2 Elderflower Mead](Recipe%20List%2F%232%20Elderflower.md)
-- [#3 Mojito Mead](Recipe%20List%2F%233%20Mojito.md)
-- [#4 Orange and Chilli Mead](Recipe%20List%2F%234%20Orange%20and%20Chilli.md)
+[//]: # (- [1_Standard.md]&#40;Recipe%20List/1_Standard.md&#41;)
+[//]: # (- [2_Elderflower.md]&#40;Recipe%20List/2_Elderflower.md&#41;)
+[//]: # (- [3_Mojito.md]&#40;Recipe%20List/3_Mojito.md&#41;)
+[//]: # (- [4_Orange_and_Chilli.md]&#40;Recipe%20List/4_Orange_and_Chilli.md&#41;)
+
+We've been running two meads at a time, each row is started on the same day; generally they use a similar amount of 
+honey and the same yeast, with the differing factor being the taste additions
+
+| Quiet_clicking_sounds choice                    |                                                                   |
+|-------------------------------------------------|-------------------------------------------------------------------|
+| [1 Standard.md](Recipe%20List/1_Standard.md)    | [2 Elderflower.md](Recipe%20List/2_Elderflower.md)                |
+| ![1_Standard.png](Recipe%20List/1_Standard.png) | ![2_Elderflower.png](Recipe%20List/2_Elderflower.png)             |
+| [3 Mojito.md](Recipe%20List/3_Mojito.md)        | [4 Orange and Chilli.md](Recipe%20List/4_Orange_and_Chilli.md)    |
+| ![3_Mojito.png](Recipe%20List/3_Mojito.png)     | ![4_Orange_and_Chilli.png](Recipe%20List/4_Orange_and_Chilli.png) |
+
+
 
 ## Yeasts I'd like to use
 
@@ -166,15 +178,18 @@ The long list of things that might taste nice, or might just be interesting enou
 once we've attempted to make them
 
 Berry Meads
+
 - Sea Buck Thorne Berry <sup>[wiki](https://en.wikipedia.org/wiki/Hippophae)</sup>
     - taste: astringent, sour, and oily
     - contains Malic Acid, may be useful to
       use  [malolactic fermentation](https://en.wikipedia.org/wiki/Malolactic_fermentation), winemaking stuff
-    - proposed 5grams per litre? via [homebrew thread](https://www.homebrewtalk.com/threads/sea-buckthorn-berries.512882/)
+    - proposed 5grams per litre?
+      via [homebrew thread](https://www.homebrewtalk.com/threads/sea-buckthorn-berries.512882/)
     - 37.5g/L for a cider recipe via [omegafruit](https://omegafruit.ca/sea-buckthorn-berry-cider-recipe/)
 - Mulberries
 
 Flower Meads
+
 - Wild Violet
     - requires a lot, 10 cups of violet petals per gallon
     - Contains [Anthocyanin](https://en.wikipedia.org/wiki/Anthocyanin) which causes the pigmentation
@@ -182,13 +197,14 @@ Flower Meads
 - [black crowberry](https://en.wikipedia.org/wiki/Empetrum_nigrum)
     - Contains [Anthocyanin](https://en.wikipedia.org/wiki/Anthocyanin) which causes the pigmentation
     - [buying option](https://www.rawliving.co.uk/products/dried-crowberry-powder-100g-islensk-hollusta?variant=40752788504715&currency=GBP&utm_medium=product_sync&utm_source=google&utm_content=sag_organic&utm_campaign=sag_organic&srsltid=AfmBOoq5-gKRgPIGt0PBj5e7dJsq6QzE_oIChfAFNiQ3wZKotVNOKsK0314)
-- orange blossom 
+- orange blossom
 - Dandelion
 - Honeysuckle
 - Rose hip / blossom
     - Make a rose hip tea
 
 Fruit Meads
+
 - Blood orange
 - Raspberry
 - Blackberry
@@ -201,6 +217,7 @@ Fruit Meads
 - Pomegranate
 
 Vegetable Meads
+
 - Rhubarb
 - Carrot & Parsnip
 - turnip & beetroot
@@ -208,26 +225,29 @@ Vegetable Meads
 - Horseradish
 - Pumpkin
 
-
 Herbal Meads
+
 - Mint
-  - Don't do this as alone, use with other things, possibly lots of herbs mead?
+    - Don't do this as alone, use with other things, possibly lots of herbs mead?
 - Aniseed
 - Nettle mead
 
 Other Meads:
+
 - Cocao nibs
 - Ginger
 - Turmeric mead
 
 Multi Meads
+
 - Lemon & Lavender
 - Lemon and ginger
 - Strawberry and elderflower
 - Apple and cinnamon
-- Lime and 
+- Lime and
 
 Cocktail base Meads
+
 - [Fortified Mojito](Planned%20Recipe%20List/Fortified%20Mojito.md)
 - [Sex on the beach](Planned%20Recipe%20List/Sex%20on%20the%20beach.md)
     - the usual cocktail consists of
@@ -252,52 +272,52 @@ Cocktail base Meads
 
 The first group of these are from ["The Flavour Thesaurus" by Niki Segnit]
 
-- Chocolate 
-  - anise, cardamom, chilli, cinnamon, coffee, ginger, mint, nutmeg, rose, thyme
-  - all the things, a chocolate mead might be lovely, but it would need to be added in secondary I think 
-- Coffee 
-  - cardamom, cinnamon, clove, coriander seed, ginger, rose, vanilla.
-  - note: acidity of coffee, should check if that needs to be added in secondary 
-- Cherry 
-  - cinnamon, vanilla.
-- Watermelon 
-  - chilli, cinnamon, coriander leaf, mint, rosemary.
-    - thought: coriander may pair badly with honey
-- Grape 
-  - anise, rosemary.
-- Strawberry 
-  - anise, cinnamon, mint, vanilla.
-- Pineapple 
-  - anise, chilli, cinnamon, sage, vanilla.
-  - smaller idea: anise, sage, vanilla 
-- Apple 
-  - anise, cinnamon, rose, sage, vanilla.
-- Pear 
-  - anise, cardamom, cinnamon.
-- Banana 
-  - anise, cinnamon, vanilla.
-- Melon 
-  - anise, mint, rose.
-- Apricot 
-  - cardamom, cinnamon, ginger, rose, rosemary, vanilla.
-- Peach 
-  - clove, vanilla.
+- Chocolate
+    - anise, cardamom, chilli, cinnamon, coffee, ginger, mint, nutmeg, rose, thyme
+    - all the things, a chocolate mead might be lovely, but it would need to be added in secondary I think
+- Coffee
+    - cardamom, cinnamon, clove, coriander seed, ginger, rose, vanilla.
+    - note: acidity of coffee, should check if that needs to be added in secondary
+- Cherry
+    - cinnamon, vanilla.
+- Watermelon
+    - chilli, cinnamon, coriander leaf, mint, rosemary.
+        - thought: coriander may pair badly with honey
+- Grape
+    - anise, rosemary.
+- Strawberry
+    - anise, cinnamon, mint, vanilla.
+- Pineapple
+    - anise, chilli, cinnamon, sage, vanilla.
+    - smaller idea: anise, sage, vanilla
+- Apple
+    - anise, cinnamon, rose, sage, vanilla.
+- Pear
+    - anise, cardamom, cinnamon.
+- Banana
+    - anise, cinnamon, vanilla.
+- Melon
+    - anise, mint, rose.
+- Apricot
+    - cardamom, cinnamon, ginger, rose, rosemary, vanilla.
+- Peach
+    - clove, vanilla.
 
-
-## quick list: how much should be added? 
+## quick list: how much should be added?
 
 - Cinnamon
-  - 1stick / gallon [from](https://gotmead.com/blog/making-mead/mead_recipes/joes-ancient-orange-clove-and-cinnamon-mead/)
-  - 0.2-0.4 sticks / litre [from]https://www.georgetimmermans.com/cinnamon-mead.html
-  - notes: [reddit thread](https://new.reddit.com/r/mead/comments/6yakbm/cinnamon_mead_questions/)
-- Vanilla 
-  - 0.14 Pods / litre [from](https://revolutionfermentation.com/en/blogs/fermented-beverages/vanilla-mead-recipe/)
-  - 1 bean / 5 litres  [reddit thread](https://new.reddit.com/r/mead/comments/88jvls/want_to_make_a_vanilla_bean_mead_is_it_best_to/)
-
+    - 1stick /
+      gallon [from](https://gotmead.com/blog/making-mead/mead_recipes/joes-ancient-orange-clove-and-cinnamon-mead/)
+    - 0.2-0.4 sticks / litre [from]https://www.georgetimmermans.com/cinnamon-mead.html
+    - notes: [reddit thread](https://new.reddit.com/r/mead/comments/6yakbm/cinnamon_mead_questions/)
+- Vanilla
+    - 0.14 Pods / litre [from](https://revolutionfermentation.com/en/blogs/fermented-beverages/vanilla-mead-recipe/)
+    - 1 bean / 5
+      litres  [reddit thread](https://new.reddit.com/r/mead/comments/88jvls/want_to_make_a_vanilla_bean_mead_is_it_best_to/)
 
 ## more thoughts
 
 - Chia Seeds / Guam Gum / Xantham Gum
-  - could be used in higher proof meads to make them less 'watery'? 
-  - supposedly use to improve 'mouth feel', but im still not sure how that relates.. 
-  - could be fun to make thickened mead? 
+    - could be used in higher proof meads to make them less 'watery'?
+    - supposedly use to improve 'mouth feel', but im still not sure how that relates..
+    - could be fun to make thickened mead? 
