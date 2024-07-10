@@ -52,7 +52,7 @@ Yeast Food:
 | 2024-06-27 | 25.00           |         |                                                      |
 | 2024-06-28 | 22.00           | 1.035   |                                                      |
 | 2024-07-03 | 22.00           | 1.034   |                                                      |
-|            |                 |         |                                                      |
+| 2024-07-10 | 21.00           | 1.010   | slightly unsure of reading                           |
 |            |                 |         |                                                      |
 
 ![#2 Elderflower.png](%232%20Elderflower.png)
