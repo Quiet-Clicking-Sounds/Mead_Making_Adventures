@@ -55,7 +55,7 @@ Yeast Food:
 | 2024-07-10 | 21.00           | 1.010   | slightly unsure of reading                           |
 |            |                 |         |                                                      |
 
-![#2 Elderflower.png](%232%20Elderflower.png)
+![2_Elderflower.png](2_Elderflower.png)
 
 - Aerated twice, first two days, could have done much more
 - I've been agitating 2 or 3 times a day, will stop when we finish fermenting

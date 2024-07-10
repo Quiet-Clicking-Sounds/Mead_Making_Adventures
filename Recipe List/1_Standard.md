@@ -54,7 +54,7 @@ Yeast Food:
 | 2024-07-03 | 22.00           | 1.034   |     |                                                            |
 | 2024-07-10 | 21.00           | 1.010   |     |                                                            |
 
-![#1 Standard.png](%231%20Standard.png)
+![1_Standard.png](1_Standard.png)
 
 1: bubbler secured in and shaken lightly seems to be making co2
 

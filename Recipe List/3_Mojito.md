@@ -71,7 +71,7 @@ Yeast Food:
 |            |                 |         |     |                           |
 |            |                 |         |     |                           |
 
-![#3 Mojito.png](%233%20Mojito.png)
+![3_Mojito.png](3_Mojito.png)
 
 notes:
 

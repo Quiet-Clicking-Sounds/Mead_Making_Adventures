@@ -68,7 +68,7 @@ Yeast Food:
 |            |                 |         |     |                           |
 |            |                 |         |     |                           |
 
-![#4 Orange and Chilli.png](%234%20Orange%20and%20Chilli.png)
+![4_Orange_and_Chilli.png](4_Orange_and_Chilli.png)
 
 notes:
 
