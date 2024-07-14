@@ -1,6 +1,6 @@
 <h1> #2 Elderflower </h1>
 
-Started on: 2024/05/25 | Running concurrently with [#1 Standard Mead](Recipe%20List%2F%231%20Standard.md)
+Started on: 2024/05/25 | Running concurrently with [#1 Standard](1_Standard.md)
 
 <hr>
 

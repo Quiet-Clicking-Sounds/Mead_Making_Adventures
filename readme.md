@@ -186,7 +186,10 @@ Berry Meads
     - proposed 5grams per litre?
       via [homebrew thread](https://www.homebrewtalk.com/threads/sea-buckthorn-berries.512882/)
     - 37.5g/L for a cider recipe via [omegafruit](https://omegafruit.ca/sea-buckthorn-berry-cider-recipe/)
-- Mulberries
+- Mulberries / [black crowberry](https://en.wikipedia.org/wiki/Empetrum_nigrum)
+    - Contains [Anthocyanin](https://en.wikipedia.org/wiki/Anthocyanin) which causes the pigmentation
+    - [buying option](https://www.rawliving.co.uk/products/dried-crowberry-powder-100g-islensk-hollusta?variant=40752788504715&currency=GBP&utm_medium=product_sync&utm_source=google&utm_content=sag_organic&utm_campaign=sag_organic&srsltid=AfmBOoq5-gKRgPIGt0PBj5e7dJsq6QzE_oIChfAFNiQ3wZKotVNOKsK0314)
+
 
 Flower Meads
 
@@ -194,9 +197,6 @@ Flower Meads
     - requires a lot, 10 cups of violet petals per gallon
     - Contains [Anthocyanin](https://en.wikipedia.org/wiki/Anthocyanin) which causes the pigmentation
     - [buying option](https://www.pollyspetals.co.uk/product/edible-freeze-dried-natural-violet-viola-flower-heads-cake-decoration-cocktail-garnish-food-grade-culinary-uk-grown-dried/)
-- [black crowberry](https://en.wikipedia.org/wiki/Empetrum_nigrum)
-    - Contains [Anthocyanin](https://en.wikipedia.org/wiki/Anthocyanin) which causes the pigmentation
-    - [buying option](https://www.rawliving.co.uk/products/dried-crowberry-powder-100g-islensk-hollusta?variant=40752788504715&currency=GBP&utm_medium=product_sync&utm_source=google&utm_content=sag_organic&utm_campaign=sag_organic&srsltid=AfmBOoq5-gKRgPIGt0PBj5e7dJsq6QzE_oIChfAFNiQ3wZKotVNOKsK0314)
 - orange blossom
 - Dandelion
 - Honeysuckle
@@ -219,6 +219,7 @@ Fruit Meads
 Vegetable Meads
 
 - Rhubarb
+- Rhubarb and Raspberry
 - Carrot & Parsnip
 - turnip & beetroot
 - Beetroot
