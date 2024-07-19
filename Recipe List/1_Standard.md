@@ -53,6 +53,11 @@ Yeast Food:
 | 2024-06-28 | 22.00           | 1.035   |     |                                                            |
 | 2024-07-03 | 22.00           | 1.034   |     |                                                            |
 | 2024-07-10 | 21.00           | 1.010   |     |                                                            |
+|            |                 |         |     |                                                            |
+|            |                 |         |     |                                                            |
+|            |                 |         |     |                                                            |
+|            |                 |         |     |                                                            |
+|            |                 |         |     |                                                            |
 
 ![1_Standard.png](1_Standard.png)
 
@@ -62,6 +67,8 @@ Yeast Food:
   a while
 - I've been agitating 2 or 3 times a day, will stop when we finish fermenting
 - temperatures have been at a consistent 21-22°C
+- 2024-07-19 Syphoned to **Secondary** it's been long enough on the lees, will leave it in the glass demijohn for a few months
+  - got a fair bit of the lees in this one (the first to be done), it may be a good idea to do it again in a few months
 
 <h3> Notes </h3>
 

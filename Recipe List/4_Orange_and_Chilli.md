@@ -75,6 +75,9 @@ notes:
 - 2024-06-24 aerated for 3 minutes with a drill attachment
 - 2024-06-25 aerated again, likely for the final time
 - 2024-06-30 added honey #2, 5 mins of swirling got some of it into suspension, need a better plan for next time
+- 2024-07-19 Syphoned to **Secondary** it's been long enough on the lees, will leave it in the glass demijohn
+   for a few months
+  - Syphoning did not go perfectly, some smaller pieces in the mix got syphoned up
 
 ```
 Mead Calculation for 4.75 litres of product
