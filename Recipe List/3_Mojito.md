@@ -81,6 +81,14 @@ notes:
 - 2024-07-19 Syphoned to **Secondary** it's been long enough on the lees, will leave it in the glass demijohn for a few months
   - somewhat irritating to syphon with the amount of free-floating lime bits, should leave things in larger pieces next time
 
+
+<h3>Stabilization plan</h3>
+
+- Completed: 2024-08-03
+- Potassium Metabisulfite: 0.15g
+- Potassium Sorbate : 0.2g
+
+
 ```
 Mead Calculation for 4.75 litres of product
 	Start gravity (required) 1.137 

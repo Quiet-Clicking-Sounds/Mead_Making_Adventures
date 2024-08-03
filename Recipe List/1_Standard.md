@@ -89,12 +89,13 @@ at the moment than it did last week
 
 2024-06-02 Refractometers are easier to use; I'll be using it for all but the first and last tests from now on I think
 
+
 <h2>Post Fermentation</h2>
 
 <h3>Stabilization plan</h3>
 
-Potassium Metabisulfite ppm:
-
-Potassium Sorbate ppm:
+- Completed: 2024-08-03
+- Potassium Metabisulfite: 0.15g
+- Potassium Sorbate : 0.85g
 
 more information and tables [here](https://meadmaking.wiki/en/process/stabilization)

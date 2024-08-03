@@ -82,8 +82,8 @@ batches, so that should be the lower end of our SG
 
 <h3>Stabilization plan</h3>
 
-Potassium Metabisulfite ppm:
-
-Potassium Sorbate ppm:
+- Completed: 2024-08-03
+- Potassium Metabisulfite: 0.15g
+- Potassium Sorbate : 0.85g
 
 more information and tables [here](https://meadmaking.wiki/en/process/stabilization)

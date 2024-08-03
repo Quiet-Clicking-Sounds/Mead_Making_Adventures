@@ -79,6 +79,14 @@ notes:
    for a few months
   - Syphoning did not go perfectly, some smaller pieces in the mix got syphoned up
 
+
+<h3>Stabilization plan</h3>
+
+- Completed: 2024-08-03
+- Potassium Metabisulfite: 0.15g
+- Potassium Sorbate : 0.2g
+
+
 ```
 Mead Calculation for 4.75 litres of product
 	Start gravity (required) 1.132 

@@ -14,7 +14,7 @@ This is not a guide, no really it's essentially a checklist of stuff we might or
 We've been running two meads at a time, each row is started on the same day; generally they use a similar amount of 
 honey and the same yeast, with the differing factor being the taste additions
 
-| Quiet_clicking_sounds choice                    |                                                                   |
+|                  |                                                                   |
 |-------------------------------------------------|-------------------------------------------------------------------|
 | [1 Standard.md](Recipe%20List/1_Standard.md)    | [2 Elderflower.md](Recipe%20List/2_Elderflower.md)                |
 | ![1_Standard.png](Recipe%20List/1_Standard.png) | ![2_Elderflower.png](Recipe%20List/2_Elderflower.png)             |
