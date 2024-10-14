@@ -174,6 +174,32 @@ graphs shown in the recipe list.
 
 ### Planned Meads
 
+#### The short list
+Meads we're planning to start in November 2024; probably aiming to brew to 8-10% with a wine yeast
+
+- Cucumber Mead
+  - brewed dry
+- Rhubarb Mead
+- Root Vegetable Mead
+  - Carrot
+  - Beetroot
+  - Parsnip
+  - Extracting the taste of root vegetables could be interesting
+    - foremost idea is currently to blend the vegetables after freexing them, then squeeze the juice out, 
+      finally extracting more taste by making an infusion with the leftover solids  
+- Lemon and Lavendar
+  - Lemon
+  - Lavendar (flowers)
+  - notes
+    - Extracting taste from the lemon, possibly using high proof alcohol to extract the oils in the zest
+    - 
+
+
+
+
+---
+#### The long list
+
 The long list of things that might taste nice, or might just be interesting enough to try, they'll move above
 once we've attempted to make them
 
