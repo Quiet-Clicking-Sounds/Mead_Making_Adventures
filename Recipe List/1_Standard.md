@@ -53,11 +53,6 @@ Yeast Food:
 | 2024-06-28 | 22.00           | 1.035   |     |                                                            |
 | 2024-07-03 | 22.00           | 1.034   |     |                                                            |
 | 2024-07-10 | 21.00           | 1.010   |     |                                                            |
-|            |                 |         |     |                                                            |
-|            |                 |         |     |                                                            |
-|            |                 |         |     |                                                            |
-|            |                 |         |     |                                                            |
-|            |                 |         |     |                                                            |
 
 ![1_Standard.png](1_Standard.png)
 
@@ -99,3 +94,19 @@ at the moment than it did last week
 - Potassium Sorbate : 0.85g
 
 more information and tables [here](https://meadmaking.wiki/en/process/stabilization)
+
+<h2> Post Ferment back sweetening</h2>
+- Added on 2024-10-14
+- 100g Honey Water Solution @ 2:1 or 66.6g Honey, and 33.3g Water
+
+Tasting Notes: 
+- Before Modifications on 2024-10-14
+  - quite dry
+  - Needs honey, lacks any distinct taste. 
+  - Some dry white wine-esq taste 
+  - some fuel smell still lingering, should be given some more time to offgas
+- After Modifications on 2024-10-14
+  - slightly more distinct honey taste, we're happy with it
+
+Serving thoughts:
+- Sugar on the rim of the glass

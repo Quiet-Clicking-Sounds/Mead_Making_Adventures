@@ -63,13 +63,6 @@ Yeast Food:
 | 2024-07-01 | 23.00           | 1.087   |     | Estimated blended gravity |
 | 2024-07-03 | 22.00           |         |     |                           |
 | 2024-07-10 | 21.00           | 1.000   |     |                           |
-|            |                 |         |     |                           |
-|            |                 |         |     |                           |
-|            |                 |         |     |                           |
-|            |                 |         |     |                           |
-|            |                 |         |     |                           |
-|            |                 |         |     |                           |
-|            |                 |         |     |                           |
 
 ![3_Mojito.png](3_Mojito.png)
 
@@ -88,6 +81,25 @@ notes:
 - Potassium Metabisulfite: 0.15g
 - Potassium Sorbate : 0.2g
 
+
+
+<h2> Post Ferment back sweetening</h2>
+- Added on 2024-10-14
+- 100g Rum
+- 10g Lime Juice
+- 200g Honey Water Solution @ 2:1
+
+Tasting Notes: 
+- dry before back sweetening 
+- no nose at-all
+- some smell of rocket fuel left over, needs time
+- additions made it better, but still not great
+- the mint was almost un-noticeable
+- lime also barely noticeable
+
+Serving thoughts:
+- Garnish with crushed mint, and a slice of lime
+- 
 
 ```
 Mead Calculation for 4.75 litres of product

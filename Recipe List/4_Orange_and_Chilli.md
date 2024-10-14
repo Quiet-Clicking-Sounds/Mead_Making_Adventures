@@ -60,13 +60,6 @@ Yeast Food:
 | 2024-07-01 | 23.00           | 1.073   |     | Estimated blended gravity |
 | 2024-07-03 | 22.00           |         |     |                           |
 | 2024-07-10 | 21.00           | 0.997   |     |                           |
-|            |                 |         |     |                           |
-|            |                 |         |     |                           |
-|            |                 |         |     |                           |
-|            |                 |         |     |                           |
-|            |                 |         |     |                           |
-|            |                 |         |     |                           |
-|            |                 |         |     |                           |
 
 ![4_Orange_and_Chilli.png](4_Orange_and_Chilli.png)
 
@@ -86,6 +79,25 @@ notes:
 - Potassium Metabisulfite: 0.15g
 - Potassium Sorbate : 0.2g
 
+<h2> Post Ferment back sweetening</h2>
+- Added on 2024-10-14
+- 100g Honey Water Solution @ 2:1 or 66.6g Honey, and 33.3g Water
+
+Tasting Notes: 
+- dry before back sweetening
+- pre 2024-10-14 changes
+  - Smells slightly of tomatoes 
+  - still has mild scent of rocket fuel, should dissapate with time
+  - no spice from the chilli at-all 
+  - very little orange taste
+- post 2024-10-14 changes
+  - still a little dry, we only added about 66 grams of honey to around 4 litres of mead 
+  - Moving the sediment made the chilli flavour stronger
+    - we may decide to add some of the leftover sediment to the bottles, it'll depend on a second tasting in a week
+  - chilli flavour is plesant without being overpowering
+
+Serving thoughts:
+-  
 
 ```
 Mead Calculation for 4.75 litres of product

@@ -52,11 +52,7 @@ Yeast Food:
 | 2024-06-27 | 25.00           |         |                                                      |
 | 2024-06-28 | 22.00           | 1.035   |                                                      |
 | 2024-07-03 | 22.00           | 1.034   |                                                      |
-| 2024-07-10 | 21.00           | 1.010   | slightly unsure of reading                           |
-|            |                 |         |                                                      |
-|            |                 |         |                                                      |                                                            |
-|            |                 |         |                                                      |                                                            |
-|            |                 |         |                                                      |                                                            |
+| 2024-07-10 | 21.00           | 1.010   | slightly unsure of reading                           |                                                         |
 
 ![2_Elderflower.png](2_Elderflower.png)
 
@@ -87,3 +83,18 @@ batches, so that should be the lower end of our SG
 - Potassium Sorbate : 0.85g
 
 more information and tables [here](https://meadmaking.wiki/en/process/stabilization)
+
+<h2> Post Ferment back sweetening</h2>
+-  Nothing
+
+Tasting Notes: 
+- dry, but not extreemely so, the elderflower brings a hint of sweetness
+- Both of us find this to be a fantastic mead, we're rather happy with it
+- small amount of nail-polish like smell which we think will be gone with a little more aging 
+- strong smell of elderflower bushes
+- hint of dry white wine, or a flat prosecco 
+- plesant, fresh taste of elderflower.
+
+Serving thoughts:
+- Could work well with frozen grapes for chilling
+- Frozen fruits would be a good addition
