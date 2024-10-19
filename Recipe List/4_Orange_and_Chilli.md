@@ -101,6 +101,8 @@ Serving thoughts:
 
 ## End Quantities:
 
+note: smells unplesant, slightly like bad fermentation, we're hoping that will go away with time
+
 |            | Container (g) | Total (g) | Liquid (g) | 
 |------------|---------------|-----------|------------|
 | 2L Jar     | 1038          | 2893      | 1855       | 
