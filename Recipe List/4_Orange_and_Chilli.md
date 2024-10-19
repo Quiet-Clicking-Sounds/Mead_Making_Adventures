@@ -103,7 +103,7 @@ Serving thoughts:
 
 note: smells unplesant, slightly like bad fermentation, we're hoping that will go away with time
 
-|            | Container (g) | Total (g) | Liquid (g) | 
+| 2024-10-19 | Container (g) | Total (g) | Liquid (g) | 
 |------------|---------------|-----------|------------|
 | 2L Jar     | 1038          | 2893      | 1855       | 
 | 1L Jar     | 633           | 1386      | 753        | 

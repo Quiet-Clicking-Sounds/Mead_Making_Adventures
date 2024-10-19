@@ -103,7 +103,7 @@ Serving thoughts:
 
 ## End Quantities:
 
-|            | Container (g) | Total (g) | Liquid (g) | 
+| 2024-10-19 | Container (g) | Total (g) | Liquid (g) | 
 |------------|---------------|-----------|------------|
 | 2L Jar     | 1038          | 2926      | 1888       | 
 | 1L Jar     | 633           | 1601      | 968        | 
