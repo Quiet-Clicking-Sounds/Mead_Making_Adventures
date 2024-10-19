@@ -59,8 +59,8 @@ Yeast Food:
 - Aerated twice, first two days, could have done much more
 - I've been agitating 2 or 3 times a day, will stop when we finish fermenting
 - temperatures have been at a consistent 21-22°C
-- 2024-07-19 Syphoned to **Secondary** it's been long enough on the lees, will leave it in the glass demijohn for a few months
-
+- 2024-07-19 Syphoned to **Secondary** it's been long enough on the lees, will leave it in the glass demijohn for a few
+  months
 
 <h3> Notes </h3>
 
@@ -87,14 +87,25 @@ more information and tables [here](https://meadmaking.wiki/en/process/stabilizat
 <h2> Post Ferment back sweetening</h2>
 -  Nothing
 
-Tasting Notes: 
+Tasting Notes:
+
 - dry, but not extreemely so, the elderflower brings a hint of sweetness
 - Both of us find this to be a fantastic mead, we're rather happy with it
-- small amount of nail-polish like smell which we think will be gone with a little more aging 
+- small amount of nail-polish like smell which we think will be gone with a little more aging
 - strong smell of elderflower bushes
-- hint of dry white wine, or a flat prosecco 
+- hint of dry white wine, or a flat prosecco
 - plesant, fresh taste of elderflower.
 
 Serving thoughts:
+
 - Could work well with frozen grapes for chilling
 - Frozen fruits would be a good addition
+
+## End Quantities:
+
+|            | Container (g) | Total (g) | Liquid (g) | 
+|------------|---------------|-----------|------------|
+| 2L Jar     | 1038          | 2926      | 1888       | 
+| 1L Jar     | 633           | 1601      | 968        | 
+| 1lL Bottle | 603           | 1601      | 998        | 
+| Total      |               |           | 3854       | 

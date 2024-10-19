@@ -62,8 +62,10 @@ Yeast Food:
   a while
 - I've been agitating 2 or 3 times a day, will stop when we finish fermenting
 - temperatures have been at a consistent 21-22°C
-- 2024-07-19 Syphoned to **Secondary** it's been long enough on the lees, will leave it in the glass demijohn for a few months
-  - got a fair bit of the lees in this one (the first to be done), it may be a good idea to do it again in a few months
+- 2024-07-19 Syphoned to **Secondary** it's been long enough on the lees, will leave it in the glass demijohn for a few
+  months
+    - got a fair bit of the lees in this one (the first to be done), it may be a good idea to do it again in a few
+      months
 
 <h3> Notes </h3>
 
@@ -84,7 +86,6 @@ at the moment than it did last week
 
 2024-06-02 Refractometers are easier to use; I'll be using it for all but the first and last tests from now on I think
 
-
 <h2>Post Fermentation</h2>
 
 <h3>Stabilization plan</h3>
@@ -99,14 +100,25 @@ more information and tables [here](https://meadmaking.wiki/en/process/stabilizat
 - Added on 2024-10-14
 - 100g Honey Water Solution @ 2:1 or 66.6g Honey, and 33.3g Water
 
-Tasting Notes: 
+Tasting Notes:
+
 - Before Modifications on 2024-10-14
-  - quite dry
-  - Needs honey, lacks any distinct taste. 
-  - Some dry white wine-esq taste 
-  - some fuel smell still lingering, should be given some more time to offgas
+    - quite dry
+    - Needs honey, lacks any distinct taste.
+    - Some dry white wine-esq taste
+    - some fuel smell still lingering, should be given some more time to offgas
 - After Modifications on 2024-10-14
-  - slightly more distinct honey taste, we're happy with it
+    - slightly more distinct honey taste, we're happy with it
 
 Serving thoughts:
+
 - Sugar on the rim of the glass
+
+## End Quantities:
+
+|            | Container (g) | Total (g) | Liquid (g) | 
+|------------|---------------|-----------|------------|
+| 2L Jar     | 1038          | 2865      | 1827       | 
+| 1L Jar     | 633           | 1573      | 940        | 
+| 1lL Bottle | 603           | 1592      | 989        | 
+| Total      |               |           | 3756       | 

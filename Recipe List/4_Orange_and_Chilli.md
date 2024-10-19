@@ -49,17 +49,17 @@ Yeast Food:
 
 <h2>Fermentation Data</h2>
 
-| Date       | Temperature  °C | Gravity | PH  | Notes                     |
-|------------|-----------------|---------|-----|---------------------------|
-| 2024-06-23 | 23.00           | 1.065   |     |                           |
-| 2024-06-24 | 24.00           |         |     |                           |
-| 2024-06-25 | 24.00           |         |     |                           |
-| 2024-06-27 | 25.00           |         |     |                           |
-| 2024-06-28 | 22.00           | 1.056   |     |                           |
-| 2024-06-30 | 24.00           | 1.035   |     |                           |
-| 2024-07-01 | 23.00           | 1.073   |     | Estimated blended gravity |
-| 2024-07-03 | 22.00           |         |     |                           |
-| 2024-07-10 | 21.00           | 0.997   |     |                           |
+| Date       | Temperature  °C | Gravity | PH | Notes                     |
+|------------|-----------------|---------|----|---------------------------|
+| 2024-06-23 | 23.00           | 1.065   |    |                           |
+| 2024-06-24 | 24.00           |         |    |                           |
+| 2024-06-25 | 24.00           |         |    |                           |
+| 2024-06-27 | 25.00           |         |    |                           |
+| 2024-06-28 | 22.00           | 1.056   |    |                           |
+| 2024-06-30 | 24.00           | 1.035   |    |                           |
+| 2024-07-01 | 23.00           | 1.073   |    | Estimated blended gravity |
+| 2024-07-03 | 22.00           |         |    |                           |
+| 2024-07-10 | 21.00           | 0.997   |    |                           |
 
 ![4_Orange_and_Chilli.png](4_Orange_and_Chilli.png)
 
@@ -69,9 +69,8 @@ notes:
 - 2024-06-25 aerated again, likely for the final time
 - 2024-06-30 added honey #2, 5 mins of swirling got some of it into suspension, need a better plan for next time
 - 2024-07-19 Syphoned to **Secondary** it's been long enough on the lees, will leave it in the glass demijohn
-   for a few months
-  - Syphoning did not go perfectly, some smaller pieces in the mix got syphoned up
-
+  for a few months
+    - Syphoning did not go perfectly, some smaller pieces in the mix got syphoned up
 
 <h3>Stabilization plan</h3>
 
@@ -83,21 +82,31 @@ notes:
 - Added on 2024-10-14
 - 100g Honey Water Solution @ 2:1 or 66.6g Honey, and 33.3g Water
 
-Tasting Notes: 
+Tasting Notes:
+
 - dry before back sweetening
 - pre 2024-10-14 changes
-  - Smells slightly of tomatoes 
-  - still has mild scent of rocket fuel, should dissapate with time
-  - no spice from the chilli at-all 
-  - very little orange taste
+    - Smells slightly of tomatoes
+    - still has mild scent of rocket fuel, should dissapate with time
+    - no spice from the chilli at-all
+    - very little orange taste
 - post 2024-10-14 changes
-  - still a little dry, we only added about 66 grams of honey to around 4 litres of mead 
-  - Moving the sediment made the chilli flavour stronger
-    - we may decide to add some of the leftover sediment to the bottles, it'll depend on a second tasting in a week
-  - chilli flavour is plesant without being overpowering
+    - still a little dry, we only added about 66 grams of honey to around 4 litres of mead
+    - Moving the sediment made the chilli flavour stronger
+        - we may decide to add some of the leftover sediment to the bottles, it'll depend on a second tasting in a week
+    - chilli flavour is plesant without being overpowering
 
 Serving thoughts:
 -  
+
+## End Quantities:
+
+|            | Container (g) | Total (g) | Liquid (g) | 
+|------------|---------------|-----------|------------|
+| 2L Jar     | 1038          | 2893      | 1855       | 
+| 1L Jar     | 633           | 1386      | 753        | 
+| 1lL Bottle | 603           | 1618      | 1015       | 
+| Total      |               |           | 3623       | 
 
 ```
 Mead Calculation for 4.75 litres of product

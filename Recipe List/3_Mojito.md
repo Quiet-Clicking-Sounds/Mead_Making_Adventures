@@ -36,7 +36,7 @@ Yeast Food:
         - caused quite the energetic reaction, had to replace the bubbler
 - feed #3
     - Fermaid O: 3 grams at addition of Honey - at or below 1.050 grav
-      - Done 2024-07-03
+        - Done 2024-07-03
 
 ## Expectations
 
@@ -52,17 +52,17 @@ Yeast Food:
 
 <h2>Fermentation Data</h2>
 
-| Date       | Temperature  °C | Gravity | PH  | Notes                     |
-|------------|-----------------|---------|-----|---------------------------|
-| 2024-06-23 | 23.00           | 1.094   |     |                           |
-| 2024-06-24 | 24.00           |         |     |                           |
-| 2024-06-25 | 24.00           |         |     |                           |
-| 2024-06-27 | 25.00           |         |     |                           |
-| 2024-06-28 | 22.00           | 1.052   |     |                           |
-| 2024-06-30 | 24.00           | 1.038   |     |                           |
-| 2024-07-01 | 23.00           | 1.087   |     | Estimated blended gravity |
-| 2024-07-03 | 22.00           |         |     |                           |
-| 2024-07-10 | 21.00           | 1.000   |     |                           |
+| Date       | Temperature  °C | Gravity | PH | Notes                     |
+|------------|-----------------|---------|----|---------------------------|
+| 2024-06-23 | 23.00           | 1.094   |    |                           |
+| 2024-06-24 | 24.00           |         |    |                           |
+| 2024-06-25 | 24.00           |         |    |                           |
+| 2024-06-27 | 25.00           |         |    |                           |
+| 2024-06-28 | 22.00           | 1.052   |    |                           |
+| 2024-06-30 | 24.00           | 1.038   |    |                           |
+| 2024-07-01 | 23.00           | 1.087   |    | Estimated blended gravity |
+| 2024-07-03 | 22.00           |         |    |                           |
+| 2024-07-10 | 21.00           | 1.000   |    |                           |
 
 ![3_Mojito.png](3_Mojito.png)
 
@@ -71,9 +71,10 @@ notes:
 - 2024-06-24 aerated for 3 minutes with a drill attachment
 - 2024-06-25 aerated again, likely for the final time
 - 2024-06-30 added honey #2, 5 mins of swirling got some of it into suspension, need a better plan for next time
-- 2024-07-19 Syphoned to **Secondary** it's been long enough on the lees, will leave it in the glass demijohn for a few months
-  - somewhat irritating to syphon with the amount of free-floating lime bits, should leave things in larger pieces next time
-
+- 2024-07-19 Syphoned to **Secondary** it's been long enough on the lees, will leave it in the glass demijohn for a few
+  months
+    - somewhat irritating to syphon with the amount of free-floating lime bits, should leave things in larger pieces
+      next time
 
 <h3>Stabilization plan</h3>
 
@@ -81,16 +82,15 @@ notes:
 - Potassium Metabisulfite: 0.15g
 - Potassium Sorbate : 0.2g
 
-
-
 <h2> Post Ferment back sweetening</h2>
 - Added on 2024-10-14
 - 100g Rum
 - 10g Lime Juice
 - 200g Honey Water Solution @ 2:1
 
-Tasting Notes: 
-- dry before back sweetening 
+Tasting Notes:
+
+- dry before back sweetening
 - no nose at-all
 - some smell of rocket fuel left over, needs time
 - additions made it better, but still not great
@@ -98,8 +98,18 @@ Tasting Notes:
 - lime also barely noticeable
 
 Serving thoughts:
+
 - Garnish with crushed mint, and a slice of lime
-- 
+-
+
+## End Quantities:
+
+|            | Container (g) | Total (g) | Liquid (g) | 
+|------------|---------------|-----------|------------|
+| 2L Jar     | 1038          | 3010      | 1972       | 
+| 1L Jar     | 633           | 1336      | 703        | 
+| 1lL Bottle | 603           | 1616      | 1013       | 
+| Total      |               |           | 3688       | 
 
 ```
 Mead Calculation for 4.75 litres of product
