@@ -7,6 +7,8 @@ sg_max_honey = 1.448
 sg_water = 1.0
 sg_ethanol = 0.79
 
+EXTRA_DATA: bool = False
+
 
 class Mead:
     """
@@ -113,7 +115,7 @@ class Mead:
             raise UserWarning("High ABV warning, use step_feed_mix_ratio below 0.5")
         self.upper_grav_limit = upper_grav_limit or self.upper_grav_limit
         self.lower_grav_limit = lower_grav_limit or self.lower_grav_limit
-        self.step_feed_ratio = max(0.0,  step_feed_mix_ratio or self.step_feed_ratio)
+        self.step_feed_ratio = max(0.0, step_feed_mix_ratio or self.step_feed_ratio)
 
         if self.lower_grav_limit > self.upper_grav_limit:
             raise Exception("Upper gravity limit must be more than Lower gravity limit")
@@ -472,9 +474,10 @@ class NitrogenSource:
         return self.nitrogen_ppm * self.current_dose
 
     def __repr__(self) -> str:
-        out = f"\tNitrogen Source: {self.current_dose:.1f}g @ {self.nitrogen_ppm:.1f}ppm " \
-              f"= {self.nitrogen_ppm * self.current_dose:.1f}mg " \
-              f" - Name: {self.name}{' - ' if len(self.note) > 1 else ''}{self.note}\n"
+        out = ""
+        out += f"\tNitrogen Source: {self.current_dose:.1f}g "
+        out += f"@ {self.nitrogen_ppm:.1f}ppm = {self.nitrogen_ppm * self.current_dose:.1f}mg " if EXTRA_DATA else ""
+        out += f" - Name: {self.name}{' - ' if len(self.note) > 1 else ''}{self.note}\n"
         return out
 
     __str__ = __repr__
@@ -601,12 +604,20 @@ Ingredient("Mint", sugar_per_100g=0, grams_per_ml=0.856, water_ml_per_gram=0.1,
 
 if __name__ == '__main__':
     print()
-    mead = Mead(22, 1.020, product_weight=4.75, step_feeding=True, step_feed_mix_ratio=0.25)
-    mead.step_feeding_setup(lower_grav_limit=1.020)
+    mead = Mead(
+        abv=11,
+        final_gravity=1.020,
+        # step_feeding=True,
+        # step_feed_mix_ratio=0.25,
+        product_weight=12.5
+    )
+    # mead.step_feeding_setup(lower_grav_limit=1.020)
+
     # mead.add_ingredient("Lime", g=100)
     # mead.add_ingredient("Mint", g=0.5)
     mead.set_nitrogen_demand_medium()
     mead.staggered_nutrient_additions(mead.SNA.Bray_Denard_dry)
+    # mead.add_nitrogen_source("Go Ferm")
     # mead.add_nitrogen_source("Fermaid K", 2.5)
     # mead.add_nitrogen_source("Fermaid O", 3.0)
     # mead.add_nitrogen_source("Fermaid O", 3.0)
