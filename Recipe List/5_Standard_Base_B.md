@@ -36,7 +36,7 @@ Yeast Food
     - 4.7g - Name: Fermaid K - 2025-04-11
     - 2.4g - Name: Fermaid O - 2025-04-11
 - Feed #2 48 hours
-    - 2.2g - Name: Fermaid O
+    - 2.2g - Name: Fermaid O - 2025-04-13
 - Feed #3 96 hours
     - 2.2g - Name: Fermaid O
 
@@ -53,14 +53,15 @@ Yeast Food
 
 <h2>Fermentation Data</h2>
 
-| Date       | Temperature °C | Gravity | PH | Notes                     |
-|------------|----------------|---------|----|---------------------------|
-| 2025-04-12 | 21.0           | 1.118   |    | 9:45am, agitated airation |
-|            |                |         |    |                           |
-|            |                |         |    |                           |
-|            |                |         |    |                           |
-|            |                |         |    |                           |
-|            |                |         |    |                           |
+| Date       | Temperature °C | Gravity | PH | Notes                          |
+|------------|----------------|---------|----|--------------------------------|
+| 2025-04-12 | 21.0           | 1.118   |    | 9:45am, agitated airation      |
+| 2025-04-13 |                |         |    | 10:30 Airation                 |
+| 2025-04-13 |                |         |    | 17:30 Airation + Added Fermaid |
+| 2025-04-16 |                | 0.098   |    |                                |
+|            |                |         |    |                                |
+|            |                |         |    |                                |
+|            |                |         |    |                                |
 
 Notes:
 End of the bucket honey from 2023. 
