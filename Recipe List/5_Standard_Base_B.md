@@ -38,7 +38,7 @@ Yeast Food
 - Feed #2 48 hours
     - 2.2g - Name: Fermaid O - 2025-04-13
 - Feed #3 96 hours
-    - 2.2g - Name: Fermaid O
+    - 2.2g - Name: Fermaid O - 2025-04-17
 
 ## Expectations
 
