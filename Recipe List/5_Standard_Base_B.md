@@ -53,15 +53,15 @@ Yeast Food
 
 <h2>Fermentation Data</h2>
 
-| Date       | Temperature °C | Gravity | PH | Notes                          |
-|------------|----------------|---------|----|--------------------------------|
-| 2025-04-12 | 21.0           | 1.118   |    | 9:45am, agitated airation      |
-| 2025-04-13 |                |         |    | 10:30 Airation                 |
-| 2025-04-13 |                |         |    | 17:30 Airation + Added Fermaid |
-| 2025-04-16 |                | 0.098   |    |                                |
-|            |                |         |    |                                |
-|            |                |         |    |                                |
-|            |                |         |    |                                |
+| Date       | Temperature °C | Gravity | PH | Notes                           |
+|------------|----------------|---------|----|---------------------------------|
+| 2025-04-12 | 21.0           | 1.118   |    | 9:45am, agitated airation       |
+| 2025-04-13 |                |         |    | 10:30 Airation                  |
+| 2025-04-13 |                |         |    | 17:30 Airation + Added Fermaid  |
+| 2025-04-16 |                | 1.098   |    | 19:50 Airation                  |
+| 2025-04-17 |                | 1.093   |    | 18:00 Airation + Added Fermaid  |
+|            |                |         |    |                                 |
+|            |                |         |    |                                 |
 
 Notes:
 End of the bucket honey from 2023. 
