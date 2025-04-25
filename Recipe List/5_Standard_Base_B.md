@@ -60,7 +60,7 @@ Yeast Food
 | 2025-04-13 |                |         |    | 17:30 Airation + Added Fermaid  |
 | 2025-04-16 |                | 1.098   |    | 19:50 Airation                  |
 | 2025-04-17 |                | 1.093   |    | 18:00 Airation + Added Fermaid  |
-|            |                |         |    |                                 |
+| 2025-04-24 |                | 1.068   |    |                                 |
 |            |                |         |    |                                 |
 
 Notes:
