@@ -53,20 +53,20 @@ Yeast Food
 
 <h2>Fermentation Data</h2>
 
-| Date       | Temperature °C | Gravity | PH | Notes                           |
-|------------|----------------|---------|----|---------------------------------|
-| 2025-04-12 | 21.0           | 1.120   |    | 09:45 Agitated airation         |
-| 2025-04-13 |                |         |    | 10:30 Airation                  |
-| 2025-04-13 |                |         |    | 17:30 Airation + Added Fermaid  |
-| 2025-04-16 |                | 1.102   |    | 19:50 Airation                  |
-| 2025-04-17 |                | 1.096   |    | 18:00  Airation + Added Fermaid |
-| 2025-04-24 |                | 1.072   |    |                                 |
-| 2025-05-02 |                | 1.058   |    |                                 |
-| 2025-05-08 |                | 1.058   |    |                                 |
-| 2025-05-11 |                | 1.058   |    |                                 |
-|            |                |         |    |                                 |
-|            |                |         |    |                                 |
-|            |                |         |    |                                 |
+| Date       | Temperature °C | Gravity | PH | Notes                                                          |
+|------------|----------------|---------|----|----------------------------------------------------------------|
+| 2025-04-12 | 21.0           | 1.120   |    | 09:45 Agitated airation                                        |
+| 2025-04-13 |                |         |    | 10:30 Airation                                                 |
+| 2025-04-13 |                |         |    | 17:30 Airation + Added Fermaid                                 |
+| 2025-04-16 |                | 1.102   |    | 19:50 Airation                                                 |
+| 2025-04-17 |                | 1.096   |    | 18:00  Airation + Added Fermaid                                |
+| 2025-04-24 |                | 1.072   |    |                                                                |
+| 2025-05-02 |                | 1.058   |    |                                                                |
+| 2025-05-08 |                | 1.058   |    |                                                                |
+| 2025-05-11 |                | 1.058   |    | Fermentation possibly stuck, mixed the lees back into the mead |
+| 2025-05-15 |                | 1.055   |    | started?just really slow?                                      |
+|            |                |         |    |                                                                |
+|            |                |         |    |                                                                |
 
 Notes:
 End of the bucket honey from 2023 at the top so a lot of it was crystalized
