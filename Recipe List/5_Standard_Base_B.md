@@ -67,7 +67,7 @@ Yeast Food
 | 2025-05-15 |                | 1.052   |    | started?just really slow?                                      |
 | 2025-05-23 |                | 1.052   |    |                                                                |
 | 2025-05-24 |                |         |    | Pretty sure it had stopped, added Lalvin QA23                  |
-| 2025-05-30 |                | 0.048   |    |                                                                |
+| 2025-05-30 |                | 1.048   |    |                                                                |
 |            |                |         |    |                                                                |
 |            |                |         |    |                                                                |
 
