@@ -113,7 +113,8 @@ def make_graph(tar, data_: list[FermentDataPoint]):
     ax1: matplotlib.pyplot.Axes
     # data needs to be in a different layout, should have planne for this earlier
     data = ([], [], [])
-    date_list = [d.date for d in data_]
+    date_list = [d.date for d in data_ if d.grav is not None or d.temp is not None]
+
     date_min = min(date_list)
     date_max = max(date_list)
 

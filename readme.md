@@ -7,20 +7,44 @@ This is not a guide, no really it's essentially a checklist of stuff we might or
 ## Recipes We've Started
 
 [//]: # (- [1_Standard.md]&#40;Recipe%20List/1_Standard.md&#41;)
+
 [//]: # (- [2_Elderflower.md]&#40;Recipe%20List/2_Elderflower.md&#41;)
+
 [//]: # (- [3_Mojito.md]&#40;Recipe%20List/3_Mojito.md&#41;)
+
 [//]: # (- [4_Orange_and_Chilli.md]&#40;Recipe%20List/4_Orange_and_Chilli.md&#41;)
 
-We've been running two meads at a time, each row is started on the same day; generally they use a similar amount of 
+We've been running two meads at a time, each row is started on the same day; generally they use a similar amount of
 honey and the same yeast, with the differing factor being the taste additions
 
-|                  |                                                                   |
-|-------------------------------------------------|-------------------------------------------------------------------|
-| [1 Standard.md](Recipe%20List/1_Standard.md)    | [2 Elderflower.md](Recipe%20List/2_Elderflower.md)                |
-| ![1_Standard.png](Recipe%20List/1_Standard.png) | ![2_Elderflower.png](Recipe%20List/2_Elderflower.png)             |
-| [3 Mojito.md](Recipe%20List/3_Mojito.md)        | [4 Orange and Chilli.md](Recipe%20List/4_Orange_and_Chilli.md)    |
-| ![3_Mojito.png](Recipe%20List/3_Mojito.png)     | ![4_Orange_and_Chilli.png](Recipe%20List/4_Orange_and_Chilli.png) |
 
+<table>
+    <tr>
+        <td><a href="Recipe%20List/1_Standard.md"> 1 Standard.md</a></td>
+        <td><a href="Recipe%20List/2_Elderflower.md"> 2 Elderflower.md</a></td>
+    </tr>
+    <tr>
+        <td><img title="1_Standard.png" src="Recipe%20List/1_Standard.png"></td>
+        <td><img title="2_Elderflower.png" src="Recipe%20List/2_Elderflower.png"></td>
+    </tr>
+    <tr>
+        <td><a href="Recipe%20List/3_Mojito.md"> 3 Mojito.md</a></td>
+        <td><a href="Recipe%20List/4_Orange_and_Chilli.md"> 4 Orange and Chilli.md</a></td>
+    </tr>
+    <tr>
+        <td><img title="3_Mojito.png" src="Recipe%20List/3_Mojito.png"></td>
+        <td><img title="4_Orange_and_Chilli.png" src="Recipe%20List/4_Orange_and_Chilli.png"></td>
+    </tr>
+    <tr>
+        <td><a href="Recipe%20List/5_Standard_Base_A.md"> 5 Standard Base A.md</a></td>
+        <td><a href="Recipe%20List/5_Standard_Base_B.md"> 5 Standard Base B.md</a></td>
+    </tr>
+    <tr>
+        <td><img title="5_Standard_Base_A.png" src="Recipe%20List/5_Standard_Base_A.png"></td>
+        <td><img title="5_Standard_Base_B.png" src="Recipe%20List/5_Standard_Base_B.png"></td>
+    </tr>
+
+</table>
 
 
 ## Yeasts I'd like to use
@@ -175,29 +199,28 @@ graphs shown in the recipe list.
 ### Planned Meads
 
 #### The short list
+
 Meads we're planning to start in November 2024; probably aiming to brew to 8-10% with a wine yeast
 
 - Cucumber Mead
-  - brewed dry
+    - brewed dry
 - Rhubarb Mead
 - Root Vegetable Mead
-  - Carrot
-  - Beetroot
-  - Parsnip
-  - Extracting the taste of root vegetables could be interesting
-    - foremost idea is currently to blend the vegetables after freexing them, then squeeze the juice out, 
-      finally extracting more taste by making an infusion with the leftover solids  
+    - Carrot
+    - Beetroot
+    - Parsnip
+    - Extracting the taste of root vegetables could be interesting
+        - foremost idea is currently to blend the vegetables after freexing them, then squeeze the juice out,
+          finally extracting more taste by making an infusion with the leftover solids
 - Lemon and Lavendar
-  - Lemon
-  - Lavendar (flowers)
-  - notes
-    - Extracting taste from the lemon, possibly using high proof alcohol to extract the oils in the zest
-    - 
-
-
-
+    - Lemon
+    - Lavendar (flowers)
+    - notes
+        - Extracting taste from the lemon, possibly using high proof alcohol to extract the oils in the zest
+        -
 
 ---
+
 #### The long list
 
 The long list of things that might taste nice, or might just be interesting enough to try, they'll move above
@@ -215,7 +238,6 @@ Berry Meads
 - Mulberries / [black crowberry](https://en.wikipedia.org/wiki/Empetrum_nigrum)
     - Contains [Anthocyanin](https://en.wikipedia.org/wiki/Anthocyanin) which causes the pigmentation
     - [buying option](https://www.rawliving.co.uk/products/dried-crowberry-powder-100g-islensk-hollusta?variant=40752788504715&currency=GBP&utm_medium=product_sync&utm_source=google&utm_content=sag_organic&utm_campaign=sag_organic&srsltid=AfmBOoq5-gKRgPIGt0PBj5e7dJsq6QzE_oIChfAFNiQ3wZKotVNOKsK0314)
-
 
 Flower Meads
 
