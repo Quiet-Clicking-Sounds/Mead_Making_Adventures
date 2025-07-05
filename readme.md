@@ -14,7 +14,7 @@ This is not a guide, no really it's essentially a checklist of stuff we might or
 
 [//]: # (- [4_Orange_and_Chilli.md]&#40;Recipe%20List/4_Orange_and_Chilli.md&#41;)
 
-We've been running two meads at a time, each row is started on the same day; generally they use a similar amount of
+We've been running multiple meads at a time, each row is started on the same day; generally they use a similar amount of
 honey and the same yeast, with the differing factor being the taste additions
 
 
@@ -43,17 +43,24 @@ honey and the same yeast, with the differing factor being the taste additions
         <td><img title="5_Standard_Base_A.png" src="Recipe%20List/5_Standard_Base_A.png"></td>
         <td><img title="5_Standard_Base_B.png" src="Recipe%20List/5_Standard_Base_B.png"></td>
     </tr>
-
+    <tr>
+        <td colspan="2">
+        5A and 5B became:<br>
+        <a href="Recipe%20List/5_1_Standard_Base_With_Raspberry.md"> 5.1 Standard Base With Raspberry</a><br>
+        <a href="Recipe%20List/5_2_Standard_Base_With_Lemon_Lavendar.md"> 5.2 Standard Base With Lemon and Lavendar</a><br>
+        <a href="Recipe%20List/5_3_Standard_Base_Plain.md"> 5.3 Standard Base Plain</a><br>
+        <a href="Recipe%20List/5_4_Standard_Base_With_Cucumber.md"> 5.4 Standard Base With Cucumber</a><br>
+        <a href="Recipe%20List/5_5_Standard_Base_Tails_with_Lemon.md"> 5.5 Standard Base Tails with Lemon</a>
+        </td>
+    </tr>
 </table>
-
 
 ## Yeasts I'd like to use
 
 - [12% Gervin Yeast](https://brew2bottle.co.uk/collections/wine-yeast/products/gervin-yeasts?variant=15349934620787)
 - [11% Wyeast sweet mead ](https://www.themaltmiller.co.uk/product/wyeast-4184-sweet-mead/?v=79cba1185463)
 - [5-10%er WLP90 San-diego](https://www.themaltmiller.co.uk/product/wlp090-san-diego-super-yeast/?v=79cba1185463)
--
-    - [wpl90 calculator](https://yeastman.com/calculator)
+- [wpl90 calculator](https://yeastman.com/calculator)
 - [17% dry mead Wyeast ](https://www.themaltmiller.co.uk/product/wyeast-4021-dry-white-sparkling/?v=79cba1185463)
 
 [more yeast ideas](https://new.reddit.com/r/mead/comments/96o93j/what_yeast_is_best_to_use/)

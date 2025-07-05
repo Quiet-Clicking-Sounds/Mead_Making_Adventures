@@ -33,8 +33,9 @@ Yeast Food:
     - Actual:1060 @ 24.75c
 - Final Gravity
     - Expected:1020
-    - Actual:
+    - Actual:1.010
 - Estimated Alcohol Content
+  - 6.56 - 7.22
 
 <h2>Fermentation Data</h2>
 

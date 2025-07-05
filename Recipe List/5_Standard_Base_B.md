@@ -29,6 +29,8 @@ Required Nitrogen Load: 403.19
 ### Yeast
 
 - [Wyeast: 1056 American Ale](https://wyeastlab.com/product/american-ale/)
+-
+    - Restarted with [Lalvin QA23]
 
 Yeast Food
 
@@ -47,33 +49,39 @@ Yeast Food
     - Actual: 1.118
 - Final Gravity
     - Expected: 1.020
-    - Actual:
+    - Actual:1.011
 - ABV
     - Expected: 11.0
 
+## Flavourings Added to separate batches:
+
+- <a href="Recipe%20List/5_3_Standard_Base_Plain.md"> 5.3 Standard Base Plain</a><br>
+- <a href="Recipe%20List/5_4_Standard_Base_With_Cucumber.md"> 5.4 Standard Base With Cucumber</a><br>
+- <a href="Recipe%20List/5_5_Standard_Base_Tails_with_Lemon.md"> 5.5 Standard Base Tails with Lemon</a>
+
 <h2>Fermentation Data</h2>
 
-| Date       | Temperature °C | Gravity | PH | Notes                                                          |
-|------------|----------------|---------|----|----------------------------------------------------------------|
-| 2025-04-12 | 21.0           | 1.118   |    | 9:45am, agitated airation                                      |
-| 2025-04-13 |                |         |    | 10:30 Airation                                                 |
-| 2025-04-13 |                |         |    | 17:30 Airation + Added Fermaid                                 |
-| 2025-04-16 |                | 1.098   |    | 19:50 Airation                                                 |
-| 2025-04-17 |                | 1.093   |    | 18:00 Airation + Added Fermaid                                 |
-| 2025-04-24 |                | 1.068   |    |                                                                |
-| 2025-05-02 |                | 1.058   |    |                                                                |
-| 2025-05-08 |                | 1.058   |    |                                                                |
-| 2025-05-11 |                | 1.055   |    | Fermentation possibly stuck, mixed the lees back into the mead |
-| 2025-05-15 |                | 1.052   |    | started?just really slow?                                      |
-| 2025-05-23 |                | 1.052   |    |                                                                |
-| 2025-05-24 |                |         |    | Pretty sure it had stopped, added Lalvin QA23                  |
-| 2025-05-30 |                | 1.048   |    |                                                                |
-| 2025-06-01 |                | 1.046   |    |                                                                |
-| 2025-06-08 |                | 1.035   |    |                                                                |
-|            |                |         |    |                                                                |
-|            |                |         |    |                                                                |
-|            |                |         |    |                                                                |
-|            |                |         |    |                                                                |
+| Date       | Temperature °C | Gravity | PH | Notes                                                               |
+|------------|----------------|---------|----|---------------------------------------------------------------------|
+| 2025-04-12 | 21.0           | 1.118   |    | 9:45am, agitated airation                                           |
+| 2025-04-13 |                |         |    | 10:30 Airation                                                      |
+| 2025-04-13 |                |         |    | 17:30 Airation + Added Fermaid                                      |
+| 2025-04-16 |                | 1.098   |    | 19:50 Airation                                                      |
+| 2025-04-17 |                | 1.093   |    | 18:00 Airation + Added Fermaid                                      |
+| 2025-04-24 |                | 1.068   |    |                                                                     |
+| 2025-05-02 |                | 1.058   |    |                                                                     |
+| 2025-05-08 |                | 1.058   |    |                                                                     |
+| 2025-05-11 |                | 1.055   |    | Fermentation possibly stuck, mixed the lees back into the mead      |
+| 2025-05-15 |                | 1.052   |    | started?just really slow?                                           |
+| 2025-05-23 |                | 1.052   |    |                                                                     |
+| 2025-05-24 |                |         |    | Pretty sure it had stopped, added Lalvin QA23                       |
+| 2025-05-30 |                | 1.048   |    |                                                                     |
+| 2025-06-01 |                | 1.046   |    |                                                                     |
+| 2025-06-08 |                | 1.035   |    |                                                                     |
+| 2025-06-14 |                | 1.028   |    |                                                                     |
+| 2025-07-02 | 28.0           | 1.011   |    | (1.010 grav 22c corrected) tastes like a classic sweet mead already |
+|            |                |         |    |                                                                     |
+|            |                |         |    |                                                                     |
 
 Notes:
 End of the bucket honey from 2023. 
