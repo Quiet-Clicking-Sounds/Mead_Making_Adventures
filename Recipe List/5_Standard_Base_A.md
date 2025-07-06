@@ -51,6 +51,8 @@ Yeast Food
     - Actual:1.012
 - ABV
     - Expected: 11.0
+    - Actual: 14.44
+      - Coul go up to 16% if additions allow
 
 ## Flavourings Added to separate batches:
 
