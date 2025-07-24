@@ -24,3 +24,12 @@ where you put the brewbag over the top of the demijon then add the contents thro
 |                         |        |
 | base mead abv           | 14.50% |
 | new abv                 | 14.25% | 
+
+## Mid-secondary checkin
+
+
+Smell
+Dark? There's a smeel I associate with rum or old whisky, not strong but just slightly there
+
+Taste
+Bright, a sweet desert wine, 

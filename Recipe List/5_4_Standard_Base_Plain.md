@@ -24,3 +24,14 @@ Building on-top of <a href="Recipe%20List/5_Standard_Base_B.md"> 5 Standard Base
 |                         |        |
 | base mead abv           | 14.50% |
 | new abv                 | 14.50% | 
+
+## Mid-secondary checkin
+Hydrometer reading: 0.013
+
+Smell
+Wine, slight ethanol note, really slight, 
+
+Taste 
+Hint of honey comes through, but not too strongly, i could easily drink a lot of it, its slightly sweet but less so than last time, 
+
+Actually an exceptional mead that, 

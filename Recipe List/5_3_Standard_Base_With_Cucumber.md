@@ -45,3 +45,10 @@ or don't bother, just blend it really well and squeze the juice out (or buy a ju
 |                         |        |
 | base mead abv           | 14.50% |
 | new abv                 | 11.53% | 
+
+## Mid-secondary checkin
+
+Smell
+Almost roasted cucumber a hint of alcohol
+
+Warming, sweet cucumber, not nessiscarily fresh cucumber taste, but not bad either 

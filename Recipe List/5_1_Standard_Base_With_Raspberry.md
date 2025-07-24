@@ -35,3 +35,11 @@ Building ontop of <a href="Recipe%20List/5_Standard_Base_A.md"> 5 Standard Base 
 |                         |        |
 | base mead abv           | 14.50% |
 | new abv                 | 12.30% |
+
+## Mid-secondary checkin
+
+Smell
+Sweet berry wine, slight ethanol
+
+Taste 
+Fairly alcoholic, slight sweetness, not a huge berry flavour, more of an aftertaste

@@ -28,3 +28,13 @@ Building ontop of <a href="Recipe%20List/5_Standard_Base_A.md"> 5 Standard Base 
 |                         |        |
 | base mead abv           | 14.50% |
 | new abv                 | 14.47% | 
+
+## Mid-secondary checkin
+Smell
+Amazing lavendar smell, light being inside a lavendar bush, but slightly citrus
+
+Taste 
+Sweet lavendar, not lemony, but a hint of sweet citrus, much less like a wine
+
+Note: should take the brew bag out
+Note: did take the brew bag out
