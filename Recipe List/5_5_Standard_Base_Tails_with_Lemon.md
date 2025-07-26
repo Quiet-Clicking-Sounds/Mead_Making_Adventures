@@ -1,5 +1,8 @@
 # Unplanned:
 
+**Mead had to be binned** The ballbearings we used corroded, not sure why, going to use marbles next time
+
+
 We had slightly more mead than expected (or we forgot how much we planned for at the beginning)
 
 So off the cuff plan, put both the tails from <a href="Recipe%20List/5_Standard_Base_A.md"> 5 Standard Base A.md</a>
@@ -29,7 +32,9 @@ where you put the brewbag over the top of the demijon then add the contents thro
 
 
 Smell
-Dark? There's a smeel I associate with rum or old whisky, not strong but just slightly there
+Dark? There's a smell I associate with rum or old whisky, not strong but just slightly there
+
+*That smell was the ballbearing dissintegrating* 
 
 Taste
 Bright, a sweet desert wine, 

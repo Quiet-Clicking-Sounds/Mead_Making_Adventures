@@ -1,5 +1,7 @@
 # Standard Base With Lemon Lavendar
 
+**Mead had to be binned** The ballbearings we used corroded, not sure why, going to use marbles next time
+
 ## plan:
 
 - Zest of 1 lemon

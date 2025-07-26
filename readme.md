@@ -47,10 +47,10 @@ honey and the same yeast, with the differing factor being the taste additions
         <td colspan="2">
         5A and 5B became:<br>
         <a href="Recipe%20List/5_1_Standard_Base_With_Raspberry.md"> 5.1 Standard Base With Raspberry</a><br>
-        <a href="Recipe%20List/5_2_Standard_Base_With_Lemon_Lavendar.md"> 5.2 Standard Base With Lemon and Lavendar</a><br>
+        <a href="Recipe%20List/5_2_Standard_Base_With_Lemon_Lavendar.md"> 5.2 Standard Base With Lemon and Lavendar</a> Failed - try again one day<br>
         <a href="Recipe%20List/5_3_Standard_Base_With_Cucumber.md"> 5.3 Standard Base With Cucumber</a><br>
         <a href="Recipe%20List/5_4_Standard_Base_Plain.md"> 5.4 Standard Base Plain</a><br>
-        <a href="Recipe%20List/5_5_Standard_Base_Tails_with_Lemon.md"> 5.5 Standard Base Tails with Lemon</a>
+        <a href="Recipe%20List/5_5_Standard_Base_Tails_with_Lemon.md"> 5.5 Standard Base Tails with Lemon</a> Failed - try again one day
         </td>
     </tr>
 </table>
