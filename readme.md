@@ -203,6 +203,12 @@ graphs shown in the recipe list.
 
 - Chlorophyll induces bitterness in mead
 
+### Yeast Thoughts: 
+
+- [Wyeast 4134 Sake Yeast](https://www.geterbrewed.com/wyeast-4134-sake-yeast/) could give interesting tastes
+  - might need to look up differing requirements of that yeast strain compared to the normal ones
+- 
+
 ### Planned Meads
 
 #### The short list
@@ -225,6 +231,8 @@ Meads we're planning to start in November 2024; probably aiming to brew to 8-10%
     - notes
         - Extracting taste from the lemon, possibly using high proof alcohol to extract the oils in the zest
         -
+
+
 
 ---
 
@@ -270,6 +278,7 @@ Fruit Meads
 - Gooseberry
 - Passion fruit
 - Pomegranate
+- Pomello 
 
 Vegetable Meads
 
@@ -287,6 +296,7 @@ Herbal Meads
     - Don't do this as alone, use with other things, possibly lots of herbs mead?
 - Aniseed
 - Nettle mead
+- Red clover (tea)
 
 Other Meads:
 
@@ -300,7 +310,14 @@ Multi Meads
 - Lemon and ginger
 - Strawberry and elderflower
 - Apple and cinnamon
-- Lime and
+- Anice and spices
+- Habanero and Pineapple
+- Kaffir Lime leaves and Ginger
+- Ideal Health Tea:
+  - Tumeric
+  - Lemon
+  - Ginger
+  - Ginseng
 
 Cocktail base Meads
 
