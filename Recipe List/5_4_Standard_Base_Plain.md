@@ -26,7 +26,8 @@ Building on-top of <a href="Recipe%20List/5_Standard_Base_B.md"> 5 Standard Base
 | new abv                 | 14.50% | 
 
 ## Mid-secondary checkin
-Hydrometer reading: 0.013
+Original: 1.120
+Hydrometer reading: 0.013 : 14.04%
 
 Smell
 Wine, slight ethanol note, really slight, 
