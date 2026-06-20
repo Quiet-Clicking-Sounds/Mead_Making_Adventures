@@ -40,10 +40,11 @@ Yeast Food
 - ABV
   - Expected: 6.0%
 
-<h2>Fermentation Data</h2>
+## Fermentation Data
+
 | Date       | Temperature  °C | Gravity | PH  | Notes                                              |
 |------------|-----------------|---------|-----|----------------------------------------------------|
-|            |                 |         |     |                                                    |
+| 2026-06-20 |                 | 1.050   |     |                                                    |
 |            |                 |         |     |                                                    |
 |            |                 |         |     |                                                    |
 |            |                 |         |     |                                                    |

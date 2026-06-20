@@ -38,7 +38,8 @@ Yeast Food
 - ABV
   - Expected: 6.7%
 
-<h2>Fermentation Data</h2>
+## Fermentation Data
+
 | Date       | Temperature  °C | Gravity | PH  | Notes                                              |
 |------------|-----------------|---------|-----|----------------------------------------------------|
 |            |                 |         |     |                                                    |
@@ -55,4 +56,4 @@ Notes:
 
 # Splitting into separate flavours:
 
-- Rhubarb
+- Raspberry
