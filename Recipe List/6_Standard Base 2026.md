@@ -1,4 +1,4 @@
-# Standard Base 2026
+# Mead Base 6
 Started on: 2026-06-20
 
 <hr>
@@ -63,3 +63,95 @@ Notes:
 - Mint
 - Sea Buckthorne Berry
 - Habanero & Pineapple
+
+--- 
+
+
+
+
+
+
+## Split: Rhubarb
+2026-07-04
+- Ingredients
+  - Mead Base 9L 
+  - Rhubarb 1KG
+- Procedure
+  - frozen rhubarb simmered for a few mins then left to cool and drained; slice into chunks
+- Post Primary Actions
+  - 2026-07-06 
+    - Bentonite Clay added at 1 g/L
+
+## Split: Kaffir Lime leaf and Ginger
+2026-07-04
+
+- Ingredients
+  - Mead Base 4.5L 
+  - Kaffir Lime Leaves 6
+  - Ginger 2 inches
+- Procedure
+  - slice the leaves and ginger then simmer for 5 mins
+  - added to demijon in a brewbag
+- Post Primary Actions
+  - 2026-07-06 
+    - Bentonite Clay added at 1 g/L
+
+## Split: Sea Buckthorne Berry
+2026-07-04
+
+- Ingredients
+  - Mead Base 4.5L 
+  - Dried Sea Buckthorne Berries 80 grams
+- Procedure
+  - simmer the berries for 5 mins 
+- Post Primary Actions
+  - 2026-07-06 
+    - Bentonite Clay added at 1 g/L
+
+## Split Chilli & Pineapple 
+2026-07-04
+
+/We couldn't find habaneros/
+
+- Ingredients
+  - Mead Base 4.5L 
+  - Pineapple 1 tin
+  - Chillis around 6 (supermarket medium heat)
+- Procedure
+  - chop the pineapple so it will fit into the neck of the demijon 
+  - chop the chillis into slices
+  - in a pan with water simmer just enough to kill any bacteria 
+- Post Primary Actions
+  - 2026-07-06 
+    - Bentonite Clay added at 1 g/L
+
+
+
+## Split Plain
+2026-07-04
+
+- Ingredients
+  - Mead Base 4.5L
+- Procedure
+  - None
+- Post Primary Actions
+  - 2026-07-05
+    - PH 3.6-4
+    - Potassium Metabisulfite added at 0.69 g/L
+    - Bentonite Clay added at 1 g/L
+
+
+## Split Mad Science
+2026-07-04
+
+- Ingredients
+  - Mead Base 4.5L 
+  - Goji Berries 100g
+  - Honey 400g 
+- Procedure
+  - None
+- Post Primary Actions
+  - 2026-07-06 
+    - Bentonite Clay added at 1 g/L
+
+no plan made, found things that might be interesting
