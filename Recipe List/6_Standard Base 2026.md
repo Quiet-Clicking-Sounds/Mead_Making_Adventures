@@ -47,9 +47,6 @@ Yeast Food
 | 2026-06-20 |                 | 1.050   |     |                                              |
 | 2026-06-30 |                 | 1.000   |     | second batch might be at 0.999, within error |
 |            |                 |         |     |                                              |
-|            |                 |         |     |                                              |
-|            |                 |         |     |                                              |
-|            |                 |         |     |                                              |
 
 Notes:
 
@@ -81,6 +78,9 @@ Notes:
 - Post Primary Actions
   - 2026-07-06 
     - Bentonite Clay added at 1 g/L
+  - 2026-07-29
+    - rhubarb removed from bucket
+    - Potassium Metabisulfite added 0.95g
 
 ## Split: Kaffir Lime leaf and Ginger
 2026-07-04
@@ -125,8 +125,6 @@ Notes:
   - 2026-07-06 
     - Bentonite Clay added at 1 g/L
 
-
-
 ## Split Plain
 2026-07-04
 
@@ -137,15 +135,14 @@ Notes:
 - Post Primary Actions
   - 2026-07-05
     - PH 3.6-4
-    - Potassium Metabisulfite added at 0.69 g/L
+    - Potassium Metabisulfite added at 0.69g
     - Bentonite Clay added at 1 g/L
-
 
 ## Split Mad Science
 2026-07-04
 
 - Ingredients
-  - Mead Base 4.5L 
+  - Mead Base 3ish L 
   - Goji Berries 100g
   - Honey 400g 
 - Procedure
@@ -154,4 +151,4 @@ Notes:
   - 2026-07-06 
     - Bentonite Clay added at 1 g/L
 
-no plan made, found things that might be interesting
+No plan made, found things that might be interesting
